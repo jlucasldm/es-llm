@@ -36,6 +36,18 @@ recursos são necessários para tal e que tipo de instrução (prompt) deve ser 
 Sobre o formato de saída, podemos ver depois. O importante agora é mexer com o prompt e botar a geração de teste por 
 questões para funcionar.
 
+## Proximos passos
+Uma vez que a gente tenha uma versão ok do prompt, eu acho massa que a gente:
+1. Submeta as 50 questões de rubis para o modelo gerar os casos de teste
+2. Rodar todos os casos de teste para as soluções das questões
+3. Quantificar a precisão de acertos para cada questão
+4. Modificar o prompt tentando aprimorá-lo
+5. Refazer tudo
+
+A gente tendo seila uns 3, 5 versões de prompt e cada versão a gente ter uma análise quantitativa dos 
+resultados e dps conduzir uma análise qualitativa dos prompts pode ser massa. Talvez até seja meio over, talvez seja
+legal verificar com o professor, mas achar maneiro eu acho tlg
+
 ## Como executar
 - Baixe o poetry
 - No diretório raiz do projeto, instale as dependências rodando ``poetry install``
