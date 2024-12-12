@@ -1,0 +1,234 @@
+Aqui estão 15 casos de teste variados para o problema descrito:
+
+### Caso de Teste 1
+Entrada:
+```
+1
+Frodo 60
+100
+```
+Saída:
+```
+Vamos todos encontrar a montanha!
+```
+
+### Caso de Teste 2
+Entrada:
+```
+2
+Sam 70
+Merry 80
+150
+```
+Saída:
+```
+Vamos todos encontrar a montanha!
+```
+
+### Caso de Teste 3
+Entrada:
+```
+3
+Pippin 50
+Gimli 90
+Legolas 60
+200
+```
+Saída:
+```
+Vamos todos encontrar a montanha!
+```
+
+### Caso de Teste 4
+Entrada:
+```
+4
+Boromir 100
+Aragorn 80
+Gandalf 70
+Faramir 60
+250
+```
+Saída:
+```
+Vamos todos encontrar a montanha!
+```
+
+### Caso de Teste 5
+Entrada:
+```
+5
+Gimli 90
+Legolas 70
+Boromir 90
+Aragorn 80
+Faramir 60
+300
+```
+Saída:
+```
+Vamos todos encontrar a montanha!
+```
+
+### Caso de Teste 6
+Entrada:
+```
+3
+Sam 70
+Merry 80
+Pippin 60
+150
+```
+Saída:
+```
+Vamos virar almoço de aranhas gigantes!
+Sam
+Merry
+```
+
+### Caso de Teste 7
+Entrada:
+```
+4
+Frodo 60
+Gimli 90
+Legolas 70
+Aragorn 80
+200
+```
+Saída:
+```
+Vamos virar almoço de aranhas gigantes!
+Gimli
+Legolas
+Aragorn
+```
+
+### Caso de Teste 8
+Entrada:
+```
+5
+Sam 70
+Merry 80
+Pippin 60
+Gimli 90
+Legolas 70
+300
+```
+Saída:
+```
+Vamos todos encontrar a montanha!
+```
+
+### Caso de Teste 9
+Entrada:
+```
+6
+Frodo 60
+Sam 70
+Merry 80
+Pippin 60
+Gimli 90
+Legolas 70
+300
+```
+Saída:
+```
+Vamos todos encontrar a montanha!
+```
+
+### Caso de Teste 10
+Entrada:
+```
+3
+Gandalf 100
+Aragorn 80
+Boromir 90
+250
+```
+Saída:
+```
+Vamos virar almoço de aranhas gigantes!
+Gandalf
+Boromir
+```
+
+### Caso de Teste 11
+Entrada:
+```
+5
+Frodo 60
+Sam 70
+Merry 80
+Pippin 60
+Gimli 90
+250
+```
+Saída:
+```
+Vamos virar almoço de aranhas gigantes!
+Merry
+Pippin
+Gimli
+```
+
+### Caso de Teste 12
+Entrada:
+```
+2
+Gimli 90
+Legolas 70
+150
+```
+Saída:
+```
+Vamos virar almoço de aranhas gigantes!
+Gimli
+```
+
+### Caso de Teste 13
+Entrada:
+```
+1
+Bilbo 80
+100
+```
+Saída:
+```
+Vamos todos encontrar a montanha!
+```
+
+### Caso de Teste 14
+Entrada:
+```
+3
+Sam 70
+Merry 80
+Pippin 60
+140
+```
+Saída:
+```
+Vamos virar almoço de aranhas gigantes!
+Sam
+Merry
+```
+
+### Caso de Teste 15
+Entrada:
+```
+6
+Frodo 60
+Sam 70
+Merry 80
+Pippin 60
+Gimli 90
+Legolas 70
+400
+```
+Saída:
+```
+Vamos todos encontrar a montanha!
+```
+
+Esses casos de teste cobrem uma variedade de cenários, incluindo casos simples, médios, grandes e especiais, respeitando as restrições do problema e garantindo que as saídas estejam corretas.

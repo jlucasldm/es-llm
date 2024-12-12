@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "trabalho-llm"
+version = "0.1.0"
+description = ""
+authors = ["Lucas <jlucas.ldm@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+transformers = "^4.47.0"
+torch = "^2.5.1"
+torchvision = "^0.20.1"
+torchaudio = "^2.5.1"
+accelerate = "^1.2.0"
+openai = "^1.57.2"
+python-dotenv = "^1.0.1"
+black = "^24.10.0"
+flake8 = "^7.1.1"
+dynaconf = "^3.2.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
