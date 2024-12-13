@@ -5,6 +5,7 @@ from model.questao import Questao
 
 API_KEY = settings.openai.API_KEY
 
+
 class OpenAIProvider:
     def __init__(self, model: str, max_tokens: int, temperature: float):
         self.client = OpenAI(api_key=API_KEY)
@@ -14,17 +15,17 @@ class OpenAIProvider:
 
     def get_prompt(self, questao: dict) -> list[dict]:
         prompt = [
-    {
-        "role": "system",
-        "content": """
+            {
+                "role": "system",
+                "content": """
             Você é um modelo especializado em programação competitiva. Sua tarefa é interpretar enunciados de problemas
             computacionais, implementar soluções corretas e gerar casos de teste válidos, diversificados e relevantes,
             garantindo conformidade total com as especificações do problema.
-        """
-    },
-    {
-        "role": "user",
-        "content": f"""
+        """,
+            },
+            {
+                "role": "user",
+                "content": f"""
             Considere o seguinte problema de programação competitiva:
 
             <enunciado>: "{questao['enunciado']}"
@@ -80,9 +81,9 @@ class OpenAIProvider:
             Apenas continue quando tiver certeza de que:
             1. A implementação está correta e validada.
             2. Os casos de teste gerados são válidos e cobrem todas as condições descritas no problema.
-        """
-    }
-]
+        """,
+            },
+        ]
         return prompt
 
     def get_response(self, prompt: list[dict]) -> ChatCompletion:
