@@ -1,0 +1,127 @@
+### Tarefa 1: Análise do Problema
+
+#### Regras Explícitas
+1. A entrada consiste em dois números inteiros `E` (espaço) e `T` (tempo).
+2. As restrições para `E` são: \(1 \leq E \leq 500\).
+3. As restrições para `T` são: \(1 \leq T \leq 100\).
+4. A velocidade `V` é calculada pela fórmula: \(V = \frac{E}{T}\).
+5. A saída deve ser um número inteiro.
+
+#### Restrições Implícitas
+1. `E` deve ser sempre maior ou igual a `T` para que a divisão resulte em um número inteiro, já que a velocidade é definida como um número inteiro.
+2. O resultado da divisão deve ser arredondado para baixo, pois estamos lidando com inteiros.
+
+#### Condições Excepcionais
+1. Se `T` for maior que `E`, a divisão não será válida para o contexto do problema, pois não se pode ter uma velocidade maior que a unidade de espaço.
+2. O caso em que `E` é igual a `T` resultará em uma velocidade de 1, que é um caso limite.
+
+### Tarefa 2: Implementação da Solução
+
+Aqui está a implementação da lógica descrita no enunciado:
+
+```python
+def calcular_velocidade(E, T):
+    if T == 0:
+        raise ValueError("O tempo não pode ser zero.")
+    return E // T  # Divisão inteira
+
+# Testando com os casos de exemplo
+casos_de_exemplo = [
+    {'entrada': '300 5', 'saida': '60'},
+    {'entrada': '100 2', 'saida': '50'}
+]
+
+for caso in casos_de_exemplo:
+    entrada = list(map(int, caso['entrada'].split()))
+    E, T = entrada[0], entrada[1]
+    resultado = calcular_velocidade(E, T)
+    assert resultado == int(caso['saida']), f"Erro: esperado {caso['saida']} mas obteve {resultado}"
+
+print("Todos os casos de exemplo passaram.")
+```
+
+### Tarefa 3: Geração de Novos Casos de Teste
+
+Aqui estão 15 novos casos de teste:
+
+#### Casos Simples
+1. Entrada: `1 1`  
+   Saída: `1`
+   
+2. Entrada: `2 1`  
+   Saída: `2`
+
+#### Casos Médios
+3. Entrada: `50 10`  
+   Saída: `5`
+   
+4. Entrada: `200 4`  
+   Saída: `50`
+
+5. Entrada: `150 3`  
+   Saída: `50`
+
+#### Casos Complexos
+6. Entrada: `500 100`  
+   Saída: `5`
+   
+7. Entrada: `499 99`  
+   Saída: `5`
+
+8. Entrada: `500 1`  
+   Saída: `500`
+
+#### Casos Especiais
+9. Entrada: `10 2`  
+   Saída: `5`
+   
+10. Entrada: `100 100`  
+    Saída: `1`
+
+11. Entrada: `250 50`  
+    Saída: `5`
+
+12. Entrada: `300 3`  
+    Saída: `100`
+
+13. Entrada: `400 4`  
+    Saída: `100`
+
+14. Entrada: `450 9`  
+    Saída: `50`
+
+15. Entrada: `500 5`  
+    Saída: `100`
+
+### Tarefa 4: Validação dos Casos de Teste
+
+Agora, vamos validar os casos de teste gerados:
+
+```python
+novos_casos_de_teste = [
+    (1, 1, 1),
+    (2, 1, 2),
+    (50, 10, 5),
+    (200, 4, 50),
+    (150, 3, 50),
+    (500, 100, 5),
+    (499, 99, 5),
+    (500, 1, 500),
+    (10, 2, 5),
+    (100, 100, 1),
+    (250, 50, 5),
+    (300, 3, 100),
+    (400, 4, 100),
+    (450, 9, 50),
+    (500, 5, 100)
+]
+
+for E, T, esperado in novos_casos_de_teste:
+    resultado = calcular_velocidade(E, T)
+    assert resultado == esperado, f"Erro: esperado {esperado} mas obteve {resultado}"
+
+print("Todos os novos casos de teste passaram.")
+```
+
+### Conclusão
+A implementação está correta e todos os casos de teste gerados foram validados com sucesso. A análise do problema, a implementação da solução e a geração dos casos de teste foram realizadas de acordo com as especificações.

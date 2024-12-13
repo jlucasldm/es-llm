@@ -1,0 +1,6 @@
+{"nome": "Treino na floresta",
+  "codigo": "BAS-A5",
+  "enunciado": " O Lobo Mau resolveu parar um pouco com as maldades, decidiu abrir uma\n academia de corrida e convidou Chapeuzinho Vermelho para ser sua sócia.\n Aproveitaram que a floresta já tinha uma estrada e fizeram uma pista circular para\n os treinos da academia.\n Certo dia, Chapeuzinho precisou levar doces e bolos para sua vovozinha.\n Como todos sabem, ela mora longe, o caminho é deserto e o Lobo Mau mora ali\n por perto. Então, após visitar a vovozinha, ela convidou o Lobo para uma corrida\n pela pista da floresta e lá foi ela pela estrada a fora, já não tão sozinha.\n Saiba que a pista circular tem tamanho de ‘T’ metros e que eles pretendem\n correr ‘X’ metros. Assim, calcule o ponto de término na pista do treinamento\n deles. Por exemplo, se a pista tem 1000 metros e eles fixaram o treinamento em\n 2200 metros, o ponto de término é 200.",
+  "entrada": "A entrada é composta por 2 inteiros, ‘T’ e ‘X’ (1 <= ‘T’,‘X’ <= 10000),\n representando o tamanho da pista e a distância que pretendem correr no\n treinamento",
+  "saida": "Na saída será apresentado o ponto de término do treinamento",
+  "casos_exemplo": [{"entrada": "200 20", "saida": "20"}, {"entrada": "100 1000", "saida": "0"}, {"entrada": "200 1100", "saida": "100"}]}

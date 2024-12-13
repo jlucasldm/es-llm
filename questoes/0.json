@@ -1,0 +1,6 @@
+{"nome": "A Força de Aceleração",
+  "codigo": "BAS-A1",
+  "enunciado": " A força de aceleração é uma energia no espaço-tempo que o Flash utiliza como fonte\n dos seus poderes. Para alcançar a velocidade que deseja, o Flash absorve o espaço e o\n tempo da força de aceleração e a transforma em velocidade. Sua tarefa é calcular a\n velocidade do Flash, dado o espaço e o tempo.",
+  "entrada": "A entrada possui dois números inteiros ‘E’ e ‘T’ (1 <= E <= 500) (1 <= T <= 100)\n representando espaço e tempo, respectivamente",
+  "saida": "A saída consiste em uma única linha contendo a velocidade alcançada, sendo a\n velocidade calculada da seguinte forma:  V = E/T. Sendo V a nossa velocidade desejada e é\n um número inteiro",
+  "casos_exemplo": [{"entrada": "300 5", "saida": "60"}, {"entrada": "100 2", "saida": "50"}]}

@@ -1,0 +1,6 @@
+{"nome": "Em Busca do Tesouro Perdido",
+  "codigo": "BAS-A6",
+  "enunciado": " Em One Piece, a tripulação\n dos chapéu de palha está tentando\n pegar o tesouro deixado pelo antigo\n rei dos piratas, Gol D. Roger. Para\n alcançar \nesse \nobjetivo, \neles\n avançam na grande linha sem se\n importar com as leis impostas pelo\n governo mundial, muitas vezes\n encarando a própria marinha.\n Como o bando de Luffy é da pior geração, a marinha vive aumentando a\n recompensa pela captura dos seus membros. Cansados de recalcular a\n recompensa do bando toda vez que as recompensas individuais mudam, dadas\n as recompensas atuais pela tripulação, calcule qual a recompensa total pelo\n bando.",
+  "entrada": "A entrada possui 5 valores inteiros (1 < L, Z, N, U, S < 1 000 000 000)\n separados por espaço, que representam as recompensas pelos cinco piratas do\n bando, em bellies, a moeda do mundo de one piece.",
+  "saida": "A saída consiste em uma única linha contendo um número que representa\n o valor total da recompensa pelo bando do chapéu de palha, que é a soma das\n recompensas dos 5 piratas",
+  "casos_exemplo": [{"entrada": " 300000000 120000000 16000000 30000000 77000000", "saida": "543000000"}, {"entrada": " 500000000 320000000 66000000 200000000 177000000", "saida": "1263000000"}]}

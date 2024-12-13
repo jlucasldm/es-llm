@@ -1,0 +1,180 @@
+[
+    {
+        "nome": "A For\u00e7a de Acelera\u00e7\u00e3o",
+        "codigo": "BAS-A1",
+        "enunciado": " A for\u00e7a de acelera\u00e7\u00e3o \u00e9 uma energia no espa\u00e7o-tempo que o Flash utiliza como fonte\n dos seus poderes. Para alcan\u00e7ar a velocidade que deseja, o Flash absorve o espa\u00e7o e o\n tempo da for\u00e7a de acelera\u00e7\u00e3o e a transforma em velocidade. Sua tarefa \u00e9 calcular a\n velocidade do Flash, dado o espa\u00e7o e o tempo.",
+        "entrada": "A entrada possui dois n\u00fameros inteiros \u2018E\u2019 e \u2018T\u2019 (1 <= E <= 500) (1 <= T <= 100)\n representando espa\u00e7o e tempo, respectivamente",
+        "saida": "A sa\u00edda consiste em uma \u00fanica linha contendo a velocidade alcan\u00e7ada, sendo a\n velocidade calculada da seguinte forma:  V = E/T. Sendo V a nossa velocidade desejada e \u00e9\n um n\u00famero inteiro",
+        "casos_exemplo": [
+            {
+                "entrada": "300 5",
+                "saida": "60"
+            },
+            {
+                "entrada": "100 2",
+                "saida": "50"
+            }
+        ]
+    },
+    {
+        "nome": "Grandes tesouros",
+        "codigo": "BAS-A2",
+        "enunciado": "Luffy e o Bando dos Chap\u00e9us de Palha\n s\u00e3o um bando de piratas que encontram\n tesouros a cada ilha que passam. Luffy est\u00e1\n precisando de um tesoureiro, alg\u00faem que fa\u00e7a\n as contas dos tesouros encontrados. Para isso,\n o bando precisa da sua ajuda",
+        "entrada": "A entrada possui uma sequ\u00eancia de 6\n n\u00fameros (t1, t2, \u2026, t6), sendo (1 <= ti <=\n 10) representando os valores em ouro dos\n tesouros encontrados at\u00e9 agora. Sua tarefa \u00e9\n dizer o valor total de tesouros do bando",
+        "saida": "A sa\u00edda consiste em uma \u00fanica linha contendo um n\u00famero inteiro: A soma do valor de\n todos os tesouros dos Chap\u00e9us de Palha",
+        "casos_exemplo": [
+            {
+                "entrada": "1 2 3 4 5 6",
+                "saida": "21"
+            },
+            {
+                "entrada": " 2 4 7 9 8 10",
+                "saida": "40"
+            }
+        ]
+    },
+    {
+        "nome": "As desventuras de Snake",
+        "codigo": "BAS-A3",
+        "enunciado": "Snake desistiu de comer ovos de p\u00e1ssaros j\u00e1 que ela descobriu da pior\n maneira que eles ficam muito bravos, e andou buscando novas op\u00e7\u00f5es. Em sua\n busca, Snake encontrou ovos de camale\u00e3o, que possuem uma incr\u0131\u0301vel curiosidade:\n aqueles que comem os ovos mudam de cor. Fascinada por essa descoberta, Snake\n come\u00e7ou a coletar in\u00fameros ovos dos camale\u00f5es, que fizeram armadilhas para\n Snake. Em alguns ninhos foram colocados ovos envenenados, que ao serem\n tocados, eles explodem e provocam sono instantaneamente. Assim, ao\n encontrar um ovo envenenado, Snake dorme por alguns segundos e os\n camale\u00f5es conseguem recuperar dois ovos.\n Ela quis saber ent\u00e3o, ao fim de tr\u00eas ca\u00e7adas, com quantos ovos ela ficou e\n te pediu ajuda, j\u00e1 que voc\u00ea \u00e9 um excelente programador. Assim, dadas as\n quantidades de ovos coletados e o n\u00famero de ovos envenenados em cada\n ca\u00e7ada diga quantos sobraram.",
+        "entrada": "A entrada \u00e9 composta na primeira linha por 3 inteiros, \u2018Q1\u2019, \u2018Q2\u2019 e \u2018Q3\u2019 (6\n <= \u2018Q1\u2019,\u2018Q2\u2019,\u2018Q3\u2019 <= 20), representando a quantidade de ovos coletados em\n cada uma das ca\u00e7adas. Na segunda linha ser\u00e3o dados 3 inteiros, \u2018E1\u2019, \u2018E2\u2019 e \u2018E3\u2019\n (0 <= \u2018E1\u2019,\u2018E2\u2019,\u2018E3\u2019 <= 2), representando a quantidade de ovos envenenados\n em cada uma das ca\u00e7adas",
+        "saida": "Na sa\u00edda ser\u00e1 apresentada a quantidade de ovos que sobraram das\n ca\u00e7adas",
+        "casos_exemplo": [
+            {
+                "entrada": "10 12 20\n 0 1 1",
+                "saida": "36"
+            },
+            {
+                "entrada": "6 6 6\n2 2 2",
+                "saida": "0"
+            }
+        ]
+    },
+    {
+        "nome": "Raffting nas cataratas",
+        "codigo": "BAS-A4",
+        "enunciado": " Praticar raffting em uma das maravilhas da natureza \u00e9 uma experi\u00eancia\n inesquec\u00edvel. \u00c9 esse o relato de milhares de turistas que visitaram as Cataratas do Igua\u00e7u.\n L\u00e1 existe toda uma estrutura para receber os turistas que tem coragem de vivenciar o\n passeio por algumas cachoeiras e corredeiras. O esporte \u00e9 radical e \u00e9 feito utilizando-se um\n bote infl\u00e1vel em que pode ir um n\u00famero variado de pessoas. Em cada bote sempre temos o\n instrutor e o guia do passeio, dois profissionais respons\u00e1veis pela seguran\u00e7a dos turistas no\n bote. E por mais incr\u00edvel que possa parecer, muitos j\u00e1 morreram praticando o raffting usando\n um barril para descer as famosas Cataratas do Ni\u00e1gara.\n O Parque Nacional do Igua\u00e7u \u00e9 uma das \u00e1reas mais tur\u00edsticas do Brasil, visitado por\n milh\u00f5es de turistas anualmente. O diretor do parque quis saber a quantidade de turistas\n que desceram as corredeiras em um intervalo de tempo, ent\u00e3o ele contou em 4 viagens a\n quantidade de pessoas nos botes. Assim, dada a quantidade de pessoas nos 4 botes, diga\n quantos turistas desceram as corredeiras.",
+        "entrada": "A entrada \u00e9 composta por 4 inteiros, \u2018Q1\u2019, \u2018Q2\u2019, \u2018Q3\u2019 e \u2018Q4\u2019 (3 <= Q1, Q2, Q3, Q4 <=\n 20), representando a quantidade de pessoas que estavam nos botes em cada uma das 4\n viagens.",
+        "saida": "Na sa\u00edda ser\u00e1 apresentada a quantidade total de turistas que desceram as\n corredeiras durante as 4 viagens",
+        "casos_exemplo": [
+            {
+                "entrada": "10 15 8 7",
+                "saida": "32"
+            },
+            {
+                "entrada": " 3 6 9 12",
+                "saida": "22"
+            },
+            {
+                "entrada": " 3 3 3 3",
+                "saida": "4"
+            }
+        ]
+    },
+    {
+        "nome": "Treino na floresta",
+        "codigo": "BAS-A5",
+        "enunciado": " O Lobo Mau resolveu parar um pouco com as maldades, decidiu abrir uma\n academia de corrida e convidou Chapeuzinho Vermelho para ser sua s\u00f3cia.\n Aproveitaram que a floresta j\u00e1 tinha uma estrada e fizeram uma pista circular para\n os treinos da academia.\n Certo dia, Chapeuzinho precisou levar doces e bolos para sua vovozinha.\n Como todos sabem, ela mora longe, o caminho \u00e9 deserto e o Lobo Mau mora ali\n por perto. Ent\u00e3o, ap\u00f3s visitar a vovozinha, ela convidou o Lobo para uma corrida\n pela pista da floresta e l\u00e1 foi ela pela estrada a fora, j\u00e1 n\u00e3o t\u00e3o sozinha.\n Saiba que a pista circular tem tamanho de \u2018T\u2019 metros e que eles pretendem\n correr \u2018X\u2019 metros. Assim, calcule o ponto de t\u00e9rmino na pista do treinamento\n deles. Por exemplo, se a pista tem 1000 metros e eles fixaram o treinamento em\n 2200 metros, o ponto de t\u00e9rmino \u00e9 200.",
+        "entrada": "A entrada \u00e9 composta por 2 inteiros, \u2018T\u2019 e \u2018X\u2019 (1 <= \u2018T\u2019,\u2018X\u2019 <= 10000),\n representando o tamanho da pista e a dist\u00e2ncia que pretendem correr no\n treinamento",
+        "saida": "Na sa\u00edda ser\u00e1 apresentado o ponto de t\u00e9rmino do treinamento",
+        "casos_exemplo": [
+            {
+                "entrada": "200 20",
+                "saida": "20"
+            },
+            {
+                "entrada": "100 1000",
+                "saida": "0"
+            },
+            {
+                "entrada": "200 1100",
+                "saida": "100"
+            }
+        ]
+    },
+    {
+        "nome": "Em Busca do Tesouro Perdido",
+        "codigo": "BAS-A6",
+        "enunciado": " Em One Piece, a tripula\u00e7\u00e3o\n dos chap\u00e9u de palha est\u00e1 tentando\n pegar o tesouro deixado pelo antigo\n rei dos piratas, Gol D. Roger. Para\n alcan\u00e7ar \nesse \nobjetivo, \neles\n avan\u00e7am na grande linha sem se\n importar com as leis impostas pelo\n governo mundial, muitas vezes\n encarando a pr\u00f3pria marinha.\n Como o bando de Luffy \u00e9 da pior gera\u00e7\u00e3o, a marinha vive aumentando a\n recompensa pela captura dos seus membros. Cansados de recalcular a\n recompensa do bando toda vez que as recompensas individuais mudam, dadas\n as recompensas atuais pela tripula\u00e7\u00e3o, calcule qual a recompensa total pelo\n bando.",
+        "entrada": "A entrada possui 5 valores inteiros (1 < L, Z, N, U, S < 1 000 000 000)\n separados por espa\u00e7o, que representam as recompensas pelos cinco piratas do\n bando, em bellies, a moeda do mundo de one piece.",
+        "saida": "A sa\u00edda consiste em uma \u00fanica linha contendo um n\u00famero que representa\n o valor total da recompensa pelo bando do chap\u00e9u de palha, que \u00e9 a soma das\n recompensas dos 5 piratas",
+        "casos_exemplo": [
+            {
+                "entrada": " 300000000 120000000 16000000 30000000 77000000",
+                "saida": "543000000"
+            },
+            {
+                "entrada": " 500000000 320000000 66000000 200000000 177000000",
+                "saida": "1263000000"
+            }
+        ]
+    },
+    {
+        "nome": "Trevamata 2",
+        "codigo": "INT-A1",
+        "enunciado": " Durante sua aventura pelas Terras-Selv\u00e1ticas,\n Bilbo Bolseiro  e seus amigos an\u00f5es precisar\u00e3o\n enfrentar a Trevamata para chegar na Montanha\n Solit\u00e1ria. Por\u00e9m, sabemos que essa n\u00e3o \u00e9 uma tarefa\n f\u00e1cil. Para conseguir atravessar a floresta eles n\u00e3o\n devem, em hip\u00f3tese alguma, sair da trilha. Por isso,\n Gandalf convocou os alunos de programa\u00e7\u00e3o da\n UFBA para ajudar Bilbo e seus amigos.\n A Trevamata \u00e9  terreno trai\u00e7oeiro e sua trilha,\n em alguns trechos, tem o caminho sendo galhos de\n grandes \u00e1rvores, que tem um limite de peso. Assim,\n ter\u00e3o que passar um por um por esses trechos de\n galhos. Mas, se excedido, quebrado, desloca todos os\n viajantes para fora do percurso. Precisamos ent\u00e3o que, dado o peso dos amigos de Bilbo, voc\u00ea diga se\n eles est\u00e3o aptos para passar pela trilha com seguran\u00e7a. O peso do Bilbo ser\u00e1 ignorado.",
+        "entrada": " A primeira linha de entrada \u00e9 composta por um inteiro \u2018N\u2019 (1 <= N <= 13), indicando a\n quantidade de amigos de Bilbo. As \u2018N\u2019 linhas seguintes cont\u00eam, cada uma, uma String Nome e um\n inteiro \u2018K\u2019 (50 <= K <= 150), que representam, respectivamente, o nome e o peso de cada amigo de\n Bilbo. Por fim, a \u00faltima linha cont\u00e9m um inteiro \u2018C\u2019 (50 <= C <= 250), indicando a capacidade m\u00e1xima\n de peso suportado por um determinado galho da estrada",
+        "saida": " Caso a capacidade da estrada n\u00e3o seja excedida, o programa deve imprimir a frase \u201cVamos\n todos encontrar a montanha!\u201d, caso contr\u00e1rio, o programa deve imprimir a frase \u201cVamos virar\n almo\u00e7o de aranhas gigantes!\u201d, seguida, dos nomes dos amigos de Bilbo que causaram a trag\u00e9dia.\n Imprima, nesse caso, um nome por linha ap\u00f3s a frase inicial, seguindo a ordem de leitura dada dos\n nomes",
+        "casos_exemplo": [
+            {
+                "entrada": " 6\n Thorin 60\n Balin 55\n Dwalin 59\n Fili 68\n Kili 53\n Dori 60\n 250",
+                "saida": "Vamos todos encontrar a montanha!"
+            },
+            {
+                "entrada": "7\n Nori 50\n Ori 57\n Oin 52\n Gloin 58\n Bifur 55 \nBofur 53\n Bombur 63\n 57",
+                "saida": " Vamos virar almo\u00e7o de aranhas gigantes!\n Gloin\n Bombur"
+            }
+        ]
+    },
+    {
+        "nome": "Ori and the Blind Forest 2",
+        "codigo": "INT-A2",
+        "enunciado": "\"Ori \nOri and the Blind Forest 2\n And The\n Blind Forest\" conta a\n hist\u00f3ria de Ori, um\n esp\u00edrito \nmaterializado\n que foi adotado por\n Naru, uma esp\u00e9cie de\n urso que h\u00e1 muito\n tempo vivia em uma\n f\n loresta encantada. Mas\n infelizmente ocorre a\n morte de Naru. Ori se\n v\u00ea \nsozinho \nimensid\u00e3o \nverde \nna\n e\n assume a responsabilidade de explorar a floresta para sobreviver.\n Uma nova vers\u00e3o do jogo est\u00e1 quase completa, faltando apenas\n implementar uma verifica\u00e7\u00e3o dos valores de XP obtidos por Ori para saber\n se ele consegue subir de n\u00edvel. Sua tarefa ser\u00e1 dizer se Ori conseguiu passar\n de n\u00edvel, sendo que para isso lhe ser\u00e1 dado o XP obtido por ele em cada\n miss\u00e3o que ele cumpriu, e al\u00e9m disso, ser\u00e1 dada uma pontua\u00e7\u00e3o b\u00f4nus para\n cada miss\u00e3o, onde cada b\u00f4nus ser\u00e1 multiplicado pela pontua\u00e7\u00e3o obtida\n naquela miss\u00e3o.",
+        "entrada": "A primeira linha cont\u00e9m um inteiro \u2018N\u2019 (1 <= N <= 100),\n representando a quantidade de miss\u00f5es cumpridas por Ori em determinado\n mapa de fase. Na linha seguinte ser\u00e3o dados \u2018N\u2019 inteiros \u2018X\u2019 (1 <= X <=\n 10), que representam o XP de cada miss\u00e3o. Na pr\u00f3xima linha ser\u00e3o dados\n \u2018N\u2019 inteiros \u2018B\u2019 (1 <= B <= 5), que representam o b\u00f4nus que deve ser\n multiplicado pela pontua\u00e7\u00e3o da respectiva miss\u00e3o. Ou seja, o primeiro valor\n de b\u00f4nus dado, ser\u00e1 multiplicado pelo XP da primeira miss\u00e3o, o segundo\n valor de b\u00f4nus ser\u00e1 multiplicado pelo XP da segunda miss\u00e3o, e assim\n sucessivamente. Por fim, na \u00faltima linha, ser\u00e1 dado um inteiro \u2018M\u2019 (1 <= M\n <= 10000), representando o total de XP necess\u00e1rio para subir de n\u00edvel,\n seguido de um inteiro \u2018A\u2019 (0 <= A <= 2), representando um b\u00f4nus\n adicional que deve ser somado a cada b\u00f4nus \u2018B\u2019 antes destes serem\n multiplicados pelos respectivos XP de cada miss\u00e3o.",
+        "saida": "Voc\u00ea dever\u00e1 imprimir \u201cUpou de Nivel!\u201d, se o total de XP for maior\n ou igual a quantidade \u2018M\u2019 necess\u00e1ria para upar de n\u00edvel, ou \u201cNao foi dessa\n vez!\u201d, caso contr\u00e1rio.",
+        "casos_exemplo": [
+            {
+                "entrada": "5\n 1 2 3 4 5\n 1 1 1 1 1\n 16 1",
+                "saida": " Upou de Nivel!"
+            },
+            {
+                "entrada": "4\n 10 15 10 5\n 1 2 3 4\n 100 0",
+                "saida": "Nao foi dessa vez!"
+            }
+        ]
+    },
+    {
+        "nome": "Yoda seleciona padawans",
+        "codigo": "INT-B1",
+        "enunciado": " H\u00e1 muito tempo atr\u00e1s, em\n uma gal\u00e1xia muito muito distante,\n o imp\u00e9rio do mal estava\n aumentando sua for\u00e7a, destruindo\n tudo em seu caminho. Mas os\n rebeldes n\u00e3o t\u00eam medo, ao lado\n negro da for\u00e7a eles nunca v\u00e3o se\n juntar. Uma esperan\u00e7a ainda\n existe. \nYoda voa entre as estrelas na velocidade da luz para ensinar os jovens Jedi.\n Parab\u00e9ns, voc\u00ea n\u00edvel subiu! Agora voc\u00ea pode mestre Jedi ser. Ajudar Mestre Yoda a\n percorrer a gal\u00e1xia voc\u00ea precisa. Ajude Mestre Yoda a selecionar novos padawans.",
+        "entrada": "A primeira linha cont\u00e9m um inteiro \u2018N\u2019 (1 \u2264 N \u2264 103) que \u00e9 a quantidade de jovens\n de todas as partes da gal\u00e1xia interessados em ser um jovem Jedi. A seguir ser\u00e3o dadas\n \u2018N\u2019 linhas, onde em cada uma ser\u00e3o dados uma string (no m\u00e1ximo 5 caracteres\n alfab\u00e9ticos mai\u00fasculos, sem espa\u00e7o), um inteiro \u2018M\u2019 (1 <= M <= 100) e um inteiro \u2018P\u2019 (0\n <= P <= 100), que representam respectivamente, o nome do jovem Jedi, o n\u00famero de\n miss\u00f5es que lhe foram atribu\u00eddas inicialmente, e o n\u00famero de miss\u00f5es que esse jovem\n Jedi deixou de cumprir em rela\u00e7\u00e3o ao total que lhe foi atribu\u00eddo.",
+        "saida": "Imprima em ordem crescente os nomes dos Padawans, com seus respectivos\n n\u00fameros de miss\u00f5es completadas. Imprima um jovem Jedi por linha. Saiba que n\u00e3o h\u00e1\n nomes repetidos.",
+        "casos_exemplo": [
+            {
+                "entrada": " 4\n ABCDE 4 2\n BCDEF 5 2\n CDEFG 4 1\n BEFGH 4 0 ",
+                "saida": "ABCDE 2\n BCDEF 3\n BEFGH 4\n CDEFG 3"
+            },
+            {
+                "entrada": "3\n ABCDE 3 3\n BCDEF 2 0\n ABCDF 3 2",
+                "saida": "ABCDE 0\n ABCDF 1\n BCDEF 2"
+            }
+        ]
+    },
+    {
+        "nome": "Dark Spoiler",
+        "codigo": "INT-B2",
+        "enunciado": "Se voc\u00ea ainda pretende\n assistir \u00e0 1\u00aa temporada da\n s\u00e9rie da Netflix \u201cDark\u201d, pule\n para o pr\u00f3ximo problema. \nJonas Kahnwald \u00e9 um\n viajante do tempo que\n desempenha um papel\n muito importante ao longo\n da hist\u00f3ria da cidade de\n Winden.\n Como o tempo n\u00e3o\n passa de maneira linear\n pra Jonas, \u00e0s vezes fica\n dif\u00edcil para que ele consiga\n se situar temporalmente.\n Por conta disso, Jonas\n viajou at\u00e9 o nosso \u201cpresente\u201d e solicitou sua ajuda na organiza\u00e7\u00e3o de algumas linhas do\n tempo.\n Sua tarefa \u00e9 implementar um programa que, dado um conjunto de datas \u2013 no formato\n dia-m\u00eas-ano \u2013 retorna uma lista destas datas em ordem crescente.",
+        "entrada": " A entrada \u00e9 composta por v\u00e1rias linhas, terminando em EOF1. Cada linha da entrada\n cont\u00e9m 3 inteiros D, M e A, respectivamente, o dia, m\u00eas e ano que comp\u00f5em uma data a\n ser ordenada",
+        "saida": "Seu programa deve imprimir o mesmo n\u00famero de linhas da entrada, onde a i-\u00e9sima\n linha cont\u00e9m os inteiros D, M e A que representam a i-\u00e9sima data.",
+        "casos_exemplo": [
+            {
+                "entrada": "21 6 2019\n 9 10 1986\n 22 10 2019\n 4 11 2019",
+                "saida": "9 10 1986\n 21 6 2019\n 22 10 2019\n 4 11 2019"
+            },
+            {
+                "entrada": " 10 11 1953\n 9 11 2019\n 12 11 1986\n 10 11 1986\n 11 11 1953\n 11 11 1986\n 11 11 2019",
+                "saida": " 10 11 1953\n 11 11 1953\n 10 11 1986\n 11 11 1986\n 12 11 1986\n 9 11 2019\n 11 11 2019"
+            }
+        ]
+    }
+]

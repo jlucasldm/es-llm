@@ -4,3 +4,13 @@ class Questao:
         self.entarda = entrada
         self.saida = saida
         self.casos_exemplo = casos_exemplo
+
+class BancoDeQuestoes:
+    def __init__(self):
+        self.questoes = []
+
+    def adicionar_questao(self, questao: Questao):
+        self.questoes.append(questao)
+
+    def remover_questao(self, questao: Questao):
+        self.questoes.remove(questao)
