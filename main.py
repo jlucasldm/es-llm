@@ -1,7 +1,7 @@
 from model.questao import Questao
 from provider.api_provider import OpenAIProvider
 
-ENUNCIADO = """ Durante sua aventura pelas Terras-Selváticas,
+ENUNCIADO = """Durante sua aventura pelas Terras-Selváticas,
      Bilbo Bolseiro  e seus amigos anões precisarão
      enfrentar a Trevamata para chegar na Montanha
      Solitária. Porém, sabemos que essa não é uma tarefa
@@ -9,7 +9,7 @@ ENUNCIADO = """ Durante sua aventura pelas Terras-Selváticas,
      devem, em hipótese alguma, sair da trilha. Por isso,
      Gandalf convocou os alunos de programação da
      UFBA para ajudar Bilbo e seus amigos.
-     A Trevamata é  terreno traiçoeiro e sua trilha,
+     A Trevamata é um terreno traiçoeiro e sua trilha,
      em alguns trechos, tem o caminho sendo galhos de
      grandes árvores, que tem um limite de peso. Assim,
      terão que passar um por um por esses trechos de
@@ -31,60 +31,97 @@ SAIDA = """Caso a capacidade da estrada não seja excedida, o programa deve impr
 
 CASOS_EXEMPLO = [
         {
-            "entrada": "6\nThorin 60\nBalin 55\nDwalin 59\nFili 68\nKili 53\nDori 6\n 250",
+            "entrada": """
+            6
+            Thorin 60
+            Balin 55
+            Dwalin 59
+            Fili 68
+            Kili 53
+            Dori 6
+            250
+            """,
             "saida": "Vamos todos encontrar a montanha!",
         },
         {
-            "entrada": "7\nNori 50\nOri 57\nOin 52\nGloin 58\nBifur 55\nBofur 53\nBombur 63\n57",
-            "saida": "Vamos virar almoço de aranhas gigantes!\nGloin\nBombur",
+            "entrada": """
+            7
+            Nori 50
+            Ori 57
+            Oin 52
+            Gloin 58
+            Bifur 55
+            Bofur 53
+            Bombur 63
+            57
+            """,
+            "saida": """
+            Vamos virar almoço de aranhas gigantes!
+            Gloin
+            Bombur
+            """,
         },
     ]
 
-MESSAGES = [
-        {
-            "role": "system",
-            "content": """
-                    Você é um modelo especializado em programação competitiva. Sua tarefa é gerar casos de teste válidos 
-                    para problemas computacionais, garantindo que as saídas correspondam exatamente ao resultado correto 
-                    de uma implementação funcional do problema.
-                    """,
-        },
-        {
-            "role": "user",
-            "content": f"""
-                    Uma questão de programação competitiva é composta por um enunciado, formato de entarda, formato de saída
-                    e pares de exemplos de entrada e saída. Processe as seguintes informações de uma questão de programação
-                    competitiva:
-                    \n
-                    Enunciado: {ENUNCIADO}\n
-                    Entrada: {ENTRADA}\n
-                    Saída: {SAIDA}\n
-                    Casos de exemplo: {CASOS_EXEMPLO}\n
-                    \n
-                    Com base nas informações fornecidas sobre e levando em consideração uma resolução ideal da questão, 
-                    gere 15 casos de teste variados, incluindo entradas e as saídas esperadas.
+MESSAGES = MESSAGES = [
+    {
+        "role": "system",
+        "content": """
+            Você é um modelo especializado em programação competitiva. Sua tarefa é interpretar corretamente
+            enunciados de problemas computacionais, implementar soluções baseadas nas regras fornecidas e
+            gerar casos de teste válidos e relevantes para avaliar a qualidade e a diversidade da implementação.
+        """
+    },
+    {
+        "role": "user",
+        "content": f"""
+            Considere a seguinte questão de programação competitiva, que será descrita com um enunciado, formato
+            de entrada, formato de saída e exemplos fornecidos:
 
-                    Certifique-se de que:
-                    1. As entradas sigam exatamente o formato descrito no enunciado.
-                    2. As saídas sejam calculadas corretamente com base nas regras descritas.
-                    3. Inclua:   
-                        - **Casos simples:** Entradas mínimas para testar a funcionalidade básica.
-                        - **Casos médios:** Entradas de tamanho intermediário para verificar a consistência
-                        - **Casos grandes:** Entradas no limite máximo permitido pelo problema para avaliar desempenho.
-                        - **Casos especiais:** Cenários como valores extremos, padrões repetitivos e casos críticos 
-                            descritos no enunciado.
+            Enunciado: "{ENUNCIADO}"
+            Entrada: "{ENTRADA}"
+            Saída: "{SAIDA}"
+            Casos de exemplo: "{CASOS_EXEMPLO}"
 
-                    Apresente cada caso de teste no formato:
-                        Entrada:[Dados de entrada]
-                        Saída:[Resultado esperado]
+            **Tarefa 1:** Processe cuidadosamente o enunciado, identificando todas as nuances e especificidades 
+            das regras descritas. Avalie, especialmente, as condições mencionadas que podem alterar a forma como 
+            o problema deve ser solucionado.
+            
+            **Tarefa 2:** Desenvolva um programa que implemente uma solução para a questão, seguindo rigorosamente 
+            as regras e condições identificadas. Submeta os casos de exemplo fornecidos ao programa e valide se a saída 
+            gerada corresponde ao resultado esperado. Se houver discrepâncias, revise cuidadosamente a implementação 
+            para corrigir qualquer erro.
 
-                    Tente ao máximo cobrir casos diversos de teste.
-                    """,
-        },
-    ]
+            **Tarefa 3:** Após validar que a implementação está correta, gere quinze novos casos de teste. Certifique-se 
+            de que esses casos sejam válidos e cubram diferentes cenários, incluindo:
+            - Casos simples: Entradas mínimas para validar o comportamento básico.
+            - Casos médios: Entradas intermediárias para testar consistência.
+            - Casos complexos: Entradas no limite superior permitido pelo problema.
+            - Casos especiais: Cenários específicos que exploram nuances do enunciado.
 
-if __name__ == "main":
-    questao = Questao(ENUNCIADO, ENTRADA, SAIDA, CASOS_EXEMPLO)
-    api_provider = OpenAIProvider("gpt-4o-mini", 3000, 0.3)
-    response = api_provider.get_response(MESSAGES)
-    api_provider.save_response(response)
+            **Tarefa 4:** Submeta os casos de teste gerados ao programa implementado pela primeira tarefa e valide se a 
+            saída gerada corresponde ao resultado esperado utilizando. Avalie a qualidade dos casos com base em:
+            1. Diversidade: Os casos cobrem uma ampla gama de cenários e restrições?
+            2. Relevância: Os casos destacam nuances e condições particulares do problema?
+            3. Cobertura: Os casos testam todas as possíveis saídas do programa?
+
+            **Formato dos Casos de Teste Gerados:** 
+            Retorne cada caso no seguinte formato:
+            Entrada:
+            [Dados de entrada]
+            Saída:
+            [Saída esperada]
+
+            **Atenção:** Certifique-se de que sua interpretação e implementação sejam sensíveis a todos os detalhes do 
+            enunciado. Qualquer interpretação incorreta resultará em uma solução inválida.
+
+            Apenas continue quando estiver seguro de que a solução, os casos de teste gerados e a validação final estão 
+            corretos e de acordo com as especificações do problema.
+        """
+    }
+]
+
+questao = Questao(ENUNCIADO, ENTRADA, SAIDA, CASOS_EXEMPLO)
+api_provider = OpenAIProvider("gpt-4o", 3000, 0.3)
+response = api_provider.get_response(MESSAGES)
+api_provider.save_response(response)

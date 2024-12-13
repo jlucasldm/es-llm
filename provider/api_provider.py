@@ -6,7 +6,7 @@ API_KEY = settings.openai.API_KEY
 
 class OpenAIProvider:
     def __init__(self, model: str, max_tokens: int, temperature: float):
-        self.client = OpenAI(API_KEY)
+        self.client = OpenAI(api_key=API_KEY)
         self.model = model
         self.max_tokens = max_tokens
         self.temperature = temperature
