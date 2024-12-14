@@ -8,9 +8,10 @@ import json
 def get_questoes():
     questoes = []
     for file in os.listdir("questoes"):
-        if file.endswith(".json"):
+        if file.endswith(".json") and file != "banco_questoes.json":
             with open(f"questoes/{file}", "r+", encoding="utf-8") as f:
                 questoes.append(json.load(f))
+            f.close()
     return questoes
 
 
@@ -26,6 +27,7 @@ def build_banco_questoes():
                 "entrada": questao["entrada"],
                 "saida": questao["saida"],
                 "casos_exemplo": questao["casos_exemplo"],
+                "resolucao": questao["resolucao"],
             }
         )
     with open("questoes/banco_questoes.json", "w+", encoding="utf-8") as f:

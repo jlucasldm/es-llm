@@ -1,19 +1,4 @@
-from openai import OpenAI
-from openai.types.chat import ChatCompletion
-from config import settings
-
-API_KEY = settings.openai.API_KEY
-
-
-class OpenAIProvider:
-    def __init__(self, model: str, max_tokens: int, temperature: float):
-        self.client = OpenAI(api_key=API_KEY)
-        self.model = model
-        self.max_tokens = max_tokens
-        self.temperature = temperature
-
-    def get_prompt(self, questao: dict) -> list[dict]:
-        prompt = [
+prompt = [
             {
                 "role": "system",
                 "content": """
@@ -36,7 +21,7 @@ class OpenAIProvider:
                     <resolucao>: "{questao['resolucao']}"
 
                     **Tarefa:** Sua missão é interpretar a <resolucao> em função do <enunciado> e dos <casos_de_exemplo>.
-                    Após isso, você deve gerar casos de teste novos, diversificados e alinhados com o enunciado e a 
+                    Após isso, você deve gerar casos de teste novos, diversificados e alinhados com o enunciado e a
                     resolução fornecida.
 
                     **Passo 1: Compreensão e Análise do Problema**
@@ -92,21 +77,3 @@ class OpenAIProvider:
                 """
             }
         ]
-
-        return prompt
-
-    def get_response(self, prompt: list[dict]) -> ChatCompletion:
-        completion = self.client.chat.completions.create(
-            model=self.model,
-            messages=prompt,
-            max_tokens=self.max_tokens,
-            temperature=self.temperature,
-        )
-
-        return completion
-
-    @staticmethod
-    def save_response(completion: ChatCompletion, nome: str, dir: str) -> None:
-        f = open(f"{dir}/{nome}.txt", "w+", encoding="utf-8")
-        f.write(completion.choices[0].message.content)
-        f.close()
