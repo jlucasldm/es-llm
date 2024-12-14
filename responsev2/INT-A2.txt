@@ -1,0 +1,82 @@
+### Tarefa 1: Análise do Problema
+
+#### Regras Explícitas
+1. **Entrada de Dados**:
+   - A primeira linha contém um inteiro `N` (1 <= N <= 100), representando a quantidade de missões.
+   - A segunda linha contém `N` inteiros `X` (1 <= X <= 10), representando o XP de cada missão.
+   - A terceira linha contém `N` inteiros `B` (1 <= B <= 5), representando o bônus para cada missão.
+   - A quarta linha contém dois inteiros: `M` (1 <= M <= 10000), o total de XP necessário para subir de nível, e `A` (0 <= A <= 2), um bônus adicional.
+
+2. **Cálculo do XP Total**:
+   - O XP total é calculado como a soma de `XP[i] * (B[i] + A)` para cada missão `i`.
+
+3. **Condições de Saída**:
+   - Se o XP total for maior ou igual a `M`, imprime "Upou de Nivel!".
+   - Caso contrário, imprime "Nao foi dessa vez!".
+
+#### Restrições Implícitas
+- O valor de `N` deve ser positivo e não exceder 100, o que limita o número de missões.
+- Os valores de `X` e `B` têm limites que garantem que o cálculo do XP total não exceda um valor razoável, mesmo no caso máximo.
+
+#### Condições Excepcionais
+- Se `A` for 0, o bônus não afetará o cálculo, mas ainda assim deve ser considerado.
+- O caso em que `M` é muito alto em relação ao XP total possível deve ser testado para garantir que a lógica funcione corretamente.
+
+### Tarefa 2: Implementação da Solução
+
+Aqui está a implementação da lógica descrita no enunciado:
+
+```python
+def verifica_nivel(N, X, B, M, A):
+    total_xp = sum(X[i] * (B[i] + A) for i in range(N))
+    if total_xp >= M:
+        return "Upou de Nivel!"
+    else:
+        return "Nao foi dessa vez!"
+
+# Testando com os casos de exemplo
+exemplo1 = (5, [1, 2, 3, 4, 5], [1, 1, 1, 1, 1], 16, 1)
+exemplo2 = (4, [10, 15, 10, 5], [1, 2, 3, 4], 100, 0)
+
+print(verifica_nivel(*exemplo1))  # Esperado: "Upou de Nivel!"
+print(verifica_nivel(*exemplo2))  # Esperado: "Nao foi dessa vez!"
+```
+
+### Tarefa 3: Geração de Novos Casos de Teste
+
+Aqui estão 15 novos casos de teste:
+
+1. **Caso Simples**:
+   - Entrada: `1\n1\n1\n2 0`
+   - Saída: `Nao foi dessa vez!`
+
+2. **Caso Simples**:
+   - Entrada: `1\n1\n1\n1 1`
+   - Saída: `Upou de Nivel!`
+
+3. **Caso Médio**:
+   - Entrada: `3\n2 2 2\n1 1 1\n10 0`
+   - Saída: `Nao foi dessa vez!`
+
+4. **Caso Médio**:
+   - Entrada: `3\n2 2 2\n1 1 1\n12 1`
+   - Saída: `Upou de Nivel!`
+
+5. **Caso Médio**:
+   - Entrada: `5\n1 1 1 1 1\n1 1 1 1 1\n10 0`
+   - Saída: `Nao foi dessa vez!`
+
+6. **Caso Médio**:
+   - Entrada: `5\n2 2 2 2 2\n1 1 1 1 1\n10 1`
+   - Saída: `Upou de Nivel!`
+
+7. **Caso Complexo**:
+   - Entrada: `10\n10 10 10 10 10 10 10 10 10 10\n5 5 5 5 5 5 5 5 5 5\n500 2`
+   - Saída: `Upou de Nivel!`
+
+8. **Caso Complexo**:
+   - Entrada: `10\n10 10 10 10 10 10 10 10 10 10\n5 5 5 5 5 5 5 5 5 5\n600 2`
+   - Saída: `Nao foi dessa vez!`
+
+9. **Caso Complexo**:
+   - Entrada: `100\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1

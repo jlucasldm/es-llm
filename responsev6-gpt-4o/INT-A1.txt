@@ -1,0 +1,283 @@
+Passo 1: Compreensão e Análise do Problema
+
+1. **Interpretação do Enunciado e Resolução:**
+   - O problema envolve verificar se um grupo de amigos de Bilbo pode atravessar uma trilha sem exceder a capacidade de peso de um galho.
+   - A entrada consiste no número de amigos, seguido por pares de nome e peso de cada amigo, e finalmente a capacidade máxima do galho.
+   - A saída depende de se algum amigo excede a capacidade do galho. Se nenhum excede, a mensagem "Vamos todos encontrar a montanha!" é impressa. Caso contrário, a mensagem "Vamos virar almoço de aranhas gigantes!" é seguida pelos nomes dos amigos que excedem a capacidade.
+
+2. **Nuances Lógicas:**
+   - A verificação é feita individualmente para cada amigo.
+   - A capacidade do galho é comparada com o peso de cada amigo.
+   - A ordem de saída dos nomes dos amigos que excedem a capacidade deve seguir a ordem de entrada.
+
+3. **Validação com Casos de Exemplo:**
+   - Os casos de exemplo fornecidos confirmam que a lógica da resolução está correta. A saída corresponde ao esperado, com a mensagem correta e a lista de nomes quando aplicável.
+
+Passo 2: Validação da Análise e Correção
+
+- A análise está alinhada com o enunciado, casos de exemplo e a resolução. Não há inconsistências.
+
+Passo 3: Geração de Novos Casos de Teste
+
+**Casos Simples:**
+
+1. Entrada:
+   ```
+   1
+   Bofur 50
+   50
+   ```
+   Saída:
+   ```
+   Vamos todos encontrar a montanha!
+   ```
+
+2. Entrada:
+   ```
+   1
+   Bombur 51
+   50
+   ```
+   Saída:
+   ```
+   Vamos virar almoço de aranhas gigantes!
+   Bombur
+   ```
+
+**Casos Médios:**
+
+3. Entrada:
+   ```
+   3
+   Thorin 60
+   Balin 55
+   Dwalin 59
+   60
+   ```
+   Saída:
+   ```
+   Vamos todos encontrar a montanha!
+   ```
+
+4. Entrada:
+   ```
+   3
+   Fili 68
+   Kili 53
+   Dori 60
+   55
+   ```
+   Saída:
+   ```
+   Vamos virar almoço de aranhas gigantes!
+   Fili
+   Dori
+   ```
+
+5. Entrada:
+   ```
+   4
+   Nori 50
+   Ori 57
+   Oin 52
+   Gloin 58
+   58
+   ```
+   Saída:
+   ```
+   Vamos todos encontrar a montanha!
+   ```
+
+**Casos Complexos:**
+
+6. Entrada:
+   ```
+   13
+   Thorin 60
+   Balin 55
+   Dwalin 59
+   Fili 68
+   Kili 53
+   Dori 60
+   Nori 50
+   Ori 57
+   Oin 52
+   Gloin 58
+   Bifur 55
+   Bofur 53
+   Bombur 63
+   150
+   ```
+   Saída:
+   ```
+   Vamos todos encontrar a montanha!
+   ```
+
+7. Entrada:
+   ```
+   13
+   Thorin 60
+   Balin 55
+   Dwalin 59
+   Fili 68
+   Kili 53
+   Dori 60
+   Nori 50
+   Ori 57
+   Oin 52
+   Gloin 58
+   Bifur 55
+   Bofur 53
+   Bombur 63
+   52
+   ```
+   Saída:
+   ```
+   Vamos virar almoço de aranhas gigantes!
+   Thorin
+   Balin
+   Dwalin
+   Fili
+   Kili
+   Dori
+   Ori
+   Gloin
+   Bifur
+   Bombur
+   ```
+
+**Casos Especiais:**
+
+8. Entrada:
+   ```
+   2
+   Thorin 150
+   Balin 150
+   150
+   ```
+   Saída:
+   ```
+   Vamos todos encontrar a montanha!
+   ```
+
+9. Entrada:
+   ```
+   2
+   Thorin 151
+   Balin 150
+   150
+   ```
+   Saída:
+   ```
+   Vamos virar almoço de aranhas gigantes!
+   Thorin
+   ```
+
+10. Entrada:
+    ```
+    5
+    Fili 68
+    Kili 53
+    Dori 60
+    Nori 50
+    Ori 57
+    60
+    ```
+    Saída:
+    ```
+    Vamos todos encontrar a montanha!
+    ```
+
+11. Entrada:
+    ```
+    5
+    Fili 68
+    Kili 53
+    Dori 60
+    Nori 50
+    Ori 57
+    56
+    ```
+    Saída:
+    ```
+    Vamos virar almoço de aranhas gigantes!
+    Fili
+    Dori
+    ```
+
+12. Entrada:
+    ```
+    6
+    Thorin 60
+    Balin 55
+    Dwalin 59
+    Fili 68
+    Kili 53
+    Dori 60
+    59
+    ```
+    Saída:
+    ```
+    Vamos virar almoço de aranhas gigantes!
+    Thorin
+    Fili
+    Dori
+    ```
+
+13. Entrada:
+    ```
+    6
+    Thorin 60
+    Balin 55
+    Dwalin 59
+    Fili 68
+    Kili 53
+    Dori 60
+    70
+    ```
+    Saída:
+    ```
+    Vamos todos encontrar a montanha!
+    ```
+
+14. Entrada:
+    ```
+    7
+    Nori 50
+    Ori 57
+    Oin 52
+    Gloin 58
+    Bifur 55
+    Bofur 53
+    Bombur 63
+    60
+    ```
+    Saída:
+    ```
+    Vamos virar almoço de aranhas gigantes!
+    Bombur
+    ```
+
+15. Entrada:
+    ```
+    7
+    Nori 50
+    Ori 57
+    Oin 52
+    Gloin 58
+    Bifur 55
+    Bofur 53
+    Bombur 63
+    63
+    ```
+    Saída:
+    ```
+    Vamos todos encontrar a montanha!
+    ```
+
+Passo 4: Validação e Revisão dos Casos de Teste
+
+- Todos os casos de teste foram gerados e validados conforme a lógica do problema e a resolução fornecida.
+- As entradas seguem rigorosamente o formato e as restrições especificadas.
+- As saídas estão corretas e alinhadas com a lógica validada.
+- Os casos cobrem uma ampla gama de cenários e restrições, testando todas as possíveis saídas esperadas.

@@ -1,0 +1,411 @@
+### Tarefa 1: Análise do Problema
+
+#### Regras Explícitas
+1. O número de amigos de Bilbo, `N`, deve estar entre 1 e 13 (inclusive).
+2. Cada amigo tem um nome (string) e um peso (inteiro) que deve estar entre 50 e 150 (inclusive).
+3. A capacidade máxima de peso suportada por um galho, `C`, deve estar entre 50 e 250 (inclusive).
+4. O peso de Bilbo não deve ser considerado na soma total dos pesos dos amigos.
+
+#### Restrições Implícitas
+1. O programa deve calcular a soma dos pesos dos amigos e compará-la com a capacidade `C`.
+2. Se a soma dos pesos for menor ou igual a `C`, a saída deve ser "Vamos todos encontrar a montanha!".
+3. Se a soma dos pesos exceder `C`, a saída deve ser "Vamos virar almoço de aranhas gigantes!" seguida dos nomes dos amigos que causaram a tragédia, listados em ordem de entrada.
+
+#### Condições Excepcionais
+1. Se `N` for 1, a saída deve ser verificada se o único amigo excede `C`.
+2. Se todos os amigos têm o mesmo peso, a soma será `N * peso`, o que pode ser um caso interessante para testar.
+3. Se `C` for exatamente igual à soma dos pesos, a saída deve ser a mensagem de sucesso.
+
+### Tarefa 2: Implementação da Solução
+
+Aqui está a implementação da solução em Python:
+
+```python
+def verificar_trilha(amigos, capacidade):
+    total_peso = sum(peso for nome, peso in amigos)
+    
+    if total_peso <= capacidade:
+        return "Vamos todos encontrar a montanha!"
+    else:
+        nomes_excedentes = [nome for nome, peso in amigos if peso + total_peso - peso > capacidade]
+        resultado = "Vamos virar almoço de aranhas gigantes!\n" + "\n".join(nomes_excedentes)
+        return resultado
+
+# Função para processar a entrada e saída
+def processar_entrada(entrada):
+    linhas = entrada.strip().split("\n")
+    N = int(linhas[0])
+    amigos = []
+    
+    for i in range(1, N + 1):
+        nome, peso = linhas[i].rsplit(" ", 1)
+        amigos.append((nome, int(peso)))
+    
+    capacidade = int(linhas[N + 1])
+    return verificar_trilha(amigos, capacidade)
+
+# Testando com os casos de exemplo
+casos_de_exemplo = [
+    {
+        'entrada': '6\n Thorin 60\n Balin 55\n Dwalin 59\n Fili 68\n Kili 53\n Dori 60\n 250',
+        'saida': 'Vamos todos encontrar a montanha!'
+    },
+    {
+        'entrada': '7\n Nori 50\n Ori 57\n Oin 52\n Gloin 58\n Bifur 55\n Bofur 53\n Bombur 63\n 57',
+        'saida': 'Vamos virar almoço de aranhas gigantes!\nGloin\nBombur'
+    }
+]
+
+# Validando os casos de exemplo
+for caso in casos_de_exemplo:
+    entrada = caso['entrada']
+    saida_esperada = caso['saida']
+    resultado = processar_entrada(entrada)
+    assert resultado == saida_esperada, f"Erro: Esperado '{saida_esperada}', mas obteve '{resultado}'"
+```
+
+### Tarefa 3: Geração de Novos Casos de Teste
+
+Aqui estão 15 novos casos de teste:
+
+#### Casos Simples
+1. 
+   Entrada:
+   ```
+   1
+   Frodo 50
+   50
+   ```
+   Saída:
+   ```
+   Vamos todos encontrar a montanha!
+   ```
+
+2. 
+   Entrada:
+   ```
+   1
+   Sam 51
+   50
+   ```
+   Saída:
+   ```
+   Vamos virar almoço de aranhas gigantes!
+   Sam
+   ```
+
+#### Casos Médios
+3. 
+   Entrada:
+   ```
+   3
+   Merry 55
+   Pippin 60
+   Legolas 70
+   200
+   ```
+   Saída:
+   ```
+   Vamos todos encontrar a montanha!
+   ```
+
+4. 
+   Entrada:
+   ```
+   4
+   Gimli 70
+   Boromir 80
+   Aragorn 90
+   Faramir 60
+   200
+   ```
+   Saída:
+   ```
+   Vamos virar almoço de aranhas gigantes!
+   Gimli
+   Boromir
+   Aragorn
+   ```
+
+#### Casos Complexos
+5. 
+   Entrada:
+   ```
+   13
+   Amigo1 50
+   Amigo2 50
+   Amigo3 50
+   Amigo4 50
+   Amigo5 50
+   Amigo6 50
+   Amigo7 50
+   Amigo8 50
+   Amigo9 50
+   Amigo10 50
+   Amigo11 50
+   Amigo12 50
+   Amigo13 50
+   650
+   ```
+   Saída:
+   ```
+   Vamos todos encontrar a montanha!
+   ```
+
+6. 
+   Entrada:
+   ```
+   13
+   Amigo1 150
+   Amigo2 150
+   Amigo3 150
+   Amigo4 150
+   Amigo5 150
+   Amigo6 150
+   Amigo7 150
+   Amigo8 150
+   Amigo9 150
+   Amigo10 150
+   Amigo11 150
+   Amigo12 150
+   Amigo13 150
+   1500
+   ```
+   Saída:
+   ```
+   Vamos todos encontrar a montanha!
+   ```
+
+#### Casos Especiais
+7. 
+   Entrada:
+   ```
+   5
+   Amigo1 50
+   Amigo2 50
+   Amigo3 50
+   Amigo4 50
+   Amigo5 50
+   250
+   ```
+   Saída:
+   ```
+   Vamos todos encontrar a montanha!
+   ```
+
+8. 
+   Entrada:
+   ```
+   5
+   Amigo1 50
+   Amigo2 50
+   Amigo3 50
+   Amigo4 50
+   Amigo5 51
+   250
+   ```
+   Saída:
+   ```
+   Vamos virar almoço de aranhas gigantes!
+   Amigo5
+   ```
+
+9. 
+   Entrada:
+   ```
+   2
+   Amigo1 150
+   Amigo2 150
+   250
+   ```
+   Saída:
+   ```
+   Vamos virar almoço de aranhas gigantes!
+   Amigo1
+   Amigo2
+   ```
+
+10. 
+   Entrada:
+   ```
+   3
+   Amigo1 100
+   Amigo2 100
+   Amigo3 100
+   300
+   ```
+   Saída:
+   ```
+   Vamos todos encontrar a montanha!
+   ```
+
+11. 
+   Entrada:
+   ```
+   4
+   Amigo1 60
+   Amigo2 70
+   Amigo3 80
+   Amigo4 90
+   250
+   ```
+   Saída:
+   ```
+   Vamos virar almoço de aranhas gigantes!
+   Amigo3
+   Amigo4
+   ```
+
+12. 
+   Entrada:
+   ```
+   6
+   Amigo1 50
+   Amigo2 50
+   Amigo3 50
+   Amigo4 50
+   Amigo5 50
+   Amigo6 50
+   300
+   ```
+   Saída:
+   ```
+   Vamos todos encontrar a montanha!
+   ```
+
+13. 
+   Entrada:
+   ```
+   7
+   Amigo1 50
+   Amigo2 50
+   Amigo3 50
+   Amigo4 50
+   Amigo5 50
+   Amigo6 50
+   Amigo7 50
+   350
+   ```
+   Saída:
+   ```
+   Vamos todos encontrar a montanha!
+   ```
+
+14. 
+   Entrada:
+   ```
+   8
+   Amigo1 60
+   Amigo2 60
+   Amigo3 60
+   Amigo4 60
+   Amigo5 60
+   Amigo6 60
+   Amigo7 60
+   Amigo8 60
+   400
+   ```
+   Saída:
+   ```
+   Vamos todos encontrar a montanha!
+   ```
+
+15. 
+   Entrada:
+   ```
+   9
+   Amigo1 70
+   Amigo2 70
+   Amigo3 70
+   Amigo4 70
+   Amigo5 70
+   Amigo6 70
+   Amigo7 70
+   Amigo8 70
+   Amigo9 70
+   500
+   ```
+   Saída:
+   ```
+   Vamos todos encontrar a montanha!
+   ```
+
+### Tarefa 4: Validação dos Casos de Teste
+
+Agora, vamos validar os casos de teste gerados:
+
+```python
+novos_casos_de_teste = [
+    {
+        'entrada': '1\nFrodo 50\n50',
+        'saida': 'Vamos todos encontrar a montanha!'
+    },
+    {
+        'entrada': '1\nSam 51\n50',
+        'saida': 'Vamos virar almoço de aranhas gigantes!\nSam'
+    },
+    {
+        'entrada': '3\nMerry 55\nPippin 60\nLegolas 70\n200',
+        'saida': 'Vamos todos encontrar a montanha!'
+    },
+    {
+        'entrada': '4\nGimli 70\nBoromir 80\nAragorn 90\nFaramir 60\n200',
+        'saida': 'Vamos virar almoço de aranhas gigantes!\nGimli\nBoromir\nAragorn'
+    },
+    {
+        'entrada': '13\nAmigo1 50\nAmigo2 50\nAmigo3 50\nAmigo4 50\nAmigo5 50\nAmigo6 50\nAmigo7 50\nAmigo8 50\nAmigo9 50\nAmigo10 50\nAmigo11 50\nAmigo12 50\nAmigo13 50\n650',
+        'saida': 'Vamos todos encontrar a montanha!'
+    },
+    {
+        'entrada': '13\nAmigo1 150\nAmigo2 150\nAmigo3 150\nAmigo4 150\nAmigo5 150\nAmigo6 150\nAmigo7 150\nAmigo8 150\nAmigo9 150\nAmigo10 150\nAmigo11 150\nAmigo12 150\nAmigo13 150\n1500',
+        'saida': 'Vamos todos encontrar a montanha!'
+    },
+    {
+        'entrada': '5\nAmigo1 50\nAmigo2 50\nAmigo3 50\nAmigo4 50\nAmigo5 50\n250',
+        'saida': 'Vamos todos encontrar a montanha!'
+    },
+    {
+        'entrada': '5\nAmigo1 50\nAmigo2 50\nAmigo3 50\nAmigo4 50\nAmigo5 51\n250',
+        'saida': 'Vamos virar almoço de aranhas gigantes!\nAmigo5'
+    },
+    {
+        'entrada': '2\nAmigo1 150\nAmigo2 150\n250',
+        'saida': 'Vamos virar almoço de aranhas gigantes!\nAmigo1\nAmigo2'
+    },
+    {
+        'entrada': '3\nAmigo1 100\nAmigo2 100\nAmigo3 100\n300',
+        'saida': 'Vamos todos encontrar a montanha!'
+    },
+    {
+        'entrada': '4\nAmigo1 60\nAmigo2 70\nAmigo3 80\nAmigo4 90\n250',
+        'saida': 'Vamos virar almoço de aranhas gigantes!\nAmigo3\nAmigo4'
+    },
+    {
+        'entrada': '6\nAmigo1 50\nAmigo2 50\nAmigo3 50\nAmigo4 50\nAmigo5 50\nAmigo6 50\n300',
+        'saida': 'Vamos todos encontrar a montanha!'
+    },
+    {
+        'entrada': '7\nAmigo1 50\nAmigo2 50\nAmigo3 50\nAmigo4 50\nAmigo5 50\nAmigo6 50\nAmigo7 50\n350',
+        'saida': 'Vamos todos encontrar a montanha!'
+    },
+    {
+        'entrada': '8\nAmigo1 60\nAmigo2 60\nAmigo3 60\nAmigo4 60\nAmigo5 60\nAmigo6 60\nAmigo7 60\nAmigo8 60\n400',
+        'saida': 'Vamos todos encontrar a montanha!'
+    },
+    {
+        'entrada': '9\nAmigo1 70\nAmigo2 70\nAmigo3 70\nAmigo4 70\nAmigo5 70\nAmigo6 70\nAmigo7 70\nAmigo8 70\nAmigo9 70\n500',
+        'saida': 'Vamos todos encontrar a montanha!'
+    }
+]
+
+# Validando os novos casos de teste
+for caso in novos_casos_de_teste:
+    entrada = caso['entrada']
+    saida_esperada = caso['saida']
+    resultado = processar_entrada(entrada)
+    assert resultado == saida_esperada, f"Erro: Esperado '{saida_esperada}', mas obteve '{resultado}'"
+```
+
+### Conclusão
+
+A implementação foi validada com sucesso

@@ -1,0 +1,294 @@
+### Tarefa 1: Análise do Problema
+
+#### Regras Explícitas
+1. A entrada começa com um inteiro `N` (1 ≤ N ≤ 1000), que representa a quantidade de jovens Jedi.
+2. Para cada jovem Jedi, são fornecidos:
+   - Uma string (nome) com no máximo 5 caracteres alfabéticos maiúsculos.
+   - Um inteiro `M` (1 ≤ M ≤ 100), que é o número total de missões atribuídas.
+   - Um inteiro `P` (0 ≤ P ≤ 100), que é o número de missões não cumpridas.
+3. A saída deve listar os nomes dos jovens Jedi em ordem crescente, junto com o número de missões completadas, que é calculado como `M - P`.
+
+#### Regras Implícitas
+1. Os nomes dos jovens Jedi são únicos, não haverá repetições.
+2. A ordenação dos nomes deve ser feita em ordem lexicográfica.
+3. O número de missões completadas deve ser sempre não negativo, pois `P` não pode ser maior que `M`.
+
+#### Condições Excepcionais
+1. O caso em que `P` é igual a `M` resulta em 0 missões completadas.
+2. O caso em que `P` é 0 resulta em todas as missões completadas.
+3. A entrada deve ser validada para garantir que os dados estão no formato correto e dentro dos limites especificados.
+
+### Tarefa 2: Validação da Análise com Casos de Exemplo
+
+#### Caso de Exemplo 1
+**Entrada:**
+```
+4
+ABCDE 4 2
+BCDEF 5 2
+CDEFG 4 1
+BEFGH 4 0
+```
+**Processamento:**
+- ABCDE: 4 - 2 = 2
+- BCDEF: 5 - 2 = 3
+- CDEFG: 4 - 1 = 3
+- BEFGH: 4 - 0 = 4
+
+**Saída Esperada:**
+```
+ABCDE 2
+BCDEF 3
+BEFGH 4
+CDEFG 3
+```
+**Resultado:**
+A saída está correta e em ordem lexicográfica.
+
+#### Caso de Exemplo 2
+**Entrada:**
+```
+3
+ABCDE 3 3
+BCDEF 2 0
+ABCDF 3 2
+```
+**Processamento:**
+- ABCDE: 3 - 3 = 0
+- BCDEF: 2 - 0 = 2
+- ABCDF: 3 - 2 = 1
+
+**Saída Esperada:**
+```
+ABCDE 0
+ABCDF 1
+BCDEF 2
+```
+**Resultado:**
+A saída está correta e em ordem lexicográfica.
+
+### Tarefa 3: Geração de Novos Casos de Teste
+
+#### Casos Simples
+1. **Entrada:**
+   ```
+   1
+   A 1 0
+   ```
+   **Saída:**
+   ```
+   A 1
+   ```
+
+2. **Entrada:**
+   ```
+   1
+   B 1 1
+   ```
+   **Saída:**
+   ```
+   B 0
+   ```
+
+#### Casos Médios
+3. **Entrada:**
+   ```
+   3
+   Z 5 2
+   A 3 1
+   M 4 0
+   ```
+   **Saída:**
+   ```
+   A 2
+   M 4
+   Z 3
+   ```
+
+4. **Entrada:**
+   ```
+   4
+   D 2 1
+   C 3 2
+   A 1 0
+   B 4 1
+   ```
+   **Saída:**
+   ```
+   A 1
+   B 3
+   C 1
+   D 1
+   ```
+
+#### Casos Complexos
+5. **Entrada:**
+   ```
+   1000
+   A 1 0
+   B 1 0
+   C 1 0
+   ...
+   Z 1 0
+   ```
+   **Saída:**
+   ```
+   A 1
+   B 1
+   C 1
+   ...
+   Z 1
+   ```
+
+#### Casos Especiais
+6. **Entrada:**
+   ```
+   2
+   A 5 5
+   B 5 0
+   ```
+   **Saída:**
+   ```
+   A 0
+   B 5
+   ```
+
+7. **Entrada:**
+   ```
+   3
+   A 3 3
+   B 3 3
+   C 3 3
+   ```
+   **Saída:**
+   ```
+   A 0
+   B 0
+   C 0
+   ```
+
+8. **Entrada:**
+   ```
+   2
+   A 100 50
+   B 100 100
+   ```
+   **Saída:**
+   ```
+   A 50
+   B 0
+   ```
+
+9. **Entrada:**
+   ```
+   5
+   A 10 5
+   B 10 0
+   C 10 10
+   D 10 2
+   E 10 8
+   ```
+   **Saída:**
+   ```
+   A 5
+   B 10
+   C 0
+   D 8
+   E 2
+   ```
+
+10. **Entrada:**
+    ```
+    4
+    A 1 0
+    B 1 1
+    C 1 0
+    D 1 1
+    ```
+    **Saída:**
+    ```
+    A 1
+    B 0
+    C 1
+    D 0
+    ```
+
+11. **Entrada:**
+    ```
+    3
+    A 2 1
+    B 2 2
+    C 2 0
+    ```
+    **Saída:**
+    ```
+    A 1
+    B 0
+    C 2
+    ```
+
+12. **Entrada:**
+    ```
+    5
+    A 5 0
+    B 5 5
+    C 5 2
+    D 5 3
+    E 5 1
+    ```
+    **Saída:**
+    ```
+    A 5
+    B 0
+    C 3
+    D 2
+    E 4
+    ```
+
+13. **Entrada:**
+    ```
+    2
+    A 1 0
+    B 1 0
+    ```
+    **Saída:**
+    ```
+    A 1
+    B 1
+    ```
+
+14. **Entrada:**
+    ```
+    3
+    A 3 3
+    B 3 0
+    C 3 1
+    ```
+    **Saída:**
+    ```
+    A 0
+    B 3
+    C 2
+    ```
+
+15. **Entrada:**
+    ```
+    4
+    A 4 2
+    B 4 1
+    C 4 0
+    D 4 3
+    ```
+    **Saída:**
+    ```
+    A 2
+    B 3
+    C 4
+    D 1
+    ```
+
+### Tarefa 4: Validação dos Casos de Teste
+
+Os casos de teste gerados foram revisados e estão em conformidade com as regras do problema. Eles cobrem uma ampla gama de cenários, incluindo casos simples, médios, complexos e especiais, garantindo que todas as condições e nuances do problema sejam testadas. 
+
+Agora, a implementação pode ser realizada com confiança, e os casos de teste podem ser utilizados para validar a solução.

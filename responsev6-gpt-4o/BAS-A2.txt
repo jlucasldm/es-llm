@@ -1,0 +1,100 @@
+Passo 1: Compreensão e Análise do Problema
+
+1. O problema requer a soma de seis números inteiros, cada um representando o valor de um tesouro. Os valores variam de 1 a 10.
+2. A resolução lê seis números, soma-os e imprime o resultado.
+3. Os casos de exemplo fornecidos confirmam que a soma dos números de entrada é a saída esperada.
+
+Passo 2: Validação da Análise e Correção
+
+- A resolução e os casos de exemplo estão alinhados. A soma dos números de entrada é calculada corretamente.
+
+Passo 3: Geração de Novos Casos de Teste
+
+**Casos Simples:**
+
+Entrada:
+1 1 1 1 1 1
+Saída:
+6
+
+Entrada:
+10 1 1 1 1 1
+Saída:
+15
+
+**Casos Médios:**
+
+Entrada:
+5 5 5 5 5 5
+Saída:
+30
+
+Entrada:
+3 4 5 6 7 8
+Saída:
+33
+
+**Casos Complexos:**
+
+Entrada:
+10 10 10 10 10 10
+Saída:
+60
+
+Entrada:
+9 9 9 9 9 9
+Saída:
+54
+
+**Casos Especiais:**
+
+Entrada:
+1 10 1 10 1 10
+Saída:
+33
+
+Entrada:
+10 9 8 7 6 5
+Saída:
+45
+
+Entrada:
+2 2 2 2 2 2
+Saída:
+12
+
+Entrada:
+1 2 3 4 5 10
+Saída:
+25
+
+Entrada:
+10 10 1 1 1 1
+Saída:
+24
+
+Entrada:
+1 1 10 10 1 1
+Saída:
+24
+
+Entrada:
+6 6 6 6 6 6
+Saída:
+36
+
+Entrada:
+4 4 4 4 4 4
+Saída:
+24
+
+Entrada:
+7 7 7 7 7 7
+Saída:
+42
+
+Passo 4: Validação e Revisão dos Casos de Teste
+
+- Todos os casos de teste foram gerados conforme as restrições do problema.
+- As saídas foram calculadas usando a lógica da resolução fornecida.
+- Os casos cobrem uma ampla gama de cenários, incluindo valores mínimos, máximos e combinações variadas.

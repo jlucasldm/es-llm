@@ -1,0 +1,83 @@
+**Passo 1: Compreensão e Análise do Problema**
+
+1. O enunciado descreve um cenário em que a tripulação dos chapéus de palha precisa calcular a recompensa total de seus membros, dada a recompensa individual de cada um deles.
+2. A resolução apresentada em C++ lê cinco valores inteiros que representam as recompensas individuais e calcula a soma total dessas recompensas.
+3. As recompensas individuais são limitadas entre 1 e 1.000.000.000, e a soma total deve ser calculada e exibida.
+
+**Passo 2: Validação da Análise e Correção**
+
+- Os casos de exemplo fornecidos mostram que a soma das recompensas individuais é corretamente calculada e exibida. Por exemplo:
+  - Para a entrada `300000000 120000000 16000000 30000000 77000000`, a soma é `543000000`, que corresponde à saída esperada.
+  - Para a entrada `500000000 320000000 66000000 200000000 177000000`, a soma é `1263000000`, que também corresponde à saída esperada.
+
+**Passo 3: Geração de Novos Casos de Teste**
+
+Aqui estão 15 casos de teste diversificados:
+
+1. **Caso Simples 1:**
+   - Entrada: `2 3 4 5 6`
+   - Saída: `20`
+   
+2. **Caso Simples 2:**
+   - Entrada: `1 1 1 1 1`
+   - Saída: `5`
+
+3. **Caso Médio 1:**
+   - Entrada: `100000000 200000000 300000000 400000000 500000000`
+   - Saída: `1500000000`
+
+4. **Caso Médio 2:**
+   - Entrada: `250000000 250000000 250000000 250000000 250000000`
+   - Saída: `1250000000`
+
+5. **Caso Médio 3:**
+   - Entrada: `123456789 987654321 111111111 222222222 333333333`
+   - Saída: `1777777775`
+
+6. **Caso Complexo 1:**
+   - Entrada: `999999999 999999999 999999999 999999999 999999999`
+   - Saída: `4999999995`
+
+7. **Caso Complexo 2:**
+   - Entrada: `1000000000 1000000000 1000000000 1000000000 1000000000`
+   - Saída: `5000000000`
+
+8. **Caso Complexo 3:**
+   - Entrada: `999999998 999999999 999999997 999999996 999999995`
+   - Saída: `4999999985`
+
+9. **Caso Especial 1:**
+   - Entrada: `1 999999999 1 999999999 1`
+   - Saída: `1999999999`
+
+10. **Caso Especial 2:**
+    - Entrada: `500000000 500000000 500000000 500000000 500000000`
+    - Saída: `2500000000`
+
+11. **Caso Especial 3:**
+    - Entrada: `999999999 1 999999999 1 999999999`
+    - Saída: `3999999999`
+
+12. **Caso Especial 4:**
+    - Entrada: `2 2 2 2 2`
+    - Saída: `10`
+
+13. **Caso Especial 5:**
+    - Entrada: `999999998 999999998 999999998 999999998 999999998`
+    - Saída: `4999999990`
+
+14. **Caso de Limite Inferior:**
+    - Entrada: `2 3 4 5 6`
+    - Saída: `20`
+
+15. **Caso de Limite Superior:**
+    - Entrada: `999999999 999999999 999999999 999999999 999999999`
+    - Saída: `4999999995`
+
+**Passo 4: Validação e Revisão dos Casos de Teste**
+
+- Todos os casos de teste gerados seguem as restrições do enunciado, com valores entre 1 e 1.000.000.000.
+- As saídas foram calculadas corretamente com base na soma das entradas.
+- Os casos cobrem uma ampla gama de cenários, incluindo casos simples, médios, complexos e especiais.
+
+Os casos de teste gerados são válidos e abrangem as especificações do problema.

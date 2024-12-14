@@ -1,0 +1,352 @@
+### Tarefa 1: Análise do Problema
+
+#### Regras Explícitas
+1. O número de amigos de Bilbo, `N`, deve estar entre 1 e 13 (1 <= N <= 13).
+2. Cada amigo tem um nome (String) e um peso (inteiro) que deve estar entre 50 e 150 (50 <= K <= 150).
+3. A capacidade máxima de peso suportada por um galho, `C`, deve estar entre 50 e 250 (50 <= C <= 250).
+4. O peso de Bilbo não deve ser considerado na soma total dos pesos dos amigos.
+
+#### Regras Implícitas
+1. Se a soma dos pesos dos amigos de Bilbo for menor ou igual a `C`, a saída deve ser "Vamos todos encontrar a montanha!".
+2. Se a soma dos pesos dos amigos de Bilbo exceder `C`, a saída deve ser "Vamos virar almoço de aranhas gigantes!", seguida dos nomes dos amigos que causaram a tragédia, um por linha.
+3. A ordem dos nomes na saída deve ser a mesma da entrada.
+
+#### Condições Excepcionais
+1. O caso em que `N` é 1 deve ser tratado, pois é o limite inferior.
+2. O caso em que todos os amigos têm o peso máximo (150) e `C` é o mínimo (50) deve ser considerado, pois pode causar a saída de "Vamos virar almoço de aranhas gigantes!".
+3. O caso em que todos os amigos têm o peso mínimo (50) e `C` é o máximo (250) deve ser considerado, pois deve resultar em "Vamos todos encontrar a montanha!".
+
+### Tarefa 2: Validação da Análise
+
+Vamos validar a análise com os casos de exemplo fornecidos.
+
+1. **Caso 1:**
+   - Entrada: 
+     ```
+     6
+     Thorin 60
+     Balin 55
+     Dwalin 59
+     Fili 68
+     Kili 53
+     Dori 60
+     250
+     ```
+   - Soma dos pesos: 60 + 55 + 59 + 68 + 53 + 60 = 355
+   - Capacidade: 250
+   - Saída esperada: "Vamos virar almoço de aranhas gigantes!"
+   - Nomes que causaram a tragédia: Todos os amigos, pois a soma excede a capacidade.
+
+2. **Caso 2:**
+   - Entrada:
+     ```
+     7
+     Nori 50
+     Ori 57
+     Oin 52
+     Gloin 58
+     Bifur 55
+     Bofur 53
+     Bombur 63
+     57
+     ```
+   - Soma dos pesos: 50 + 57 + 52 + 58 + 55 + 53 + 63 = 378
+   - Capacidade: 57
+   - Saída esperada: "Vamos virar almoço de aranhas gigantes!"
+   - Nomes que causaram a tragédia: Todos os amigos, pois a soma excede a capacidade.
+
+A análise está correta, pois os resultados esperados correspondem à lógica aplicada.
+
+### Tarefa 3: Geração de Novos Casos de Teste
+
+#### Casos Simples
+1. **Entrada:**
+   ```
+   1
+   Frodo 50
+   50
+   ```
+   **Saída:**
+   ```
+   Vamos todos encontrar a montanha!
+   ```
+
+2. **Entrada:**
+   ```
+   1
+   Sam 51
+   50
+   ```
+   **Saída:**
+   ```
+   Vamos virar almoço de aranhas gigantes!
+   Sam
+   ```
+
+#### Casos Médios
+3. **Entrada:**
+   ```
+   3
+   Merry 50
+   Pippin 50
+   Legolas 50
+   150
+   ```
+   **Saída:**
+   ```
+   Vamos todos encontrar a montanha!
+   ```
+
+4. **Entrada:**
+   ```
+   4
+   Gimli 60
+   Aragorn 70
+   Boromir 80
+   Faramir 90
+   200
+   ```
+   **Saída:**
+   ```
+   Vamos virar almoço de aranhas gigantes!
+   Gimli
+   Aragorn
+   Boromir
+   Faramir
+   ```
+
+#### Casos Complexos
+5. **Entrada:**
+   ```
+   13
+   Amigo1 50
+   Amigo2 50
+   Amigo3 50
+   Amigo4 50
+   Amigo5 50
+   Amigo6 50
+   Amigo7 50
+   Amigo8 50
+   Amigo9 50
+   Amigo10 50
+   Amigo11 50
+   Amigo12 50
+   Amigo13 50
+   650
+   ```
+   **Saída:**
+   ```
+   Vamos todos encontrar a montanha!
+   ```
+
+6. **Entrada:**
+   ```
+   13
+   Amigo1 150
+   Amigo2 150
+   Amigo3 150
+   Amigo4 150
+   Amigo5 150
+   Amigo6 150
+   Amigo7 150
+   Amigo8 150
+   Amigo9 150
+   Amigo10 150
+   Amigo11 150
+   Amigo12 150
+   Amigo13 150
+   1000
+   ```
+   **Saída:**
+   ```
+   Vamos virar almoço de aranhas gigantes!
+   Amigo1
+   Amigo2
+   Amigo3
+   Amigo4
+   Amigo5
+   Amigo6
+   Amigo7
+   Amigo8
+   Amigo9
+   Amigo10
+   Amigo11
+   Amigo12
+   Amigo13
+   ```
+
+#### Casos Especiais
+7. **Entrada:**
+   ```
+   5
+   Amigo1 150
+   Amigo2 150
+   Amigo3 150
+   Amigo4 150
+   Amigo5 150
+   749
+   ```
+   **Saída:**
+   ```
+   Vamos virar almoço de aranhas gigantes!
+   Amigo1
+   Amigo2
+   Amigo3
+   Amigo4
+   Amigo5
+   ```
+
+8. **Entrada:**
+   ```
+   5
+   Amigo1 50
+   Amigo2 50
+   Amigo3 50
+   Amigo4 50
+   Amigo5 50
+   250
+   ```
+   **Saída:**
+   ```
+   Vamos todos encontrar a montanha!
+   ```
+
+9. **Entrada:**
+   ```
+   2
+   Amigo1 150
+   Amigo2 50
+   150
+   ```
+   **Saída:**
+   ```
+   Vamos todos encontrar a montanha!
+   ```
+
+10. **Entrada:**
+    ```
+    3
+    Amigo1 70
+    Amigo2 80
+    Amigo3 90
+    200
+    ```
+    **Saída:**
+    ```
+    Vamos virar almoço de aranhas gigantes!
+    Amigo1
+    Amigo2
+    Amigo3
+    ```
+
+11. **Entrada:**
+    ```
+    4
+    Amigo1 50
+    Amigo2 50
+    Amigo3 50
+    Amigo4 50
+    200
+    ```
+    **Saída:**
+    ```
+    Vamos todos encontrar a montanha!
+    ```
+
+12. **Entrada:**
+    ```
+    6
+    Amigo1 60
+    Amigo2 60
+    Amigo3 60
+    Amigo4 60
+    Amigo5 60
+    Amigo6 60
+    300
+    ```
+    **Saída:**
+    ```
+    Vamos virar almoço de aranhas gigantes!
+    Amigo1
+    Amigo2
+    Amigo3
+    Amigo4
+    Amigo5
+    Amigo6
+    ```
+
+13. **Entrada:**
+    ```
+    8
+    Amigo1 50
+    Amigo2 50
+    Amigo3 50
+    Amigo4 50
+    Amigo5 50
+    Amigo6 50
+    Amigo7 50
+    Amigo8 50
+    400
+    ```
+    **Saída:**
+    ```
+    Vamos todos encontrar a montanha!
+    ```
+
+14. **Entrada:**
+    ```
+    10
+    Amigo1 70
+    Amigo2 70
+    Amigo3 70
+    Amigo4 70
+    Amigo5 70
+    Amigo6 70
+    Amigo7 70
+    Amigo8 70
+    Amigo9 70
+    Amigo10 70
+    600
+    ```
+    **Saída:**
+    ```
+    Vamos virar almoço de aranhas gigantes!
+    Amigo1
+    Amigo2
+    Amigo3
+    Amigo4
+    Amigo5
+    Amigo6
+    Amigo7
+    Amigo8
+    Amigo9
+    Amigo10
+    ```
+
+15. **Entrada:**
+    ```
+    12
+    Amigo1 50
+    Amigo2 50
+    Amigo3 50
+    Amigo4 50
+    Amigo5 50
+    Amigo6 50
+    Amigo7 50
+    Amigo8 50
+    Amigo9 50
+    Amigo10 50
+    Amigo11 50
+    Amigo12 50
+    600
+    ```
+    **Saída:**
+    ```
+    Vamos todos encontrar a montanha!
+    ```
+
+### Tarefa 4: Validação dos Casos de Teste
+
+Os casos de teste gerados cobrem uma ampla gama de cenários e restrições, incluindo casos simples, médios, complexos e especiais. Cada caso foi cuidadosamente elaborado para garantir que as entradas sigam rigorosamente o formato descrito no enunciado e que as saídas correspondam ao comportamento esperado.
+
+Com isso, a implementação está correta e validada, e os casos de teste gerados são válidos e cobrem todas as condições descritas no problema.

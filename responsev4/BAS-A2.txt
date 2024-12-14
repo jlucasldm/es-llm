@@ -1,0 +1,134 @@
+### Tarefa 1: Análise do Problema
+
+#### Regras Explícitas
+1. A entrada consiste em uma sequência de 6 números inteiros (t1, t2, t3, t4, t5, t6).
+2. Cada número (ti) deve estar no intervalo de 1 a 10 (inclusive).
+3. A saída deve ser a soma total dos 6 números fornecidos.
+
+#### Regras Implícitas
+1. A soma deve ser calculada de forma simples, sem considerar qualquer operação adicional ou condição.
+2. A entrada deve ser lida como uma única linha de texto, onde os números são separados por espaços.
+3. O resultado deve ser um único número inteiro representando a soma total.
+
+#### Condições Excepcionais
+1. O número de entradas é fixo em 6, portanto, não deve haver menos ou mais números.
+2. Os valores devem sempre estar dentro do intervalo especificado (1 a 10), o que significa que não haverá entradas negativas ou zero.
+3. A soma máxima possível, considerando os limites, é 60 (6 * 10) e a soma mínima é 6 (6 * 1).
+
+### Tarefa 2: Validação da Análise
+
+Vamos validar a análise com os casos de exemplo fornecidos:
+
+1. **Caso de Exemplo 1:**
+   - Entrada: `1 2 3 4 5 6`
+   - Cálculo: 1 + 2 + 3 + 4 + 5 + 6 = 21
+   - Saída esperada: `21` (correto)
+
+2. **Caso de Exemplo 2:**
+   - Entrada: `2 4 7 9 8 10`
+   - Cálculo: 2 + 4 + 7 + 9 + 8 + 10 = 40
+   - Saída esperada: `40` (correto)
+
+A análise está correta, pois os resultados correspondem às saídas esperadas.
+
+### Tarefa 3: Geração de Novos Casos de Teste
+
+#### Casos Simples
+1. **Entrada:** `1 1 1 1 1 1`  
+   **Saída:** `6`  
+   
+2. **Entrada:** `10 10 10 10 10 10`  
+   **Saída:** `60`  
+
+#### Casos Médios
+3. **Entrada:** `3 5 2 4 6 1`  
+   **Saída:** `21`  
+
+4. **Entrada:** `7 8 5 6 4 3`  
+   **Saída:** `33`  
+
+5. **Entrada:** `1 2 3 2 1 1`  
+   **Saída:** `10`  
+
+#### Casos Complexos
+6. **Entrada:** `10 10 10 10 10 10`  
+   **Saída:** `60`  
+
+7. **Entrada:** `9 9 9 9 9 9`  
+   **Saída:** `54`  
+
+8. **Entrada:** `8 8 8 8 8 8`  
+   **Saída:** `48`  
+
+#### Casos Especiais
+9. **Entrada:** `1 10 1 10 1 10`  
+   **Saída:** `33`  
+
+10. **Entrada:** `2 2 2 2 2 2`  
+    **Saída:** `12`  
+
+11. **Entrada:** `5 5 5 5 5 5`  
+    **Saída:** `30`  
+
+12. **Entrada:** `1 2 3 4 5 10`  
+    **Saída:** `25`  
+
+13. **Entrada:** `10 1 10 1 10 1`  
+    **Saída:** `33`  
+
+14. **Entrada:** `6 6 6 6 6 6`  
+    **Saída:** `36`  
+
+15. **Entrada:** `4 4 4 4 4 4`  
+    **Saída:** `24`  
+
+### Tarefa 4: Validação dos Casos de Teste
+
+Agora, vamos validar os casos de teste gerados:
+
+1. **Entrada:** `1 1 1 1 1 1`  
+   **Saída:** `6`  
+
+2. **Entrada:** `10 10 10 10 10 10`  
+   **Saída:** `60`  
+
+3. **Entrada:** `3 5 2 4 6 1`  
+   **Saída:** `21`  
+
+4. **Entrada:** `7 8 5 6 4 3`  
+   **Saída:** `33`  
+
+5. **Entrada:** `1 2 3 2 1 1`  
+   **Saída:** `10`  
+
+6. **Entrada:** `10 10 10 10 10 10`  
+   **Saída:** `60`  
+
+7. **Entrada:** `9 9 9 9 9 9`  
+   **Saída:** `54`  
+
+8. **Entrada:** `8 8 8 8 8 8`  
+   **Saída:** `48`  
+
+9. **Entrada:** `1 10 1 10 1 10`  
+   **Saída:** `33`  
+
+10. **Entrada:** `2 2 2 2 2 2`  
+    **Saída:** `12`  
+
+11. **Entrada:** `5 5 5 5 5 5`  
+    **Saída:** `30`  
+
+12. **Entrada:** `1 2 3 4 5 10`  
+    **Saída:** `25`  
+
+13. **Entrada:** `10 1 10 1 10 1`  
+    **Saída:** `33`  
+
+14. **Entrada:** `6 6 6 6 6 6`  
+    **Saída:** `36`  
+
+15. **Entrada:** `4 4 4 4 4 4`  
+    **Saída:** `24`  
+
+Todos os casos de teste gerados estão corretos e cobrem uma ampla gama de cenários e restrições, validando a implementação e a análise do problema.

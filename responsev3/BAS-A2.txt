@@ -1,0 +1,164 @@
+### Tarefa 1: Análise do Problema
+
+#### Regras Explícitas
+1. A entrada consiste em uma sequência de 6 números inteiros (t1, t2, t3, t4, t5, t6).
+2. Cada número (ti) deve estar no intervalo de 1 a 10 (inclusive).
+3. A saída deve ser um único número inteiro que representa a soma dos tesouros.
+
+#### Regras Implícitas
+1. A soma deve ser calculada de forma simples, somando todos os 6 números fornecidos.
+2. Não há necessidade de considerar a ordem dos números, pois a soma é comutativa.
+3. Todos os números devem ser considerados, não há números a serem ignorados.
+
+#### Condições Excepcionais
+1. O menor valor possível para a soma é 6 (quando todos os tesouros são 1).
+2. O maior valor possível para a soma é 60 (quando todos os tesouros são 10).
+3. A entrada deve sempre conter exatamente 6 números, caso contrário, a entrada é inválida.
+
+### Tarefa 2: Validação da Análise
+
+Vamos validar a análise com os casos de exemplo fornecidos.
+
+1. **Caso de Exemplo 1:**
+   - Entrada: `1 2 3 4 5 6`
+   - Cálculo: 1 + 2 + 3 + 4 + 5 + 6 = 21
+   - Saída Esperada: `21` (Correto)
+
+2. **Caso de Exemplo 2:**
+   - Entrada: `2 4 7 9 8 10`
+   - Cálculo: 2 + 4 + 7 + 9 + 8 + 10 = 40
+   - Saída Esperada: `40` (Correto)
+
+A análise está correta, pois os resultados esperados correspondem aos cálculos realizados.
+
+### Tarefa 3: Geração de Casos de Teste
+
+#### Casos Simples
+1. **Entrada:** `1 1 1 1 1 1`  
+   **Saída:** `6`  
+   (Todos os tesouros são 1)
+
+2. **Entrada:** `1 1 1 1 1 2`  
+   **Saída:** `7`  
+   (Cinco tesouros de 1 e um de 2)
+
+#### Casos Médios
+3. **Entrada:** `3 4 2 5 1 6`  
+   **Saída:** `21`  
+   (Soma de tesouros variados)
+
+4. **Entrada:** `5 5 5 5 5 5`  
+   **Saída:** `30`  
+   (Todos os tesouros são 5)
+
+5. **Entrada:** `2 3 4 5 6 7`  
+   **Saída:** `27`  
+   (Soma de tesouros em sequência)
+
+#### Casos Complexos
+6. **Entrada:** `10 10 10 10 10 10`  
+   **Saída:** `60`  
+   (Todos os tesouros são 10)
+
+7. **Entrada:** `9 9 9 9 9 9`  
+   **Saída:** `54`  
+   (Todos os tesouros são 9)
+
+#### Casos Especiais
+8. **Entrada:** `1 10 1 10 1 10`  
+   **Saída:** `33`  
+   (Alternando entre 1 e 10)
+
+9. **Entrada:** `2 2 2 2 2 10`  
+   **Saída:** `20`  
+   (Cinco tesouros de 2 e um de 10)
+
+10. **Entrada:** `10 1 10 1 10 1`  
+    **Saída:** `33`  
+    (Alternando entre 10 e 1)
+
+11. **Entrada:** `5 1 5 1 5 1`  
+    **Saída:** `18`  
+    (Alternando entre 5 e 1)
+
+12. **Entrada:** `3 3 3 3 3 3`  
+    **Saída:** `18`  
+    (Todos os tesouros são 3)
+
+13. **Entrada:** `4 4 4 4 4 4`  
+    **Saída:** `24`  
+    (Todos os tesouros são 4)
+
+14. **Entrada:** `6 6 6 6 6 6`  
+    **Saída:** `36`  
+    (Todos os tesouros são 6)
+
+15. **Entrada:** `7 7 7 7 7 7`  
+    **Saída:** `42`  
+    (Todos os tesouros são 7)
+
+### Tarefa 4: Validação dos Casos de Teste
+
+Agora, vamos validar os casos de teste gerados:
+
+1. **Entrada:** `1 1 1 1 1 1`  
+   **Saída:** `6`  
+   (Correto)
+
+2. **Entrada:** `1 1 1 1 1 2`  
+   **Saída:** `7`  
+   (Correto)
+
+3. **Entrada:** `3 4 2 5 1 6`  
+   **Saída:** `21`  
+   (Correto)
+
+4. **Entrada:** `5 5 5 5 5 5`  
+   **Saída:** `30`  
+   (Correto)
+
+5. **Entrada:** `2 3 4 5 6 7`  
+   **Saída:** `27`  
+   (Correto)
+
+6. **Entrada:** `10 10 10 10 10 10`  
+   **Saída:** `60`  
+   (Correto)
+
+7. **Entrada:** `9 9 9 9 9 9`  
+   **Saída:** `54`  
+   (Correto)
+
+8. **Entrada:** `1 10 1 10 1 10`  
+   **Saída:** `33`  
+   (Correto)
+
+9. **Entrada:** `2 2 2 2 2 10`  
+   **Saída:** `20`  
+   (Correto)
+
+10. **Entrada:** `10 1 10 1 10 1`  
+    **Saída:** `33`  
+    (Correto)
+
+11. **Entrada:** `5 1 5 1 5 1`  
+    **Saída:** `18`  
+    (Correto)
+
+12. **Entrada:** `3 3 3 3 3 3`  
+    **Saída:** `18`  
+    (Correto)
+
+13. **Entrada:** `4 4 4 4 4 4`  
+    **Saída:** `24`  
+    (Correto)
+
+14. **Entrada:** `6 6 6 6 6 6`  
+    **Saída:** `36`  
+    (Correto)
+
+15. **Entrada:** `7 7 7 7 7 7`  
+    **Saída:** `42`  
+    (Correto)
+
+Todos os casos de teste gerados estão corretos e cobrem uma ampla gama de cenários e restrições. A implementação e a análise estão validadas e prontas para uso.

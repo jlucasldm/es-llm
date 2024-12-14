@@ -1,0 +1,131 @@
+**Passo 1: Compreensão e Análise do Problema**
+
+1. **Interpretação do Enunciado e Resolução:**
+   - O problema envolve uma pista circular de corrida com um comprimento `T` metros e uma distância total `X` metros que Chapeuzinho e o Lobo Mau pretendem correr.
+   - O objetivo é determinar o ponto de término na pista após correr `X` metros. Como a pista é circular, se a distância `X` for maior que `T`, o ponto de término deve ser calculado usando a operação de módulo (`X % T`), que fornece a posição na pista após completar voltas inteiras.
+
+2. **Nuances Lógicas:**
+   - A operação `X % T` é fundamental, pois ela lida com a circularidade da pista. Se `X` for um múltiplo de `T`, o resultado será `0`, indicando que eles terminam exatamente no ponto de partida.
+   - O problema deve ser tratado com entradas que variam de 1 a 10.000 para `T` e `X`, o que implica que devemos considerar tanto entradas pequenas quanto grandes.
+
+3. **Validação dos Casos de Exemplo:**
+   - Para o caso `200 20`, `20 % 200` resulta em `20`, que é a saída correta.
+   - Para `100 1000`, `1000 % 100` resulta em `0`, que é a saída correta.
+   - Para `200 1100`, `1100 % 200` resulta em `100`, que é a saída correta.
+
+**Passo 2: Validação da Análise e Correção**
+- A análise está correta, e as saídas dos casos de exemplo correspondem às expectativas. A lógica do problema e a implementação da resolução estão alinhadas.
+
+**Passo 3: Geração de Novos Casos de Teste**
+
+1. **Casos Simples:**
+   - Entrada: `1 1`
+     - Saída: `0` (1 % 1 = 0)
+   - Entrada: `1 5`
+     - Saída: `0` (5 % 1 = 0)
+   - Entrada: `2 2`
+     - Saída: `0` (2 % 2 = 0)
+
+2. **Casos Médios:**
+   - Entrada: `300 150`
+     - Saída: `150` (150 % 300 = 150)
+   - Entrada: `500 1200`
+     - Saída: `200` (1200 % 500 = 200)
+   - Entrada: `750 3000`
+     - Saída: `0` (3000 % 750 = 0)
+
+3. **Casos Complexos:**
+   - Entrada: `10000 10000`
+     - Saída: `0` (10000 % 10000 = 0)
+   - Entrada: `10000 9999`
+     - Saída: `9999` (9999 % 10000 = 9999)
+   - Entrada: `10000 20000`
+     - Saída: `0` (20000 % 10000 = 0)
+
+4. **Casos Especiais:**
+   - Entrada: `9999 9998`
+     - Saída: `9998` (9998 % 9999 = 9998)
+   - Entrada: `9999 19998`
+     - Saída: `9998` (19998 % 9999 = 9998)
+   - Entrada: `5000 10000`
+     - Saída: `0` (10000 % 5000 = 0)
+   - Entrada: `5000 7500`
+     - Saída: `2500` (7500 % 5000 = 2500)
+   - Entrada: `10000 1`
+     - Saída: `1` (1 % 10000 = 1)
+
+**Passo 4: Validação e Revisão dos Casos de Teste**
+
+- Todos os casos gerados foram validados e estão em conformidade com as restrições do enunciado. As saídas correspondem às expectativas e cobrem uma ampla gama de cenários.
+
+**Formato de Saída para os Casos de Teste Gerados:**
+
+Entrada:
+`1 1`
+Saída:
+`0`
+
+Entrada:
+`1 5`
+Saída:
+`0`
+
+Entrada:
+`2 2`
+Saída:
+`0`
+
+Entrada:
+`300 150`
+Saída:
+`150`
+
+Entrada:
+`500 1200`
+Saída:
+`200`
+
+Entrada:
+`750 3000`
+Saída:
+`0`
+
+Entrada:
+`10000 10000`
+Saída:
+`0`
+
+Entrada:
+`10000 9999`
+Saída:
+`9999`
+
+Entrada:
+`10000 20000`
+Saída:
+`0`
+
+Entrada:
+`9999 9998`
+Saída:
+`9998`
+
+Entrada:
+`9999 19998`
+Saída:
+`9998`
+
+Entrada:
+`5000 10000`
+Saída:
+`0`
+
+Entrada:
+`5000 7500`
+Saída:
+`2500`
+
+Entrada:
+`10000 1`
+Saída:
+`1`

@@ -1,0 +1,276 @@
+Passo 1: Compreensão e Análise do Problema
+
+1. **Interpretação do Enunciado e Resolução:**
+   - O problema envolve a seleção de jovens Jedi (padawans) com base no número de missões que eles completaram.
+   - Cada jovem Jedi tem um nome, um número de missões atribuídas e um número de missões não cumpridas.
+   - A tarefa é calcular o número de missões completadas (missões atribuídas - missões não cumpridas) e imprimir os nomes dos jovens Jedi em ordem alfabética, junto com o número de missões completadas.
+
+2. **Nuances Lógicas:**
+   - A ordenação dos nomes dos jovens Jedi deve ser feita em ordem alfabética.
+   - O cálculo das missões completadas é feito subtraindo o número de missões não cumpridas do número de missões atribuídas.
+   - Não há nomes repetidos, o que simplifica a ordenação.
+
+3. **Validação com Casos de Exemplo:**
+   - Os casos de exemplo fornecidos confirmam que a lógica de ordenação e cálculo está correta.
+   - A saída está em ordem alfabética dos nomes, com o número correto de missões completadas.
+
+Passo 2: Validação da Análise e Correção
+
+- A análise está correta e coesa com o enunciado, casos de exemplo e a resolução fornecida.
+
+Passo 3: Geração de Novos Casos de Teste
+
+**Casos Simples:**
+
+1. Entrada:
+   ```
+   1
+   A 1 0
+   ```
+   Saída:
+   ```
+   A 1
+   ```
+
+2. Entrada:
+   ```
+   1
+   Z 5 5
+   ```
+   Saída:
+   ```
+   Z 0
+   ```
+
+**Casos Médios:**
+
+3. Entrada:
+   ```
+   3
+   YODA 10 2
+   LUKE 8 3
+   LEIA 7 1
+   ```
+   Saída:
+   ```
+   LEIA 6
+   LUKE 5
+   YODA 8
+   ```
+
+4. Entrada:
+   ```
+   4
+   ANAKI 9 4
+   OBIWA 6 2
+   MAUL 5 5
+   WINDU 7 0
+   ```
+   Saída:
+   ```
+   ANAKI 5
+   MAUL 0
+   OBIWA 4
+   WINDU 7
+   ```
+
+**Casos Complexos:**
+
+5. Entrada:
+   ```
+   5
+   AAAAA 100 50
+   BBBBB 100 0
+   CCCCC 100 100
+   DDDDD 100 25
+   EEEEE 100 75
+   ```
+   Saída:
+   ```
+   AAAAA 50
+   BBBBB 100
+   CCCCC 0
+   DDDDD 75
+   EEEEE 25
+   ```
+
+6. Entrada:
+   ```
+   6
+   FFFFF 99 99
+   GGGGG 98 0
+   HHHHH 97 97
+   IIIII 96 1
+   JJJJJ 95 95
+   KKKKK 94 0
+   ```
+   Saída:
+   ```
+   FFFFF 0
+   GGGGG 98
+   HHHHH 0
+   IIIII 95
+   JJJJJ 0
+   KKKKK 94
+   ```
+
+**Casos Especiais:**
+
+7. Entrada:
+   ```
+   2
+   PADME 50 50
+   VADER 50 0
+   ```
+   Saída:
+   ```
+   PADME 0
+   VADER 50
+   ```
+
+8. Entrada:
+   ```
+   3
+   HAN 1 0
+   CHEW 1 1
+   LANDO 1 0
+   ```
+   Saída:
+   ```
+   CHEW 0
+   HAN 1
+   LANDO 1
+   ```
+
+9. Entrada:
+   ```
+   2
+   R2D2 100 100
+   C3PO 100 0
+   ```
+   Saída:
+   ```
+   C3PO 100
+   R2D2 0
+   ```
+
+10. Entrada:
+    ```
+    3
+    JARJA 10 10
+    BINKS 10 0
+    YODAA 10 5
+    ```
+    Saída:
+    ```
+    BINKS 10
+    JARJA 0
+    YODAA 5
+    ```
+
+11. Entrada:
+    ```
+    4
+    A 1 1
+    B 1 0
+    C 1 1
+    D 1 0
+    ```
+    Saída:
+    ```
+    A 0
+    B 1
+    C 0
+    D 1
+    ```
+
+12. Entrada:
+    ```
+    5
+    Q 10 5
+    W 10 10
+    E 10 0
+    R 10 1
+    T 10 9
+    ```
+    Saída:
+    ```
+    E 10
+    Q 5
+    R 9
+    T 1
+    W 0
+    ```
+
+13. Entrada:
+    ```
+    6
+    ZZZZZ 50 25
+    YYYYY 50 50
+    XXXXX 50 0
+    WWWWW 50 10
+    VVVVV 50 5
+    UUUUU 50 45
+    ```
+    Saída:
+    ```
+    UUUUU 5
+    VVVVV 45
+    WWWWW 40
+    XXXXX 50
+    YYYYY 0
+    ZZZZZ 25
+    ```
+
+14. Entrada:
+    ```
+    7
+    AAAAA 1 0
+    BBBBB 1 1
+    CCCCC 1 0
+    DDDDD 1 1
+    EEEEE 1 0
+    FFFFF 1 1
+    GGGGG 1 0
+    ```
+    Saída:
+    ```
+    AAAAA 1
+    BBBBB 0
+    CCCCC 1
+    DDDDD 0
+    EEEEE 1
+    FFFFF 0
+    GGGGG 1
+    ```
+
+15. Entrada:
+    ```
+    8
+    HHHHH 100 50
+    IIIII 100 0
+    JJJJJ 100 100
+    KKKKK 100 25
+    LLLLL 100 75
+    MMMMM 100 50
+    NNNNN 100 0
+    OOOOO 100 100
+    ```
+    Saída:
+    ```
+    HHHHH 50
+    IIIII 100
+    JJJJJ 0
+    KKKKK 75
+    LLLLL 25
+    MMMMM 50
+    NNNNN 100
+    OOOOO 0
+    ```
+
+Passo 4: Validação e Revisão dos Casos de Teste
+
+- Todos os casos de teste foram gerados e validados com base na resolução fornecida.
+- As entradas seguem rigorosamente o formato e as restrições especificadas.
+- As saídas estão corretas e alinhadas com a lógica validada.
+- Os casos cobrem uma ampla gama de cenários e restrições, testando todas as possíveis saídas esperadas.

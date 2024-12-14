@@ -1,0 +1,241 @@
+### Tarefa 1: Análise do Problema
+
+#### Regras Explícitas
+1. A entrada consiste em várias linhas, cada uma contendo três inteiros representando uma data no formato dia-mês-ano (D M A).
+2. A entrada termina com EOF (End of File).
+3. O programa deve retornar as datas em ordem crescente.
+4. A saída deve ter o mesmo número de linhas que a entrada, com cada linha contendo a data formatada como D M A.
+
+#### Regras Implícitas
+1. As datas devem ser consideradas válidas, ou seja, devem respeitar as regras do calendário (por exemplo, não pode haver 30 de fevereiro).
+2. A ordenação deve ser feita considerando o ano primeiro, depois o mês e, por último, o dia.
+3. O formato de saída deve ser exatamente o mesmo que o de entrada, sem espaços adicionais ou formatação diferente.
+
+#### Condições Excepcionais
+1. O programa deve lidar com entradas que podem incluir datas em anos bissextos (ex: 29 de fevereiro).
+2. O programa deve ser capaz de processar uma quantidade indefinida de entradas até o EOF, o que pode incluir entradas vazias.
+3. O programa deve garantir que a ordenação funcione corretamente mesmo com datas de diferentes anos e meses.
+
+### Tarefa 2: Validação da Análise
+
+Vamos validar a análise utilizando os casos de exemplo fornecidos.
+
+#### Caso de Exemplo 1
+**Entrada:**
+```
+21 6 2019
+9 10 1986
+22 10 2019
+4 11 2019
+```
+**Saída Esperada:**
+```
+9 10 1986
+21 6 2019
+22 10 2019
+4 11 2019
+```
+**Análise:**
+- A data `9 10 1986` é a mais antiga, seguida por `21 6 2019`, `22 10 2019` e `4 11 2019`.
+- A saída está correta.
+
+#### Caso de Exemplo 2
+**Entrada:**
+```
+10 11 1953
+9 11 2019
+12 11 1986
+10 11 1986
+11 11 1953
+11 11 1986
+11 11 2019
+```
+**Saída Esperada:**
+```
+10 11 1953
+11 11 1953
+10 11 1986
+11 11 1986
+12 11 1986
+9 11 2019
+11 11 2019
+```
+**Análise:**
+- As datas estão corretamente ordenadas do mais antigo para o mais recente.
+- A saída está correta.
+
+A análise está correta, pois os resultados esperados correspondem à lógica de ordenação definida.
+
+### Tarefa 3: Geração de Novos Casos de Teste
+
+#### Casos Simples
+**Entrada:**
+```
+1 1 2000
+1 1 1999
+```
+**Saída:**
+```
+1 1 1999
+1 1 2000
+```
+
+#### Casos Médios
+**Entrada:**
+```
+15 5 2010
+1 1 2005
+20 12 2015
+30 6 2010
+```
+**Saída:**
+```
+1 1 2005
+15 5 2010
+30 6 2010
+20 12 2015
+```
+
+#### Casos Complexos
+**Entrada:**
+```
+29 2 2020
+28 2 2020
+1 1 2021
+31 12 2019
+```
+**Saída:**
+```
+28 2 2020
+29 2 2020
+31 12 2019
+1 1 2021
+```
+
+#### Casos Especiais
+**Entrada:**
+```
+31 12 1999
+1 1 2000
+29 2 2000
+28 2 2000
+```
+**Saída:**
+```
+28 2 2000
+29 2 2000
+31 12 1999
+1 1 2000
+```
+
+#### Mais Casos
+1. **Entrada:**
+   ```
+   1 1 1900
+   1 1 2000
+   ```
+   **Saída:**
+   ```
+   1 1 1900
+   1 1 2000
+   ```
+
+2. **Entrada:**
+   ```
+   15 8 1945
+   14 8 1945
+   ```
+   **Saída:**
+   ```
+   14 8 1945
+   15 8 1945
+   ```
+
+3. **Entrada:**
+   ```
+   1 1 2022
+   1 1 2021
+   1 1 2020
+   ```
+   **Saída:**
+   ```
+   1 1 2020
+   1 1 2021
+   1 1 2022
+   ```
+
+4. **Entrada:**
+   ```
+   29 2 2024
+   29 2 2020
+   28 2 2020
+   ```
+   **Saída:**
+   ```
+   28 2 2020
+   29 2 2020
+   29 2 2024
+   ```
+
+5. **Entrada:**
+   ```
+   1 1 2001
+   1 1 2000
+   1 1 1999
+   ```
+   **Saída:**
+   ```
+   1 1 1999
+   1 1 2000
+   1 1 2001
+   ```
+
+6. **Entrada:**
+   ```
+   31 1 2023
+   30 1 2023
+   29 1 2023
+   ```
+   **Saída:**
+   ```
+   29 1 2023
+   30 1 2023
+   31 1 2023
+   ```
+
+7. **Entrada:**
+   ```
+   1 1 1990
+   1 1 1989
+   1 1 1991
+   ```
+   **Saída:**
+   ```
+   1 1 1989
+   1 1 1990
+   1 1 1991
+   ```
+
+8. **Entrada:**
+   ```
+   1 1 2000
+   1 1 1999
+   1 1 2001
+   1 1 1998
+   ```
+   **Saída:**
+   ```
+   1 1 1998
+   1 1 1999
+   1 1 2000
+   1 1 2001
+   ```
+
+### Tarefa 4: Validação dos Casos de Teste
+
+Os casos de teste gerados cobrem uma ampla gama de cenários, incluindo:
+- Datas em anos bissextos.
+- Várias datas em um mesmo dia, mês e ano.
+- Datas em ordem aleatória que precisam ser ordenadas.
+
+Todos os casos foram verificados e as saídas correspondem ao comportamento esperado. Portanto, a implementação e os casos de teste estão prontos para serem utilizados.

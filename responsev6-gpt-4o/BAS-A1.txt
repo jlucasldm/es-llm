@@ -1,0 +1,76 @@
+Passo 1: Compreensão e Análise do Problema
+
+1. **Interpretação do Enunciado e Resolução:**
+   - O problema pede para calcular a velocidade \( V \) do Flash, dada a fórmula \( V = \frac{E}{T} \), onde \( E \) é o espaço e \( T \) é o tempo.
+   - A resolução lê dois inteiros \( E \) e \( T \) e imprime o resultado da divisão inteira \( E/T \).
+
+2. **Nuances Lógicas:**
+   - A divisão é inteira, o que significa que qualquer parte decimal do resultado é descartada.
+   - Os valores de \( E \) e \( T \) estão restritos a \( 1 \leq E \leq 500 \) e \( 1 \leq T \leq 100 \).
+
+3. **Validação com Casos de Exemplo:**
+   - Para a entrada '300 5', a saída é '60', pois \( 300/5 = 60 \).
+   - Para a entrada '100 2', a saída é '50', pois \( 100/2 = 50 \).
+   - As saídas estão corretas e correspondem à lógica da resolução.
+
+Passo 2: Validação da Análise e Correção
+
+- A análise está correta e coesa com o enunciado, casos de exemplo e a resolução.
+
+Passo 3: Geração de Novos Casos de Teste
+
+**Casos Simples:**
+1. Entrada: `1 1`
+   Saída: `1` (1/1 = 1)
+
+2. Entrada: `10 1`
+   Saída: `10` (10/1 = 10)
+
+**Casos Médios:**
+3. Entrada: `250 5`
+   Saída: `50` (250/5 = 50)
+
+4. Entrada: `123 3`
+   Saída: `41` (123/3 = 41)
+
+5. Entrada: `200 4`
+   Saída: `50` (200/4 = 50)
+
+**Casos Complexos:**
+6. Entrada: `500 100`
+   Saída: `5` (500/100 = 5)
+
+7. Entrada: `499 99`
+   Saída: `5` (499/99 = 5)
+
+8. Entrada: `500 1`
+   Saída: `500` (500/1 = 500)
+
+**Casos Especiais:**
+9. Entrada: `101 10`
+   Saída: `10` (101/10 = 10)
+
+10. Entrada: `99 10`
+    Saída: `9` (99/10 = 9)
+
+11. Entrada: `50 3`
+    Saída: `16` (50/3 = 16)
+
+12. Entrada: `7 2`
+    Saída: `3` (7/2 = 3)
+
+13. Entrada: `100 99`
+    Saída: `1` (100/99 = 1)
+
+14. Entrada: `300 7`
+    Saída: `42` (300/7 = 42)
+
+15. Entrada: `400 8`
+    Saída: `50` (400/8 = 50)
+
+Passo 4: Validação e Revisão dos Casos de Teste
+
+- Todos os casos de teste foram validados usando a lógica da resolução fornecida.
+- As entradas seguem as restrições \( 1 \leq E \leq 500 \) e \( 1 \leq T \leq 100 \).
+- As saídas estão corretas e alinhadas com a lógica validada.
+- Os casos cobrem uma ampla gama de cenários, incluindo divisões exatas, divisões com restos, e valores nos limites das restrições.

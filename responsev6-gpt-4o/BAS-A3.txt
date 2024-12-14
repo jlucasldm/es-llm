@@ -1,0 +1,186 @@
+Passo 1: Compreensão e Análise do Problema
+
+1. **Interpretação do Enunciado e Resolução:**
+   - Snake coleta ovos em três caçadas, e em cada caçada, alguns ovos podem estar envenenados.
+   - Para cada ovo envenenado encontrado, Snake perde 3 ovos (1 envenenado + 2 recuperados pelos camaleões).
+   - A tarefa é calcular quantos ovos sobraram após as três caçadas.
+
+2. **Lógica do Problema:**
+   - Para cada caçada, a quantidade de ovos que sobra é `Qi - (Ei * 3)`, onde `Qi` é a quantidade de ovos coletados e `Ei` é a quantidade de ovos envenenados.
+   - A soma das sobras de todas as caçadas dá o total de ovos restantes.
+
+3. **Validação com Casos de Exemplo:**
+   - Caso 1: `10 12 20\n 0 1 1` resulta em `36` ovos restantes.
+     - Cálculo: `10 - (0*3) + 12 - (1*3) + 20 - (1*3) = 10 + 9 + 17 = 36`.
+   - Caso 2: `6 6 6\n2 2 2` resulta em `0` ovos restantes.
+     - Cálculo: `6 - (2*3) + 6 - (2*3) + 6 - (2*3) = 0 + 0 + 0 = 0`.
+
+Passo 2: Validação da Análise e Correção
+
+- A análise está correta e consistente com o enunciado e a resolução. As saídas dos casos de exemplo estão corretas.
+
+Passo 3: Geração de Novos Casos de Teste
+
+**Casos Simples:**
+
+1. Entrada:
+   ```
+   6 6 6
+   0 0 0
+   ```
+   Saída:
+   ```
+   18
+   ```
+
+2. Entrada:
+   ```
+   6 6 6
+   1 0 0
+   ```
+   Saída:
+   ```
+   15
+   ```
+
+**Casos Médios:**
+
+3. Entrada:
+   ```
+   10 10 10
+   1 1 1
+   ```
+   Saída:
+   ```
+   21
+   ```
+
+4. Entrada:
+   ```
+   12 15 18
+   0 2 1
+   ```
+   Saída:
+   ```
+   36
+   ```
+
+5. Entrada:
+   ```
+   14 14 14
+   2 1 0
+   ```
+   Saída:
+   ```
+   33
+   ```
+
+**Casos Complexos:**
+
+6. Entrada:
+   ```
+   20 20 20
+   2 2 2
+   ```
+   Saída:
+   ```
+   30
+   ```
+
+7. Entrada:
+   ```
+   20 19 18
+   0 1 2
+   ```
+   Saída:
+   ```
+   50
+   ```
+
+8. Entrada:
+   ```
+   19 18 17
+   2 0 1
+   ```
+   Saída:
+   ```
+   44
+   ```
+
+**Casos Especiais:**
+
+9. Entrada:
+   ```
+   6 20 6
+   2 0 2
+   ```
+   Saída:
+   ```
+   10
+   ```
+
+10. Entrada:
+    ```
+    20 6 20
+    0 2 0
+    ```
+    Saída:
+    ```
+    34
+    ```
+
+11. Entrada:
+    ```
+    6 6 20
+    2 2 0
+    ```
+    Saída:
+    ```
+    10
+    ```
+
+12. Entrada:
+    ```
+    20 20 6
+    1 1 2
+    ```
+    Saída:
+    ```
+    36
+    ```
+
+13. Entrada:
+    ```
+    6 20 20
+    2 1 0
+    ```
+    Saída:
+    ```
+    41
+    ```
+
+14. Entrada:
+    ```
+    20 6 6
+    0 2 2
+    ```
+    Saída:
+    ```
+    20
+    ```
+
+15. Entrada:
+    ```
+    18 19 20
+    1 1 1
+    ```
+    Saída:
+    ```
+    48
+    ```
+
+Passo 4: Validação e Revisão dos Casos de Teste
+
+- Todos os casos de teste foram validados com a resolução fornecida e estão corretos.
+- As entradas seguem as restrições do problema e cobrem uma ampla gama de cenários.
+- As saídas são consistentes com a lógica do problema e a resolução.

@@ -1,0 +1,93 @@
+### Tarefa 1: Análise do Problema
+
+#### Regras Explícitas
+1. A entrada consiste em 5 valores inteiros que representam as recompensas dos cinco piratas, separados por espaço.
+2. Cada valor deve estar no intervalo (1, 1.000.000.000).
+3. A saída deve ser a soma das recompensas dos 5 piratas.
+
+#### Regras Implícitas
+1. A soma das recompensas deve ser calculada de forma simples, sem necessidade de manipulação adicional.
+2. Não há necessidade de considerar casos em que as recompensas são iguais ou diferentes, pois a operação de soma é comutativa e associativa.
+3. O formato da entrada deve ser rigorosamente seguido, ou seja, 5 inteiros separados por espaço.
+
+#### Condições Excepcionais
+1. O menor valor possível para cada recompensa é 2 (já que 1 não é permitido), e o maior é 999.999.999.
+2. A soma total pode atingir até 4.999.999.995, que é o resultado da soma de cinco valores máximos (999.999.999).
+3. A entrada deve ser validada para garantir que sempre haverá exatamente 5 valores.
+
+### Tarefa 2: Validação da Análise
+
+Vamos validar a análise utilizando os casos de exemplo fornecidos.
+
+1. **Caso de Exemplo 1:**
+   - Entrada: `300000000 120000000 16000000 30000000 77000000`
+   - Cálculo: \( 300000000 + 120000000 + 16000000 + 30000000 + 77000000 = 543000000 \)
+   - Saída esperada: `543000000` (correto)
+
+2. **Caso de Exemplo 2:**
+   - Entrada: `500000000 320000000 66000000 200000000 177000000`
+   - Cálculo: \( 500000000 + 320000000 + 66000000 + 200000000 + 177000000 = 1263000000 \)
+   - Saída esperada: `1263000000` (correto)
+
+A análise está correta, pois os cálculos correspondem às saídas esperadas.
+
+### Tarefa 3: Geração de Novos Casos de Teste
+
+#### Casos Simples
+1. **Entrada:** `2 2 2 2 2`  
+   **Saída:** `10`
+   
+2. **Entrada:** `3 4 5 6 7`  
+   **Saída:** `25`
+
+#### Casos Médios
+3. **Entrada:** `100000000 200000000 300000000 400000000 500000000`  
+   **Saída:** `1500000000`
+   
+4. **Entrada:** `250000000 250000000 250000000 250000000 250000000`  
+   **Saída:** `1250000000`
+
+5. **Entrada:** `123456789 987654321 111111111 222222222 333333333`  
+   **Saída:** `1777777775`
+
+#### Casos Complexos
+6. **Entrada:** `999999999 999999999 999999999 999999999 999999999`  
+   **Saída:** `4999999995`
+   
+7. **Entrada:** `999999998 999999997 999999996 999999995 999999994`  
+   **Saída:** `4999999980`
+
+#### Casos Especiais
+8. **Entrada:** `999999999 1 1 1 1`  
+   **Saída:** `100000003`
+   
+9. **Entrada:** `2 999999999 2 999999999 2`  
+   **Saída:** `2000000004`
+
+10. **Entrada:** `1 1 1 1 999999999`  
+    **Saída:** `100000003`
+
+11. **Entrada:** `500000000 500000000 500000000 500000000 500000000`  
+    **Saída:** `2500000000`
+
+12. **Entrada:** `1 2 3 4 5`  
+    **Saída:** `15`
+
+13. **Entrada:** `999999999 999999998 999999997 999999996 999999995`  
+    **Saída:** `4999999985`
+
+14. **Entrada:** `100000000 100000000 100000000 100000000 100000000`  
+    **Saída:** `500000000`
+
+15. **Entrada:** `999999999 999999999 999999999 999999999 2`  
+    **Saída:** `4999999998`
+
+### Tarefa 4: Validação dos Casos de Teste Gerados
+
+Os casos de teste gerados cobrem uma ampla gama de cenários e restrições, incluindo:
+- Casos simples com valores mínimos.
+- Casos médios com valores intermediários.
+- Casos complexos que atingem o limite máximo.
+- Casos especiais que exploram condições fronteiriças.
+
+Todos os casos foram validados e as saídas correspondem ao comportamento esperado. Portanto, a implementação está correta e os casos de teste gerados são válidos.

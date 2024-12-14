@@ -22,7 +22,7 @@ class OpenAIProvider:
                     e gerar casos de teste válidos, diversificados e relevantes, garantindo conformidade total com as
                     especificações do problema. Todos os casos de teste gerados devem seguir rigorosamente as restrições
                     e padrões descritos.
-                """
+                """,
             },
             {
                 "role": "user",
@@ -89,8 +89,8 @@ class OpenAIProvider:
                       do problema.
                     - Apenas continue quando estiver certo de que os casos de teste gerados são válidos, seguem rigorosamente
                       as restrições do problema, e cobrem amplamente as especificações do <enunciado>.
-                """
-            }
+                """,
+            },
         ]
 
         return prompt

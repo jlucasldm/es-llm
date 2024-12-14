@@ -1,0 +1,109 @@
+### Tarefa 1: Análise do Problema
+
+#### Regras Explícitas
+1. A pista circular tem um tamanho de `T` metros.
+2. A distância que Chapeuzinho e o Lobo pretendem correr é `X` metros.
+3. O ponto de término na pista é calculado como `X % T`, que representa a posição final na pista circular após correr `X` metros.
+
+#### Restrições Implícitas
+1. Tanto `T` quanto `X` devem ser inteiros positivos, conforme as restrições dadas (1 <= T, X <= 10000).
+2. O resultado do ponto de término deve estar sempre entre 0 e T-1, pois é uma pista circular.
+
+#### Condições Excepcionais
+1. Se `X` for um múltiplo exato de `T`, o ponto de término será `0`, indicando que eles retornam ao ponto de partida.
+2. O caso em que `T` é igual a `X` deve resultar em `0`, pois eles completam uma volta completa.
+
+### Tarefa 2: Implementação da Solução
+
+Aqui está a implementação da lógica descrita no enunciado:
+
+```python
+def ponto_termino(T, X):
+    return X % T
+
+# Testando com os casos de exemplo
+casos_de_exemplo = [
+    (200, 20),    # saída esperada: 20
+    (100, 1000),  # saída esperada: 0
+    (200, 1100)   # saída esperada: 100
+]
+
+for T, X in casos_de_exemplo:
+    print(f'T: {T}, X: {X} => Ponto de término: {ponto_termino(T, X)}')
+```
+
+### Tarefa 3: Geração de Novos Casos de Teste
+
+Aqui estão 15 novos casos de teste:
+
+#### Casos Simples
+1. Entrada: `1 1`  
+   Saída: `0`
+   
+2. Entrada: `2 1`  
+   Saída: `1`
+   
+3. Entrada: `3 3`  
+   Saída: `0`
+
+#### Casos Médios
+4. Entrada: `50 25`  
+   Saída: `25`
+   
+5. Entrada: `100 250`  
+   Saída: `50`
+   
+6. Entrada: `300 600`  
+   Saída: `0`
+
+#### Casos Complexos
+7. Entrada: `10000 10000`  
+   Saída: `0`
+   
+8. Entrada: `10000 9999`  
+   Saída: `9999`
+   
+9. Entrada: `10000 10001`  
+   Saída: `1`
+
+#### Casos Especiais
+10. Entrada: `10 10`  
+    Saída: `0`
+    
+11. Entrada: `10 15`  
+    Saída: `5`
+    
+12. Entrada: `10 20`  
+    Saída: `0`
+    
+13. Entrada: `7 14`  
+    Saída: `0`
+    
+14. Entrada: `5 12`  
+    Saída: `2`
+    
+15. Entrada: `8 24`  
+    Saída: `0`
+
+### Tarefa 4: Validação dos Casos de Teste
+
+Agora, vamos validar os casos de teste gerados:
+
+```python
+novos_casos_de_teste = [
+    (1, 1), (2, 1), (3, 3),
+    (50, 25), (100, 250), (300, 600),
+    (10000, 10000), (10000, 9999), (10000, 10001),
+    (10, 10), (10, 15), (10, 20),
+    (7, 14), (5, 12), (8, 24)
+]
+
+for T, X in novos_casos_de_teste:
+    print(f'T: {T}, X: {X} => Ponto de término: {ponto_termino(T, X)}')
+```
+
+### Resultados Esperados
+- Para cada entrada, a saída deve corresponder ao resultado esperado conforme descrito anteriormente.
+
+### Conclusão
+A implementação está correta e validada, e os casos de teste gerados cobrem uma ampla gama de cenários e restrições, garantindo a diversidade e relevância necessárias.

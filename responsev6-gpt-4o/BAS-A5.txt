@@ -1,0 +1,71 @@
+Passo 1: Compreensão e Análise do Problema
+
+O problema descreve uma pista circular de tamanho `T` metros e uma corrida de `X` metros. O objetivo é determinar o ponto de término na pista após correr `X` metros. A lógica é que, após completar voltas inteiras na pista, o ponto de término será o restante da divisão de `X` por `T`, ou seja, `X % T`.
+
+A resolução fornecida implementa exatamente essa lógica, utilizando a operação de módulo (`%`) para calcular o ponto de término.
+
+Passo 2: Validação da Análise e Correção
+
+Os casos de exemplo fornecidos são:
+1. Entrada: `200 20`, Saída: `20`
+2. Entrada: `100 1000`, Saída: `0`
+3. Entrada: `200 1100`, Saída: `100`
+
+Para cada caso, a saída é o resultado de `X % T`, o que confirma que a resolução está correta e alinhada com o enunciado.
+
+Passo 3: Geração de Novos Casos de Teste
+
+Agora, vamos gerar 15 casos de teste diversificados:
+
+**Casos Simples:**
+1. Entrada: `1 1`
+   Saída: `0`
+   
+2. Entrada: `10 5`
+   Saída: `5`
+
+**Casos Médios:**
+3. Entrada: `50 75`
+   Saída: `25`
+
+4. Entrada: `100 250`
+   Saída: `50`
+
+5. Entrada: `300 600`
+   Saída: `0`
+
+**Casos Complexos:**
+6. Entrada: `10000 9999`
+   Saída: `9999`
+
+7. Entrada: `9999 10000`
+   Saída: `1`
+
+8. Entrada: `10000 10000`
+   Saída: `0`
+
+9. Entrada: `10000 20000`
+   Saída: `0`
+
+10. Entrada: `10000 15000`
+    Saída: `5000`
+
+**Casos Especiais:**
+11. Entrada: `2 3`
+    Saída: `1`
+
+12. Entrada: `3 2`
+    Saída: `2`
+
+13. Entrada: `7 14`
+    Saída: `0`
+
+14. Entrada: `7 15`
+    Saída: `1`
+
+15. Entrada: `5000 12345`
+    Saída: `2345`
+
+Passo 4: Validação e Revisão dos Casos de Teste
+
+Cada caso de teste foi gerado para cobrir diferentes cenários, desde o mínimo até o máximo permitido pelas restrições. As saídas foram calculadas usando a lógica `X % T`, conforme a resolução fornecida. Todos os casos seguem as restrições do problema e cobrem uma ampla gama de cenários, garantindo a diversidade e relevância dos testes.

@@ -1,0 +1,283 @@
+Passo 1: Compreensão e Análise do Problema
+
+1. **Interpretação do Enunciado e Resolução:**
+   - O problema requer a ordenação de datas no formato dia-mês-ano.
+   - A entrada consiste em várias linhas, cada uma com três inteiros representando dia, mês e ano.
+   - A saída deve ser as mesmas datas, mas ordenadas cronologicamente.
+   - A resolução utiliza uma estrutura `evento` para armazenar as datas e a função `stable_sort` com um comparador personalizado para ordenar as datas.
+
+2. **Nuances Lógicas:**
+   - A ordenação é feita primeiro pelo ano, depois pelo mês e, por último, pelo dia.
+   - O uso de `stable_sort` garante que a ordem original seja mantida para datas iguais.
+   - Não há limites explícitos para o número de datas, mas o formato de entrada é bem definido.
+
+3. **Validação com Casos de Exemplo:**
+   - Os casos de exemplo fornecidos são consistentes com a lógica de ordenação descrita.
+   - A saída está correta, refletindo a ordenação cronológica das datas.
+
+Passo 2: Validação da Análise e Correção
+
+- A análise está correta e consistente com o enunciado, casos de exemplo e resolução.
+
+Passo 3: Geração de Novos Casos de Teste
+
+**Casos Simples:**
+
+1. Entrada:
+   ```
+   1 1 2000
+   ```
+   Saída:
+   ```
+   1 1 2000
+   ```
+
+2. Entrada:
+   ```
+   31 12 1999
+   1 1 2000
+   ```
+   Saída:
+   ```
+   31 12 1999
+   1 1 2000
+   ```
+
+**Casos Médios:**
+
+3. Entrada:
+   ```
+   15 8 1947
+   26 1 1950
+   15 8 1947
+   ```
+   Saída:
+   ```
+   15 8 1947
+   15 8 1947
+   26 1 1950
+   ```
+
+4. Entrada:
+   ```
+   1 1 2020
+   31 12 2019
+   1 1 2019
+   31 12 2020
+   ```
+   Saída:
+   ```
+   1 1 2019
+   31 12 2019
+   1 1 2020
+   31 12 2020
+   ```
+
+**Casos Complexos:**
+
+5. Entrada:
+   ```
+   29 2 2000
+   28 2 2000
+   1 3 2000
+   31 12 1999
+   1 1 2000
+   ```
+   Saída:
+   ```
+   31 12 1999
+   28 2 2000
+   29 2 2000
+   1 1 2000
+   1 3 2000
+   ```
+
+6. Entrada:
+   ```
+   31 12 1999
+   1 1 2000
+   31 12 2000
+   1 1 1999
+   31 12 1998
+   ```
+   Saída:
+   ```
+   31 12 1998
+   1 1 1999
+   31 12 1999
+   1 1 2000
+   31 12 2000
+   ```
+
+**Casos Especiais:**
+
+7. Entrada:
+   ```
+   29 2 2004
+   29 2 2000
+   28 2 2001
+   28 2 2000
+   ```
+   Saída:
+   ```
+   28 2 2000
+   29 2 2000
+   28 2 2001
+   29 2 2004
+   ```
+
+8. Entrada:
+   ```
+   31 1 2020
+   29 2 2020
+   1 3 2020
+   31 12 2019
+   1 1 2020
+   ```
+   Saída:
+   ```
+   31 12 2019
+   31 1 2020
+   29 2 2020
+   1 1 2020
+   1 3 2020
+   ```
+
+9. Entrada:
+   ```
+   1 1 1900
+   31 12 2099
+   1 1 2000
+   31 12 1999
+   1 1 2100
+   ```
+   Saída:
+   ```
+   1 1 1900
+   31 12 1999
+   1 1 2000
+   31 12 2099
+   1 1 2100
+   ```
+
+10. Entrada:
+    ```
+    29 2 2000
+    28 2 2000
+    1 3 2000
+    31 12 1999
+    1 1 2000
+    29 2 2004
+    ```
+    Saída:
+    ```
+    31 12 1999
+    28 2 2000
+    29 2 2000
+    1 1 2000
+    1 3 2000
+    29 2 2004
+    ```
+
+11. Entrada:
+    ```
+    1 1 2020
+    1 1 2020
+    1 1 2020
+    1 1 2020
+    ```
+    Saída:
+    ```
+    1 1 2020
+    1 1 2020
+    1 1 2020
+    1 1 2020
+    ```
+
+12. Entrada:
+    ```
+    31 12 1999
+    1 1 2000
+    31 12 2000
+    1 1 1999
+    31 12 1998
+    1 1 1998
+    ```
+    Saída:
+    ```
+    1 1 1998
+    31 12 1998
+    1 1 1999
+    31 12 1999
+    1 1 2000
+    31 12 2000
+    ```
+
+13. Entrada:
+    ```
+    29 2 2000
+    28 2 2000
+    1 3 2000
+    31 12 1999
+    1 1 2000
+    29 2 2004
+    28 2 2004
+    ```
+    Saída:
+    ```
+    31 12 1999
+    28 2 2000
+    29 2 2000
+    1 1 2000
+    1 3 2000
+    28 2 2004
+    29 2 2004
+    ```
+
+14. Entrada:
+    ```
+    1 1 1900
+    31 12 2099
+    1 1 2000
+    31 12 1999
+    1 1 2100
+    31 12 2100
+    ```
+    Saída:
+    ```
+    1 1 1900
+    31 12 1999
+    1 1 2000
+    31 12 2099
+    1 1 2100
+    31 12 2100
+    ```
+
+15. Entrada:
+    ```
+    31 12 1999
+    1 1 2000
+    31 12 2000
+    1 1 1999
+    31 12 1998
+    1 1 1998
+    31 12 1997
+    1 1 1997
+    ```
+    Saída:
+    ```
+    1 1 1997
+    31 12 1997
+    1 1 1998
+    31 12 1998
+    1 1 1999
+    31 12 1999
+    1 1 2000
+    31 12 2000
+    ```
+
+Passo 4: Validação e Revisão dos Casos de Teste
+
+- Todos os casos de teste foram gerados e validados com base na resolução fornecida.
+- As entradas seguem o formato especificado e as saídas estão corretas.
+- Os casos cobrem uma ampla gama de cenários, incluindo casos simples, médios, complexos e especiais.

@@ -1,0 +1,189 @@
+**Passo 1: Compreensão e Análise do Problema**
+
+1. **Interpretação do Enunciado e Resolução:**
+   - Snake coleta ovos em três caçadas, e em cada caçada, ela pode encontrar ovos envenenados.
+   - Para cada ovo envenenado encontrado, Snake perde 3 ovos (ela dorme e os camaleões recuperam 2 ovos).
+   - A tarefa é calcular quantos ovos sobraram após as três caçadas.
+
+2. **Nuances Lógicas:**
+   - A quantidade total de ovos coletados é a soma de ovos das três caçadas: `Q1 + Q2 + Q3`.
+   - A quantidade total de ovos perdidos devido aos ovos envenenados é `3 * (E1 + E2 + E3)`.
+   - A saída final é a diferença entre os ovos coletados e os ovos perdidos.
+
+3. **Validação com Casos de Exemplo:**
+   - Para o primeiro exemplo: `10 + 12 + 20 - (0*3 + 1*3 + 1*3) = 36`.
+   - Para o segundo exemplo: `6 + 6 + 6 - (2*3 + 2*3 + 2*3) = 0`.
+   - As saídas estão corretas e a lógica da resolução está alinhada com o enunciado.
+
+**Passo 2: Validação da Análise e Correção**
+- A análise está correta e as saídas dos casos de exemplo correspondem às expectativas.
+
+**Passo 3: Geração de Novos Casos de Teste**
+
+1. **Casos Simples:**
+   - Entrada:
+     ```
+     6 6 6
+     0 0 0
+     ```
+     Saída:
+     ```
+     18
+     ```
+
+2. **Casos Médios:**
+   - Entrada:
+     ```
+     10 15 12
+     1 0 1
+     ```
+     Saída:
+     ```
+     34
+     ```
+
+3. **Casos Complexos:**
+   - Entrada:
+     ```
+     20 20 20
+     2 2 2
+     ```
+     Saída:
+     ```
+     54
+     ```
+
+4. **Casos Especiais:**
+   - Entrada:
+     ```
+     6 20 20
+     2 0 0
+     ```
+     Saída:
+     ```
+     36
+     ```
+
+5. **Casos com Mínimos Ovos Coletados:**
+   - Entrada:
+     ```
+     6 6 6
+     1 1 1
+     ```
+     Saída:
+     ```
+     12
+     ```
+
+6. **Casos com Máximos Ovos Coletados e Mínimos Envenenados:**
+   - Entrada:
+     ```
+     20 20 20
+     0 0 0
+     ```
+     Saída:
+     ```
+     60
+     ```
+
+7. **Casos com Ovos Coletados e Nenhum Envenenado:**
+   - Entrada:
+     ```
+     10 10 10
+     0 0 0
+     ```
+     Saída:
+     ```
+     30
+     ```
+
+8. **Casos com Ovos Coletados e Todos Envenenados:**
+   - Entrada:
+     ```
+     10 10 10
+     2 2 2
+     ```
+     Saída:
+     ```
+     12
+     ```
+
+9. **Casos com Ovos Coletados e Um Envenenado em Cada Caçada:**
+   - Entrada:
+     ```
+     15 15 15
+     1 1 1
+     ```
+     Saída:
+     ```
+     42
+     ```
+
+10. **Casos com Ovos Coletados e Dois Envenenados em Cada Caçada:**
+    - Entrada:
+      ```
+      12 12 12
+      2 2 2
+      ```
+      Saída:
+      ```
+      30
+      ```
+
+11. **Casos com Ovos Coletados e Um Envenenado em Duas Caçadas:**
+    - Entrada:
+      ```
+      18 18 18
+      1 1 0
+      ```
+      Saída:
+      ```
+      51
+      ```
+
+12. **Casos com Ovos Coletados e Nenhum Envenenado em Uma Caçada:**
+    - Entrada:
+      ```
+      14 14 14
+      0 1 0
+      ```
+      Saída:
+      ```
+      41
+      ```
+
+13. **Casos com Ovos Coletados e Um Envenenado em Uma Caçada:**
+    - Entrada:
+      ```
+      16 16 16
+      1 0 0
+      ```
+      Saída:
+      ```
+      49
+      ```
+
+14. **Casos com Ovos Coletados e Dois Envenenados em Uma Caçada:**
+    - Entrada:
+      ```
+      19 19 19
+      0 2 0
+      ```
+      Saída:
+      ```
+      54
+      ```
+
+15. **Casos com Ovos Coletados e Um Envenenado em Cada Caçada:**
+    - Entrada:
+      ```
+      20 20 20
+      1 1 1
+      ```
+      Saída:
+      ```
+      57
+      ```
+
+**Passo 4: Validação e Revisão dos Casos de Teste**
+- Todos os casos gerados foram revisados e estão em conformidade com as restrições do enunciado. As saídas foram calculadas corretamente e cobrem uma ampla gama de cenários.

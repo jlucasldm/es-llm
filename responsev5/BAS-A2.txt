@@ -1,0 +1,83 @@
+**Passo 1: Compreensão e Análise do Problema**
+
+1. O enunciado descreve um problema onde Luffy e seu bando de piratas precisam calcular a soma dos tesouros encontrados em várias ilhas. Cada tesouro é representado por um número inteiro entre 1 e 10, e a entrada consiste em uma sequência de 6 números.
+2. A resolução fornecida lê 6 números inteiros, um por um, e acumula a soma total desses números. O resultado final é impresso na saída.
+3. As saídas dos casos de exemplo confirmam que a soma dos tesouros está correta, pois:
+   - Para a entrada `1 2 3 4 5 6`, a soma é `21`.
+   - Para a entrada `2 4 7 9 8 10`, a soma é `40`.
+
+**Passo 2: Validação da Análise e Correção**
+
+- A análise está correta, pois a lógica da resolução corresponde ao que é solicitado no enunciado. A soma dos tesouros é calculada corretamente e as saídas dos casos de exemplo estão alinhadas com a lógica implementada.
+
+**Passo 3: Geração de Novos Casos de Teste**
+
+Aqui estão 15 casos de teste diversificados:
+
+1. **Caso Simples 1**
+   - Entrada: `1 1 1 1 1 1`
+   - Saída: `6`
+   
+2. **Caso Simples 2**
+   - Entrada: `1 2 1 2 1 2`
+   - Saída: `9`
+
+3. **Caso Médio 1**
+   - Entrada: `3 4 2 5 1 2`
+   - Saída: `17`
+
+4. **Caso Médio 2**
+   - Entrada: `5 5 5 5 5 5`
+   - Saída: `30`
+
+5. **Caso Médio 3**
+   - Entrada: `2 3 4 5 6 7`
+   - Saída: `27`
+
+6. **Caso Complexo 1**
+   - Entrada: `10 10 10 10 10 10`
+   - Saída: `60`
+
+7. **Caso Complexo 2**
+   - Entrada: `9 9 9 9 9 9`
+   - Saída: `54`
+
+8. **Caso Complexo 3**
+   - Entrada: `8 8 8 8 8 8`
+   - Saída: `48`
+
+9. **Caso Especial 1**
+   - Entrada: `1 10 1 10 1 10`
+   - Saída: `33`
+
+10. **Caso Especial 2**
+    - Entrada: `10 1 10 1 10 1`
+    - Saída: `33`
+
+11. **Caso Especial 3**
+    - Entrada: `5 1 5 1 5 1`
+    - Saída: `18`
+
+12. **Caso Especial 4**
+    - Entrada: `2 2 2 2 2 2`
+    - Saída: `12`
+
+13. **Caso Especial 5**
+    - Entrada: `1 2 3 4 5 10`
+    - Saída: `25`
+
+14. **Caso Especial 6**
+    - Entrada: `10 9 8 7 6 5`
+    - Saída: `45`
+
+15. **Caso Especial 7**
+    - Entrada: `1 1 1 1 1 10`
+    - Saída: `15`
+
+**Passo 4: Validação e Revisão dos Casos de Teste**
+
+- Todos os casos de teste gerados seguem as restrições do enunciado (1 <= ti <= 10 e 6 tesouros).
+- As saídas foram calculadas corretamente com base na soma dos valores de entrada.
+- Os casos cobrem uma ampla gama de cenários, incluindo casos simples, médios, complexos e especiais, garantindo diversidade e relevância.
+
+Os casos de teste estão prontos para serem utilizados e são válidos conforme as especificações do problema.

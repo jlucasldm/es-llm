@@ -1,0 +1,151 @@
+### Tarefa 1: Análise do Problema
+
+#### Regras Explícitas
+1. A entrada consiste em dois números inteiros `E` (espaço) e `T` (tempo).
+2. Os valores de `E` e `T` estão restritos a: 
+   - \(1 \leq E \leq 500\)
+   - \(1 \leq T \leq 100\)
+3. A saída deve ser a velocidade `V`, calculada pela fórmula \(V = \frac{E}{T}\).
+4. A saída deve ser um número inteiro.
+
+#### Regras Implícitas
+1. A divisão \(E/T\) deve resultar em um número inteiro, o que implica que `E` deve ser divisível por `T` para que a operação não gere um número decimal.
+2. O resultado deve ser arredondado para baixo, pois estamos lidando com inteiros e a divisão de inteiros em muitas linguagens de programação (como Python) já realiza a divisão inteira automaticamente.
+
+#### Condições Excepcionais
+1. O menor valor para `E` é 1 e para `T` é 1, resultando em uma velocidade mínima de 1.
+2. O maior valor para `E` é 500 e para `T` é 100, resultando em uma velocidade máxima de 5000.
+3. Casos em que `E` não é divisível por `T` não são explicitamente tratados, mas a interpretação correta é que a saída deve ser o resultado da divisão inteira.
+
+### Tarefa 2: Validação da Análise
+
+Vamos validar a análise com os casos de exemplo fornecidos:
+
+1. **Caso 1:**
+   - Entrada: `300 5`
+   - Cálculo: \(V = \frac{300}{5} = 60\)
+   - Saída esperada: `60` (correto)
+
+2. **Caso 2:**
+   - Entrada: `100 2`
+   - Cálculo: \(V = \frac{100}{2} = 50\)
+   - Saída esperada: `50` (correto)
+
+A análise está correta, pois os resultados obtidos correspondem às saídas esperadas.
+
+### Tarefa 3: Geração de Novos Casos de Teste
+
+#### Casos Simples
+1. Entrada: `1 1`
+   Saída: `1`
+   
+2. Entrada: `2 1`
+   Saída: `2`
+
+#### Casos Médios
+3. Entrada: `50 5`
+   Saída: `10`
+
+4. Entrada: `150 3`
+   Saída: `50`
+
+5. Entrada: `250 10`
+   Saída: `25`
+
+6. Entrada: `400 4`
+   Saída: `100`
+
+#### Casos Complexos
+7. Entrada: `500 100`
+   Saída: `5`
+
+8. Entrada: `500 1`
+   Saída: `500`
+
+9. Entrada: `499 99`
+   Saída: `5`
+
+#### Casos Especiais
+10. Entrada: `10 3`
+    Saída: `3`
+
+11. Entrada: `99 10`
+    Saída: `9`
+
+12. Entrada: `200 3`
+    Saída: `66`
+
+13. Entrada: `300 2`
+    Saída: `150`
+
+14. Entrada: `450 15`
+    Saída: `30`
+
+15. Entrada: `250 5`
+    Saída: `50`
+
+### Tarefa 4: Validação dos Casos de Teste
+
+Agora, vamos validar os casos de teste gerados:
+
+1. **Caso 1:**
+   - Entrada: `1 1`
+   - Saída: `1` (correto)
+
+2. **Caso 2:**
+   - Entrada: `2 1`
+   - Saída: `2` (correto)
+
+3. **Caso 3:**
+   - Entrada: `50 5`
+   - Saída: `10` (correto)
+
+4. **Caso 4:**
+   - Entrada: `150 3`
+   - Saída: `50` (correto)
+
+5. **Caso 5:**
+   - Entrada: `250 10`
+   - Saída: `25` (correto)
+
+6. **Caso 6:**
+   - Entrada: `400 4`
+   - Saída: `100` (correto)
+
+7. **Caso 7:**
+   - Entrada: `500 100`
+   - Saída: `5` (correto)
+
+8. **Caso 8:**
+   - Entrada: `500 1`
+   - Saída: `500` (correto)
+
+9. **Caso 9:**
+   - Entrada: `499 99`
+   - Saída: `5` (correto)
+
+10. **Caso 10:**
+    - Entrada: `10 3`
+    - Saída: `3` (correto)
+
+11. **Caso 11:**
+    - Entrada: `99 10`
+    - Saída: `9` (correto)
+
+12. **Caso 12:**
+    - Entrada: `200 3`
+    - Saída: `66` (correto)
+
+13. **Caso 13:**
+    - Entrada: `300 2`
+    - Saída: `150` (correto)
+
+14. **Caso 14:**
+    - Entrada: `450 15`
+    - Saída: `30` (correto)
+
+15. **Caso 15:**
+    - Entrada: `250 5`
+    - Saída: `50` (correto)
+
+Todos os casos de teste gerados estão corretos e cobrem uma ampla gama de cenários e restrições. A implementação e a análise estão validadas.

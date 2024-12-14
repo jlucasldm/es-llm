@@ -1,0 +1,218 @@
+Passo 1: Compreensão e Análise do Problema
+
+1. **Interpretação do Enunciado e Resolução:**
+   - Ori precisa verificar se o XP total obtido em missões é suficiente para subir de nível.
+   - Para cada missão, o XP é multiplicado por um bônus específico, e um bônus adicional é somado antes da multiplicação.
+   - O XP total é a soma dos XP calculados para cada missão.
+   - Se o XP total for maior ou igual a um valor M, Ori sobe de nível.
+
+2. **Nuances Lógicas:**
+   - O cálculo do XP para cada missão é: `(XP da missão + bônus adicional) * bônus da missão`.
+   - O XP total é a soma dos XP calculados para todas as missões.
+   - A comparação final é entre o XP total e o valor M.
+
+3. **Validação com Casos de Exemplo:**
+   - Os casos de exemplo fornecidos confirmam que a lógica da resolução está correta:
+     - No primeiro exemplo, o XP total é suficiente para subir de nível.
+     - No segundo exemplo, o XP total não é suficiente.
+
+Passo 2: Validação da Análise e Correção
+
+- A análise está correta e coesa com o enunciado, casos de exemplo e resolução.
+
+Passo 3: Geração de Novos Casos de Teste
+
+**Casos Simples:**
+
+1. Entrada:
+   ```
+   1
+   1
+   1
+   1 0
+   ```
+   Saída:
+   ```
+   Nao foi dessa vez!
+   ```
+
+2. Entrada:
+   ```
+   1
+   10
+   5
+   50 0
+   ```
+   Saída:
+   ```
+   Upou de Nivel!
+   ```
+
+**Casos Médios:**
+
+3. Entrada:
+   ```
+   3
+   2 3 4
+   1 2 1
+   20 1
+   ```
+   Saída:
+   ```
+   Upou de Nivel!
+   ```
+
+4. Entrada:
+   ```
+   4
+   1 2 3 4
+   1 1 1 1
+   15 0
+   ```
+   Saída:
+   ```
+   Nao foi dessa vez!
+   ```
+
+5. Entrada:
+   ```
+   5
+   5 4 3 2 1
+   1 2 3 4 5
+   50 1
+   ```
+   Saída:
+   ```
+   Upou de Nivel!
+   ```
+
+**Casos Complexos:**
+
+6. Entrada:
+   ```
+   100
+   1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+   1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+   100 0
+   ```
+   Saída:
+   ```
+   Nao foi dessa vez!
+   ```
+
+7. Entrada:
+   ```
+   100
+   10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10
+   5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+   10000 2
+   ```
+   Saída:
+   ```
+   Upou de Nivel!
+   ```
+
+**Casos Especiais:**
+
+8. Entrada:
+   ```
+   2
+   1 10
+   5 1
+   15 1
+   ```
+   Saída:
+   ```
+   Upou de Nivel!
+   ```
+
+9. Entrada:
+   ```
+   3
+   3 3 3
+   3 3 3
+   30 0
+   ```
+   Saída:
+   ```
+   Upou de Nivel!
+   ```
+
+10. Entrada:
+    ```
+    3
+    3 3 3
+    3 3 3
+    30 1
+    ```
+    Saída:
+    ```
+    Upou de Nivel!
+    ```
+
+11. Entrada:
+    ```
+    5
+    1 1 1 1 1
+    5 5 5 5 5
+    30 0
+    ```
+    Saída:
+    ```
+    Nao foi dessa vez!
+    ```
+
+12. Entrada:
+    ```
+    5
+    1 1 1 1 1
+    5 5 5 5 5
+    25 0
+    ```
+    Saída:
+    ```
+    Upou de Nivel!
+    ```
+
+13. Entrada:
+    ```
+    10
+    1 2 3 4 5 6 7 8 9 10
+    1 1 1 1 1 1 1 1 1 1
+    55 0
+    ```
+    Saída:
+    ```
+    Upou de Nivel!
+    ```
+
+14. Entrada:
+    ```
+    10
+    1 2 3 4 5 6 7 8 9 10
+    1 1 1 1 1 1 1 1 1 1
+    56 0
+    ```
+    Saída:
+    ```
+    Nao foi dessa vez!
+    ```
+
+15. Entrada:
+    ```
+    10
+    10 9 8 7 6 5 4 3 2 1
+    1 2 3 4 5 1 2 3 4 5
+    100 1
+    ```
+    Saída:
+    ```
+    Upou de Nivel!
+    ```
+
+Passo 4: Validação e Revisão dos Casos de Teste
+
+- Todos os casos de teste foram validados com a resolução fornecida.
+- As entradas seguem rigorosamente o formato e as restrições especificadas.
+- As saídas geradas estão corretas e alinhadas com a lógica validada.
+- Os casos cobrem uma ampla gama de cenários e restrições, testando todas as possíveis saídas esperadas.

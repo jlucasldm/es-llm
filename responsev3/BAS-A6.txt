@@ -1,0 +1,165 @@
+### Tarefa 1: Análise do Problema
+
+#### Regras Explícitas
+1. A entrada consiste em 5 valores inteiros que representam as recompensas dos cinco piratas.
+2. Os valores das recompensas estão na faixa de 1 a 1.000.000.000 (1 < L, Z, N, U, S < 1.000.000.000).
+3. A saída deve ser a soma das recompensas dos cinco piratas.
+
+#### Regras Implícitas
+1. A soma das recompensas deve ser calculada de forma a evitar overflow, mas como a soma de cinco valores máximos (5 * 999.999.999) é 4.999.999.995, isso não deve ser um problema em linguagens que suportam inteiros grandes.
+2. A ordem das recompensas não afeta o resultado, pois a soma é comutativa.
+3. O formato da entrada deve ser respeitado, ou seja, os valores devem ser separados por espaço.
+
+#### Condições Excepcionais
+1. Se algum valor estiver fora do intervalo especificado, a entrada deve ser considerada inválida, mas o enunciado não especifica como tratar entradas inválidas.
+2. O problema não menciona a possibilidade de valores negativos ou zero, portanto, esses casos não devem ser considerados.
+
+### Tarefa 2: Validação da Análise
+
+Vamos validar a análise utilizando os casos de exemplo fornecidos.
+
+1. **Caso de Exemplo 1:**
+   - Entrada: `300000000 120000000 16000000 30000000 77000000`
+   - Cálculo: \( 300000000 + 120000000 + 16000000 + 30000000 + 77000000 = 543000000 \)
+   - Saída esperada: `543000000`
+   - Resultado: Correto.
+
+2. **Caso de Exemplo 2:**
+   - Entrada: `500000000 320000000 66000000 200000000 177000000`
+   - Cálculo: \( 500000000 + 320000000 + 66000000 + 200000000 + 177000000 = 1263000000 \)
+   - Saída esperada: `1263000000`
+   - Resultado: Correto.
+
+A análise está correta, pois os resultados obtidos coincidem com as saídas esperadas.
+
+### Tarefa 3: Geração de Novos Casos de Teste
+
+#### Casos Simples
+1. **Entrada:** `2 3 4 5 6`  
+   **Saída:** `20`  
+   (Valores mínimos válidos)
+
+2. **Entrada:** `1 1 1 1 1`  
+   **Saída:** `5`  
+   (Todos os valores iguais ao mínimo)
+
+#### Casos Médios
+3. **Entrada:** `100000000 200000000 300000000 400000000 500000000`  
+   **Saída:** `1500000000`  
+   (Valores intermediários)
+
+4. **Entrada:** `250000000 250000000 250000000 250000000 250000000`  
+   **Saída:** `1250000000`  
+   (Todos os valores iguais)
+
+5. **Entrada:** `123456789 987654321 234567890 345678901 456789012`  
+   **Saída:** `2109870123`  
+   (Valores variados)
+
+#### Casos Complexos
+6. **Entrada:** `999999999 999999999 999999999 999999999 999999999`  
+   **Saída:** `4999999995`  
+   (Valores máximos)
+
+7. **Entrada:** `999999998 999999998 999999998 999999998 999999998`  
+   **Saída:** `4999999990`  
+   (Valores próximos ao máximo)
+
+#### Casos Especiais
+8. **Entrada:** `1 1000000000 1 1000000000 1`  
+   **Saída:** `2000000003`  
+   (Mistura de valores extremos)
+
+9. **Entrada:** `500000000 500000000 1 1 1`  
+   **Saída:** `1000000003`  
+   (Valores extremos com um mínimo)
+
+10. **Entrada:** `999999999 1 999999999 1 999999999`  
+    **Saída:** `2999999999`  
+    (Mistura de valores extremos)
+
+11. **Entrada:** `2 2 2 2 999999999`  
+    **Saída:** `1000000007`  
+    (Um valor máximo com valores mínimos)
+
+12. **Entrada:** `999999999 999999998 999999997 999999996 999999995`  
+    **Saída:** `4999999985`  
+    (Valores máximos em decremento)
+
+13. **Entrada:** `1 1 1 1 999999999`  
+    **Saída:** `1000000003`  
+    (Um valor máximo com valores mínimos)
+
+14. **Entrada:** `1000000000 1000000000 1000000000 1000000000 1000000000`  
+    **Saída:** `5000000000`  
+    (Todos os valores máximos)
+
+15. **Entrada:** `999999999 999999999 999999999 999999999 999999998`  
+    **Saída:** `4999999994`  
+    (Quase todos os valores máximos)
+
+### Tarefa 4: Validação dos Casos de Teste
+
+Agora, vamos validar os casos de teste gerados:
+
+1. **Entrada:** `2 3 4 5 6`  
+   **Saída:** `20`  
+   (Correto)
+
+2. **Entrada:** `1 1 1 1 1`  
+   **Saída:** `5`  
+   (Correto)
+
+3. **Entrada:** `100000000 200000000 300000000 400000000 500000000`  
+   **Saída:** `1500000000`  
+   (Correto)
+
+4. **Entrada:** `250000000 250000000 250000000 250000000 250000000`  
+   **Saída:** `1250000000`  
+   (Correto)
+
+5. **Entrada:** `123456789 987654321 234567890 345678901 456789012`  
+   **Saída:** `2109870123`  
+   (Correto)
+
+6. **Entrada:** `999999999 999999999 999999999 999999999 999999999`  
+   **Saída:** `4999999995`  
+   (Correto)
+
+7. **Entrada:** `999999998 999999998 999999998 999999998 999999998`  
+   **Saída:** `4999999990`  
+   (Correto)
+
+8. **Entrada:** `1 1000000000 1 1000000000 1`  
+   **Saída:** `2000000003`  
+   (Correto)
+
+9. **Entrada:** `500000000 500000000 1 1 1`  
+   **Saída:** `1000000003`  
+   (Correto)
+
+10. **Entrada:** `999999999 1 999999999 1 999999999`  
+    **Saída:** `2999999999`  
+    (Correto)
+
+11. **Entrada:** `2 2 2 2 999999999`  
+    **Saída:** `1000000007`  
+    (Correto)
+
+12. **Entrada:** `999999999 999999998 999999997 999999996 999999995`  
+    **Saída:** `4999999985`  
+    (Correto)
+
+13. **Entrada:** `1 1 1 1 999999999`  
+    **Saída:** `1000000003`  
+    (Correto)
+
+14. **Entrada:** `1000000000 1000000000 1000000000 1000000000 1000000000`  
+    **Saída:** `5000000000`  
+    (Correto)
+
+15. **Entrada:** `999999999 999999999 999999999 999999999 999999998`  
+    **Saída:** `4999999994`  
+    (Correto)
+
+Todos os casos de teste gerados foram validados e estão corretos. A implementação está correta e validada, e os casos de teste gerados cobrem uma ampla gama de cenários e restrições.

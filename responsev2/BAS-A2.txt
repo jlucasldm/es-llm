@@ -1,0 +1,135 @@
+### Tarefa 1: Análise do Problema
+
+#### Regras Explícitas:
+1. A entrada consiste em uma sequência de 6 números inteiros (t1, t2, t3, t4, t5, t6).
+2. Cada número representa o valor em ouro dos tesouros encontrados, com a restrição de que \(1 \leq t_i \leq 10\).
+3. A saída deve ser um único número inteiro que representa a soma dos valores dos tesouros.
+
+#### Restrições Implícitas:
+1. A soma dos tesouros deve ser calculada apenas se houver exatamente 6 valores na entrada.
+2. Os valores devem ser inteiros e dentro do intervalo especificado (1 a 10).
+
+#### Condições Excepcionais:
+1. Se a entrada não contiver exatamente 6 números, a implementação deve lidar com isso (embora não esteja explicitamente mencionado no enunciado).
+2. A soma pode variar de 6 (caso todos os tesouros sejam 1) a 60 (caso todos os tesouros sejam 10).
+
+### Tarefa 2: Implementação da Solução
+
+Aqui está a implementação da solução em Python:
+
+```python
+def calcular_soma_tesouros(tesouros):
+    # Converte a entrada em uma lista de inteiros
+    tesouros = list(map(int, tesouros.split()))
+    
+    # Verifica se a entrada contém exatamente 6 tesouros
+    if len(tesouros) != 6:
+        raise ValueError("A entrada deve conter exatamente 6 tesouros.")
+    
+    # Calcula a soma dos tesouros
+    soma = sum(tesouros)
+    return soma
+
+# Testando com os casos de exemplo
+casos_de_exemplo = [
+    {'entrada': '1 2 3 4 5 6', 'saida': '21'},
+    {'entrada': '2 4 7 9 8 10', 'saida': '40'}
+]
+
+for caso in casos_de_exemplo:
+    entrada = caso['entrada']
+    esperado = int(caso['saida'])
+    resultado = calcular_soma_tesouros(entrada)
+    assert resultado == esperado, f"Erro: esperado {esperado}, mas obteve {resultado}"
+
+print("Todos os casos de exemplo passaram.")
+```
+
+### Tarefa 3: Geração de Novos Casos de Teste
+
+Aqui estão 15 novos casos de teste:
+
+#### Casos Simples:
+1. Entrada: `1 1 1 1 1 1`  
+   Saída: `6`
+   
+2. Entrada: `1 1 1 1 1 2`  
+   Saída: `7`
+
+#### Casos Médios:
+3. Entrada: `3 3 3 3 3 3`  
+   Saída: `18`
+   
+4. Entrada: `2 3 4 5 6 7`  
+   Saída: `27`
+
+5. Entrada: `5 5 5 5 5 5`  
+   Saída: `30`
+
+#### Casos Complexos:
+6. Entrada: `10 10 10 10 10 10`  
+   Saída: `60`
+   
+7. Entrada: `9 9 9 9 9 9`  
+   Saída: `54`
+
+8. Entrada: `8 8 8 8 8 8`  
+   Saída: `48`
+
+#### Casos Especiais:
+9. Entrada: `1 10 1 10 1 10`  
+   Saída: `33`
+   
+10. Entrada: `2 2 2 2 2 10`  
+    Saída: `20`
+
+11. Entrada: `10 1 10 1 10 1`  
+    Saída: `33`
+
+12. Entrada: `5 5 5 1 1 1`  
+    Saída: `18`
+
+13. Entrada: `3 3 3 3 3 10`  
+    Saída: `25`
+
+14. Entrada: `4 4 4 4 4 4`  
+    Saída: `24`
+
+15. Entrada: `6 6 6 6 6 6`  
+    Saída: `36`
+
+### Tarefa 4: Validação dos Casos de Teste
+
+Agora, vamos validar os casos de teste gerados:
+
+```python
+novos_casos_de_teste = [
+    {'entrada': '1 1 1 1 1 1', 'saida': '6'},
+    {'entrada': '1 1 1 1 1 2', 'saida': '7'},
+    {'entrada': '3 3 3 3 3 3', 'saida': '18'},
+    {'entrada': '2 3 4 5 6 7', 'saida': '27'},
+    {'entrada': '5 5 5 5 5 5', 'saida': '30'},
+    {'entrada': '10 10 10 10 10 10', 'saida': '60'},
+    {'entrada': '9 9 9 9 9 9', 'saida': '54'},
+    {'entrada': '8 8 8 8 8 8', 'saida': '48'},
+    {'entrada': '1 10 1 10 1 10', 'saida': '33'},
+    {'entrada': '2 2 2 2 2 10', 'saida': '20'},
+    {'entrada': '10 1 10 1 10 1', 'saida': '33'},
+    {'entrada': '5 5 5 1 1 1', 'saida': '18'},
+    {'entrada': '3 3 3 3 3 10', 'saida': '25'},
+    {'entrada': '4 4 4 4 4 4', 'saida': '24'},
+    {'entrada': '6 6 6 6 6 6', 'saida': '36'},
+]
+
+for caso in novos_casos_de_teste:
+    entrada = caso['entrada']
+    esperado = int(caso['saida'])
+    resultado = calcular_soma_tesouros(entrada)
+    assert resultado == esperado, f"Erro: esperado {esperado}, mas obteve {resultado}"
+
+print("Todos os novos casos de teste passaram.")
+```
+
+### Conclusão
+
+A implementação foi validada com sucesso para todos os casos de exemplo e os novos casos de teste. A análise do problema, a implementação da solução e a geração dos casos de teste foram realizadas de acordo com as especificações.

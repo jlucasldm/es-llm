@@ -1,0 +1,106 @@
+### Tarefa 1: Análise do Problema
+
+#### Regras Explícitas
+1. A pista circular tem um tamanho de `T` metros.
+2. Eles pretendem correr uma distância de `X` metros.
+3. O ponto de término na pista é calculado como `X % T`, que representa a posição final na pista circular após correr `X` metros.
+
+#### Regras Implícitas
+1. O resultado deve ser sempre um número não negativo, pois estamos lidando com uma pista circular.
+2. Se `X` for um múltiplo exato de `T`, o ponto de término será `0`, indicando que eles retornaram ao ponto de partida.
+3. O valor de `X` pode ser maior que `T`, o que significa que eles darão voltas na pista.
+
+#### Condições Excepcionais
+1. O menor valor para `T` e `X` é `1`, o que significa que a pista tem 1 metro e eles correrão 1 metro, resultando em um ponto de término de `0`.
+2. O maior valor para `T` e `X` é `10000`, o que deve ser considerado para garantir que a implementação funcione em limites extremos.
+
+### Tarefa 2: Validação da Análise
+
+Vamos validar a análise utilizando os casos de exemplo fornecidos:
+
+1. **Entrada:** `200 20`
+   - Cálculo: `20 % 200 = 20`
+   - **Saída Esperada:** `20` (Correto)
+
+2. **Entrada:** `100 1000`
+   - Cálculo: `1000 % 100 = 0`
+   - **Saída Esperada:** `0` (Correto)
+
+3. **Entrada:** `200 1100`
+   - Cálculo: `1100 % 200 = 100`
+   - **Saída Esperada:** `100` (Correto)
+
+Todos os casos de exemplo produzem os resultados esperados, validando a análise.
+
+### Tarefa 3: Geração de Novos Casos de Teste
+
+#### Casos Simples
+1. **Entrada:** `1 1`
+   - **Saída:** `0`
+   
+2. **Entrada:** `1 5`
+   - **Saída:** `0`
+
+3. **Entrada:** `2 1`
+   - **Saída:** `1`
+
+#### Casos Médios
+4. **Entrada:** `50 75`
+   - **Saída:** `25`
+
+5. **Entrada:** `300 600`
+   - **Saída:** `0`
+
+6. **Entrada:** `150 400`
+   - **Saída:** `100`
+
+#### Casos Complexos
+7. **Entrada:** `10000 10000`
+   - **Saída:** `0`
+
+8. **Entrada:** `10000 9999`
+   - **Saída:** `9999`
+
+9. **Entrada:** `10000 20000`
+   - **Saída:** `0`
+
+#### Casos Especiais
+10. **Entrada:** `500 499`
+    - **Saída:** `499`
+
+11. **Entrada:** `500 1001`
+    - **Saída:** `1`
+
+12. **Entrada:** `1000 1500`
+    - **Saída:** `500`
+
+13. **Entrada:** `1000 2500`
+    - **Saída:** `500`
+
+14. **Entrada:** `9999 9998`
+    - **Saída:** `9998`
+
+15. **Entrada:** `9999 19998`
+    - **Saída:** `9998`
+
+### Tarefa 4: Validação dos Casos de Teste Gerados
+
+Agora, vamos validar os casos de teste gerados:
+
+1. **Entrada:** `1 1` → **Saída:** `0` (Correto)
+2. **Entrada:** `1 5` → **Saída:** `0` (Correto)
+3. **Entrada:** `2 1` → **Saída:** `1` (Correto)
+4. **Entrada:** `50 75` → **Saída:** `25` (Correto)
+5. **Entrada:** `300 600` → **Saída:** `0` (Correto)
+6. **Entrada:** `150 400` → **Saída:** `100` (Correto)
+7. **Entrada:** `10000 10000` → **Saída:** `0` (Correto)
+8. **Entrada:** `10000 9999` → **Saída:** `9999` (Correto)
+9. **Entrada:** `10000 20000` → **Saída:** `0` (Correto)
+10. **Entrada:** `500 499` → **Saída:** `499` (Correto)
+11. **Entrada:** `500 1001` → **Saída:** `1` (Correto)
+12. **Entrada:** `1000 1500` → **Saída:** `500` (Correto)
+13. **Entrada:** `1000 2500` → **Saída:** `500` (Correto)
+14. **Entrada:** `9999 9998` → **Saída:** `9998` (Correto)
+15. **Entrada:** `9999 19998` → **Saída:** `9998` (Correto)
+
+Todos os casos de teste gerados são válidos e cobrem uma ampla gama de cenários e restrições. A implementação está correta e validada.
