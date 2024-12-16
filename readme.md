@@ -67,7 +67,10 @@ falha da execução.
 Os casos de teste gerados pelo modelo e o sucesso da validação pelo agente validador serão registrados lá. O modelo deve
 continuar gerando os casos teste até que uma quantidade X de casos teste tenham sido gerados corretamente.
 
-4. Depois a gente vê um framework de comunicação melhor, um formato maneiro de input do usuário e de saída do modelo e
+4. A partir disso, a gente volta à etapa de prompt engineering, refinando o prompt para que o modelo gere casos de teste
+seguindo esse fluxo de validação.
+
+5. Depois a gente vê um framework de comunicação melhor, um formato maneiro de input do usuário e de saída do modelo e
 do sistema.
 
 ## Como executar
