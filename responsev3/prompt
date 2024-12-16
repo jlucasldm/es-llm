@@ -34,7 +34,6 @@ prompt = [
             Valide a sua análise novamente com os <casos_de_exemplo> até que você esteja confiante de que a sua análise
             está correta, ou seja, que a sua análise produz os resultados esperados para os <casos_de_exemplo>.
 
-
             **Tarefa 3:** Gere 15 novos casos de teste com base no seguinte critério:
             - **Casos Simples:** Entradas mínimas para validar funcionalidades básicas.
             - **Casos Médios:** Entradas intermediárias que testam cenários mais comuns.

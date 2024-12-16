@@ -1,5 +1,4 @@
 import json
-
 from provider.api_provider import OpenAIProvider
 
 openai_provider = OpenAIProvider(model="gpt-4o-mini", max_tokens=3000, temperature=0)
@@ -10,6 +9,6 @@ for questao in questoes:
 
     prompt = openai_provider.get_prompt(questao)
     completion = openai_provider.get_response(prompt)
-    openai_provider.save_response(completion, questao["codigo"], "responsev6-gpt-4o")
+    openai_provider.save_response(completion, questao["codigo"], "teste-em-aula")
 
 print("Respostas geradas com sucesso!")
