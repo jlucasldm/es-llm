@@ -1,6 +1,7 @@
 from openai import OpenAI
 from openai.types.chat import ChatCompletion
 from config import settings
+from db.weyes_db import Questao
 
 API_KEY = settings.openai.API_KEY
 
@@ -12,7 +13,10 @@ class OpenAIProvider:
         self.max_tokens = max_tokens
         self.temperature = temperature
 
-    def get_prompt(self, questao: dict) -> list[dict]:
+    def get_prompt(self, questao: Questao) -> list[dict]:
+
+        exemplos = {exemplo.entrada: exemplo.saida for exemplo in questao.exemplos}
+
         prompt = [
             {
                 "role": "system",
@@ -29,11 +33,11 @@ class OpenAIProvider:
                 "content": f"""
                             Considere o seguinte problema de programação competitiva:
 
-                            <enunciado>: "{questao['enunciado']}"
-                            <entrada>: "{questao['entrada']}"
-                            <saida>: "{questao['saida']}"
-                            <casos_de_exemplo>: "{questao['casos_exemplo']}"
-                            <resolucao>: "{questao['resolucao']}"
+                            <enunciado>: "{questao.enunciado}"
+                            <entrada>: "{questao.entrada}"
+                            <saida>: "{questao.saida}"
+                            <casos_de_exemplo>: "{exemplos}"
+                            <resolucao>: "{questao.resolucao}"
 
                             **Tarefa:** Sua missão é interpretar a <resolucao> em função do <enunciado> e dos <casos_de_exemplo>.
                             Após isso, você deve gerar casos de teste novos, diversificados e alinhados com o enunciado e a
