@@ -3,9 +3,9 @@ from sqlalchemy import select
 from sqlalchemy.orm import selectinload
 
 from db.weyes_db import WeyesAsyncSession, Questao
-from providers.api_provider import OpenAIProvider
+from agents.open_ai_agent import OpenAiAgent
 
-openai_provider = OpenAIProvider(model="gpt-4o-mini", max_tokens=3000, temperature=0)
+openai_provider = OpenAiAgent(model="gpt-4o-mini", max_tokens=3000, temperature=0)
 
 
 async def main():

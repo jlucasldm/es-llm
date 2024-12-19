@@ -1,5 +1,7 @@
+import enum
+
 from config import settings
-from sqlalchemy import VARCHAR, BOOLEAN, ForeignKey
+from sqlalchemy import VARCHAR, ForeignKey
 from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 import asyncio
@@ -19,6 +21,11 @@ async_engine = create_async_engine(DATABASE_URL, echo=True, future=True)
 WeyesAsyncSession = async_sessionmaker(
     async_engine, expire_on_commit=False, autoflush=False
 )
+
+class VaidationStatusEnum(enum.Enum):
+    PENDING = "pending"
+    PASSED = "passed"
+    FAILED = "failed"
 
 
 class BaseModel(DeclarativeBase):
@@ -62,7 +69,7 @@ class CasoTeste(BaseModel):
     saida: Mapped[str] = mapped_column(VARCHAR(1000))
     created_at: Mapped[datetime_default_now]
     updated_at: Mapped[datetime_default_now]
-    validado: Mapped[bool | None] = mapped_column(BOOLEAN)
+    validation_status: Mapped[VaidationStatusEnum] = mapped_column(default=VaidationStatusEnum.PENDING)
 
     questao: Mapped[Questao] = relationship("Questao", back_populates="casos_teste")
 

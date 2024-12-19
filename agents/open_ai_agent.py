@@ -6,7 +6,7 @@ from db.weyes_db import Questao
 API_KEY = settings.openai.API_KEY
 
 
-class OpenAIProvider:
+class OpenAiAgent:
     def __init__(self, model: str, max_tokens: int, temperature: float):
         self.client = OpenAI(api_key=API_KEY)
         self.model = model
