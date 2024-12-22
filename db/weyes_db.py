@@ -16,11 +16,12 @@ DATABASE_URL = (
 )
 
 
-async_engine = create_async_engine(DATABASE_URL, echo=True, future=True)
+async_engine = create_async_engine(DATABASE_URL, echo=False, future=True)
 
 WeyesAsyncSession = async_sessionmaker(
     async_engine, expire_on_commit=False, autoflush=False
 )
+
 
 class VaidationStatusEnum(enum.Enum):
     PENDING = "pending"
@@ -69,7 +70,9 @@ class CasoTeste(BaseModel):
     saida: Mapped[str] = mapped_column(VARCHAR(1000))
     created_at: Mapped[datetime_default_now]
     updated_at: Mapped[datetime_default_now]
-    validation_status: Mapped[VaidationStatusEnum] = mapped_column(default=VaidationStatusEnum.PENDING)
+    validation_status: Mapped[VaidationStatusEnum] = mapped_column(
+        default=VaidationStatusEnum.PENDING
+    )
 
     questao: Mapped[Questao] = relationship("Questao", back_populates="casos_teste")
 

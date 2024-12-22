@@ -1,45 +1,74 @@
 import asyncio
-import sys
 import subprocess
 
 from sqlalchemy import select
-from db.weyes_db import WeyesAsyncSession, CasoTeste, VaidationStatusEnum
+from db.weyes_db import WeyesAsyncSession, CasoTeste, VaidationStatusEnum, Questao
 
-# TODO: Implementar a classe do agente validador
-# - O agente validador deve ser capaz de executar os casos de teste pendentes
-# - O agente validador deve comparar a saída gerada pelo código do usuário com a saída esperada
-# - O agente validador deve atualizar o status de validação dos casos de teste
-# - O agente validador deve persistir as atualizações no banco de dados
-# - O agente validador deve ser executado com o caminho para o executável do usuário como argumento
-# - O agente validador deve ser executado em um processo separado
 
-async def validate_test_cases(executable_path):
-    async with WeyesAsyncSession() as session:
-        test_cases = await session.execute(
-            select(CasoTeste).filter(CasoTeste.validation_status == VaidationStatusEnum.PENDING)
-        )
-        test_cases = test_cases.scalars().all()
+class ValidatorAgent:
+    def __init__(self, questao: Questao):
+        self.questao = questao
 
-        for test_case in test_cases:
-            # Execute the user's solution with the input data
-            process = subprocess.Popen(
-                [executable_path],
-                stdin=subprocess.PIPE,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
-                text=True
+    # Criar executável sobre um código em c++. Consultar Questao.resolucao para obter o código
+    async def create_executable(self):
+        try:
+            with open("main.cpp", "w+") as f:
+                f.write(self.questao.resolucao)
+
+            process = await asyncio.create_subprocess_shell(
+                "g++ main.cpp -o main",
+                stdout=asyncio.subprocess.PIPE,
+                stderr=asyncio.subprocess.PIPE,
             )
-            stdout, stderr = process.communicate(input=test_case.input_data)
+            await process.communicate()
 
-            # Compare the actual output with the expected output
-            actual_output = stdout.strip()
-            validation_status = VaidationStatusEnum.PASSED if actual_output == test_case.expected_output else VaidationStatusEnum.FAILED
-            test_case.actual_output = actual_output
-            test_case.validation_status = validation_status
-            await session.add(test_case)
+            print("Executable created successfully")
 
-        await session.commit()
+        except Exception as e:
+            print("Error creating executable", e)
 
-if __name__ == "__main__":
-    executable_path = sys.argv[1]
-    asyncio.run(validate_test_cases(executable_path))
+    # Consultar os casos de teste pendentes para a questão e validar a saída gerada pelo código do usuário
+    async def validate_test_cases(self):
+        try:
+            await self.create_executable()
+
+            async with WeyesAsyncSession() as session:
+                casos_teste = (
+                    await session.scalars(
+                        select(CasoTeste)
+                        .where(CasoTeste.questao_id == self.questao.id)
+                        .where(
+                            CasoTeste.validation_status != VaidationStatusEnum.PASSED
+                        )
+                    )
+                ).all()
+
+                print(f"Validating {len(casos_teste)} test cases")
+
+                for caso_teste in casos_teste:
+                    process = subprocess.Popen(
+                        ["./main.exe"],
+                        stdin=subprocess.PIPE,
+                        stdout=subprocess.PIPE,
+                        stderr=subprocess.PIPE,
+                        text=True,  # Garante que a comunicação seja em texto, não bytes
+                    )
+
+                    # Envia a entrada e captura a saída padrão (out) e erros (err)
+                    out, err = process.communicate(caso_teste.entrada)
+
+                    if err:
+                        print("Error executing test case", err)
+                        continue
+
+                    if out.strip() == caso_teste.saida.strip():
+                        caso_teste.validation_status = VaidationStatusEnum.PASSED
+                        print("Test case passed")
+                    else:
+                        caso_teste.validation_status = VaidationStatusEnum.FAILED
+                        print("Test case failed")
+
+                    await session.commit()
+
+        except Exception as e:
+            print("Error validating test cases", e)

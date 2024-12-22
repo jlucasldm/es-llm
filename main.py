@@ -2,6 +2,7 @@ import asyncio
 from sqlalchemy import select
 from sqlalchemy.orm import selectinload
 
+from agents.validator_agent import ValidatorAgent
 from db.weyes_db import WeyesAsyncSession, Questao
 from agents.open_ai_agent import OpenAiAgent
 
@@ -27,7 +28,12 @@ async def main():
 
             prompt = openai_provider.get_prompt(questao)
             completion = openai_provider.get_response(prompt)
-            openai_provider.save_response(completion, questao.codigo, "teste")
+            await openai_provider.save_response(completion, questao)
+
+            validation_agent = ValidatorAgent(questao)
+            await validation_agent.validate_test_cases()
+
+    print("Finished processing all questions")
 
 
 if __name__ == "__main__":
