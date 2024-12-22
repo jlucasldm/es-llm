@@ -61,6 +61,8 @@ class ValidatorAgent:
                         print("Error executing test case", err)
                         continue
 
+                    caso_teste.validated_result = out
+
                     if out.strip() == caso_teste.saida.strip():
                         caso_teste.validation_status = VaidationStatusEnum.PASSED
                         print("Test case passed")
