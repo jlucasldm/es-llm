@@ -1,4 +1,4 @@
-from blood import Blood
+from agents.blood import Blood
 import asyncio
 
 
