@@ -1,7 +1,7 @@
 import enum
 
 from config import settings
-from sqlalchemy import VARCHAR, ForeignKey
+from sqlalchemy import VARCHAR, ForeignKey, select
 from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 import asyncio
@@ -76,6 +76,40 @@ class CasoTeste(BaseModel):
     validated_result: Mapped[str | None] = mapped_column(VARCHAR(1000))
 
     questao: Mapped[Questao] = relationship("Questao", back_populates="casos_teste")
+
+    @staticmethod
+    async def get_reprovados(questao_id: int):
+        async with WeyesAsyncSession() as session:
+            casos_teste_reprovados = (
+                (
+                    await session.execute(
+                        select(CasoTeste).where(
+                            CasoTeste.questao_id == questao_id,
+                            CasoTeste.validation_status == VaidationStatusEnum.FAILED,
+                        )
+                    )
+                )
+                .scalars()
+                .all()
+            )
+            return casos_teste_reprovados
+
+    @staticmethod
+    async def get_aprovados(questao_id: int):
+        async with WeyesAsyncSession() as session:
+            casos_teste_aprovados = (
+                (
+                    await session.execute(
+                        select(CasoTeste).where(
+                            CasoTeste.questao_id == questao_id,
+                            CasoTeste.validation_status == VaidationStatusEnum.PASSED,
+                        )
+                    )
+                )
+                .scalars()
+                .all()
+            )
+            return casos_teste_aprovados
 
 
 async def create_all():
