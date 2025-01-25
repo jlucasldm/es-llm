@@ -38,6 +38,8 @@ class Blood:
 
             # Iterar sobre todas as questões
             for questao in questoes:
+                validation_round = 0
+
                 print("Gerando resposta para a questão:", questao.codigo)
                 self.openai_provider.clear_history()
 
@@ -63,7 +65,7 @@ class Blood:
                 )
 
                 # Salvar a resposta do modelo no banco de dados
-                await self.openai_provider.save_response(completion, questao, session)
+                await self.openai_provider.save_response(completion, questao, session, validation_round)
 
                 # Validar os casos de teste gerados
                 validation_agent = ValidatorAgent(questao)
@@ -89,6 +91,7 @@ class Blood:
                 )
 
                 while count < self.test_cases:
+                    validation_round += 1
                     user_prompt_test_validation = (
                         self.openai_provider.get_user_prompt_test_validation(
                             casos_teste_aprovados,
@@ -107,7 +110,7 @@ class Blood:
                     )
 
                     await self.openai_provider.save_response(
-                        completion, questao, session
+                        completion, questao, session, validation_round
                     )
 
                     # Validar os casos de teste gerados

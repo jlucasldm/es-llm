@@ -73,6 +73,7 @@ class CasoTeste(BaseModel):
     validation_status: Mapped[VaidationStatusEnum] = mapped_column(
         default=VaidationStatusEnum.PENDING
     )
+    validation_round: Mapped[int] = mapped_column(default=0)
     validated_result: Mapped[str | None] = mapped_column(VARCHAR(1000))
 
     questao: Mapped[Questao] = relationship("Questao", back_populates="casos_teste")

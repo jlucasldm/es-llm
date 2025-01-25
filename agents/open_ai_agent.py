@@ -167,7 +167,7 @@ class OpenAiAgent:
 
     @staticmethod
     async def save_response(
-        completion: ChatCompletion, questao: Questao, session: AsyncSession
+        completion: ChatCompletion, questao: Questao, session: AsyncSession, validation_round: int
     ) -> None:
         response = completion.choices[0].message.content
         test_cases = json.loads(response)
@@ -179,6 +179,7 @@ class OpenAiAgent:
                         questao_id=questao.id,
                         entrada=test_case["entrada"],
                         saida=test_case["saida"],
+                        validation_round=validation_round,
                     )
                 )
 

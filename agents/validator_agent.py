@@ -1,5 +1,6 @@
 import asyncio
 import subprocess
+import pathlib
 
 from sqlalchemy import select
 from db.weyes_db import WeyesAsyncSession, CasoTeste, VaidationStatusEnum, Questao
@@ -26,6 +27,15 @@ class ValidatorAgent:
 
         except Exception as e:
             print("Error creating executable", e)
+
+    # Método para remover main.cpp e main.exe
+    @staticmethod
+    async def remove_executable():
+        try:
+            pathlib.Path("main.cpp").unlink()
+            pathlib.Path("main.exe").unlink()
+        except Exception as e:
+            print("Error removing executable", e)
 
     # Consultar os casos de teste pendentes para a questão e validar a saída gerada pelo código do usuário
     async def validate_test_cases(self):
@@ -71,6 +81,8 @@ class ValidatorAgent:
                         print("Test case failed")
 
                     await session.commit()
+
+            await self.remove_executable()
 
         except Exception as e:
             print("Error validating test cases", e)
