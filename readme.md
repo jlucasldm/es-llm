@@ -51,6 +51,8 @@ recursos são necessários para tal e que tipo de instrução (prompt) deve ser 
 Sobre o formato de saída, podemos ver depois. O importante agora é mexer com o prompt e botar a geração de teste por 
 questões para funcionar.
 
+Os casos de teste gerados em cada fase estão na pasta `dados-gerados-por-fase`.
+
 
 ## Proximos passos
 Depois da discussão em aula, acho que o foco é o RAG.

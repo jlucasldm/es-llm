@@ -1,0 +1,159 @@
+**Passo 1: Compreensão e Análise do Problema**
+
+1. **Interpretação do Enunciado e Resolução:**
+   - O problema envolve calcular o total de XP que Ori obtém após completar várias missões, levando em consideração um bônus que é multiplicado pelo XP de cada missão.
+   - O total de XP é comparado a um valor mínimo necessário para que Ori suba de nível.
+   - A entrada consiste em:
+     - Um inteiro `N` que representa o número de missões.
+     - Uma lista de inteiros `X` que representa o XP de cada missão.
+     - Uma lista de inteiros `B` que representa o bônus para cada missão.
+     - Um inteiro `M` que é o XP necessário para subir de nível e um inteiro `A` que é um bônus adicional a ser somado a cada bônus `B`.
+
+2. **Nuances Lógicas:**
+   - O cálculo do XP total é feito somando o XP de cada missão (com o bônus adicional `A` adicionado) multiplicado pelo bônus correspondente.
+   - A condição de sucesso é que o XP total deve ser maior ou igual a `M`.
+
+3. **Validação com Casos de Exemplo:**
+   - O primeiro caso de exemplo mostra que, com as entradas dadas, o total de XP é suficiente para subir de nível.
+   - O segundo caso mostra que o total de XP não é suficiente.
+
+**Passo 2: Validação da Análise e Correção**
+- A análise está correta, pois as saídas da resolução correspondem aos resultados esperados para os casos de exemplo.
+
+**Passo 3: Geração de Novos Casos de Teste**
+
+1. **Caso Simples:**
+   - Entrada:
+     ```
+     1
+     1
+     1
+     1 0
+     ```
+   - Saída:
+     ```
+     Upou de Nivel!
+     ```
+
+2. **Caso Simples:**
+   - Entrada:
+     ```
+     1
+     1
+     1
+     2 0
+     ```
+   - Saída:
+     ```
+     Nao foi dessa vez!
+     ```
+
+3. **Caso Médio:**
+   - Entrada:
+     ```
+     3
+     2 3 4
+     1 2 1
+     15 1
+     ```
+   - Saída:
+     ```
+     Upou de Nivel!
+     ```
+
+4. **Caso Médio:**
+   - Entrada:
+     ```
+     3
+     1 1 1
+     1 1 1
+     10 0
+     ```
+   - Saída:
+     ```
+     Nao foi dessa vez!
+     ```
+
+5. **Caso Médio:**
+   - Entrada:
+     ```
+     4
+     5 5 5 5
+     1 1 1 1
+     30 0
+     ```
+   - Saída:
+     ```
+     Upou de Nivel!
+     ```
+
+6. **Caso Complexo:**
+   - Entrada:
+     ```
+     10
+     10 10 10 10 10 10 10 10 10 10
+     5 5 5 5 5 5 5 5 5 5
+     500 0
+     ```
+   - Saída:
+     ```
+     Upou de Nivel!
+     ```
+
+7. **Caso Complexo:**
+   - Entrada:
+     ```
+     10
+     1 1 1 1 1 1 1 1 1 1
+     1 1 1 1 1 1 1 1 1 1
+     20 0
+     ```
+   - Saída:
+     ```
+     Nao foi dessa vez!
+     ```
+
+8. **Caso Especial:**
+   - Entrada:
+     ```
+     5
+     10 10 10 10 10
+     5 5 5 5 5
+     300 2
+     ```
+   - Saída:
+     ```
+     Upou de Nivel!
+     ```
+
+9. **Caso Especial:**
+   - Entrada:
+     ```
+     5
+     1 1 1 1 1
+     1 1 1 1 1
+     10 2
+     ```
+   - Saída:
+     ```
+     Nao foi dessa vez!
+     ```
+
+10. **Caso Especial:**
+    - Entrada:
+      ```
+      6
+      1 2 3 4 5 6
+      1 1 1 1 1 1
+      30 1
+      ```
+    - Saída:
+      ```
+      Nao foi dessa vez!
+      ```
+
+11. **Caso Complexo:**
+    - Entrada:
+      ```
+      100
+      1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 

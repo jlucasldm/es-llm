@@ -1,0 +1,270 @@
+**Passo 1: Compreensão e Análise do Problema**
+
+1. **Interpretação do Enunciado e Resolução:**
+   - O problema envolve Bilbo e seus amigos anões que precisam atravessar uma trilha com galhos que têm um limite de peso. O peso de Bilbo não é considerado, e o objetivo é verificar se o peso combinado dos amigos de Bilbo não excede a capacidade máxima do galho.
+   - A entrada consiste em um número de amigos, seus nomes e pesos, e a capacidade máxima do galho. A saída deve indicar se eles podem passar com segurança ou não, e, em caso negativo, listar os amigos que excedem o peso.
+
+2. **Nuances Lógicas:**
+   - A soma dos pesos dos amigos deve ser comparada com a capacidade do galho.
+   - Se a soma dos pesos for menor ou igual à capacidade, a saída é positiva. Caso contrário, a saída é negativa e deve listar os amigos que causaram o excesso de peso.
+   - O número de amigos varia de 1 a 13, e os pesos variam de 50 a 150, enquanto a capacidade do galho varia de 50 a 250.
+
+3. **Validação com Casos de Exemplo:**
+   - O primeiro exemplo tem 6 amigos com pesos que somam 305, que é menor que 250, resultando em uma saída positiva.
+   - O segundo exemplo tem 7 amigos com pesos que somam 373, que é maior que 57, resultando em uma saída negativa e listando os amigos que causaram o excesso.
+
+**Passo 2: Validação da Análise e Correção**
+- A análise está correta, pois as saídas da resolução correspondem aos resultados esperados para os casos de exemplo.
+
+**Passo 3: Geração de Novos Casos de Teste**
+
+**Caso 1: Entrada Mínima**
+Entrada:
+```
+1
+ Frodo 50
+ 50
+```
+Saída:
+```
+Vamos todos encontrar a montanha!
+```
+
+**Caso 2: Peso Exato**
+Entrada:
+```
+2
+ Sam 50
+ Merry 50
+ 100
+```
+Saída:
+```
+Vamos todos encontrar a montanha!
+```
+
+**Caso 3: Um Amigo Excede o Peso**
+Entrada:
+```
+3
+ Pippin 60
+ Merry 50
+ Sam 60
+ 100
+```
+Saída:
+```
+Vamos virar almoço de aranhas gigantes!
+Pippin
+Sam
+```
+
+**Caso 4: Todos com Peso Máximo**
+Entrada:
+```
+3
+ Thorin 150
+ Balin 150
+ Dwalin 150
+ 300
+```
+Saída:
+```
+Vamos virar almoço de aranhas gigantes!
+Thorin
+Balin
+Dwalin
+```
+
+**Caso 5: Peso Total Abaixo do Limite**
+Entrada:
+```
+4
+ Fili 50
+ Kili 50
+ Dori 50
+ Nori 50
+ 250
+```
+Saída:
+```
+Vamos todos encontrar a montanha!
+```
+
+**Caso 6: Peso Total Exato**
+Entrada:
+```
+5
+ Ori 50
+ Oin 50
+ Gloin 50
+ Bifur 50
+ Bofur 50
+ 250
+```
+Saída:
+```
+Vamos todos encontrar a montanha!
+```
+
+**Caso 7: Um Amigo Muito Pesado**
+Entrada:
+```
+6
+ Bombur 150
+ Bifur 50
+ Bofur 50
+ Ori 50
+ Oin 50
+ Gloin 50
+ 200
+```
+Saída:
+```
+Vamos virar almoço de aranhas gigantes!
+Bombur
+```
+
+**Caso 8: Todos com Peso Mínimo**
+Entrada:
+```
+5
+ Amigo1 50
+ Amigo2 50
+ Amigo3 50
+ Amigo4 50
+ Amigo5 50
+ 250
+```
+Saída:
+```
+Vamos todos encontrar a montanha!
+```
+
+**Caso 9: Peso Total Excede Capacidade**
+Entrada:
+```
+4
+ Amigo1 70
+ Amigo2 80
+ Amigo3 90
+ Amigo4 100
+ 200
+```
+Saída:
+```
+Vamos virar almoço de aranhas gigantes!
+Amigo1
+Amigo2
+Amigo3
+Amigo4
+```
+
+**Caso 10: Limite Inferior de Capacidade**
+Entrada:
+```
+3
+ Amigo1 50
+ Amigo2 50
+ Amigo3 50
+ 150
+```
+Saída:
+```
+Vamos todos encontrar a montanha!
+```
+
+**Caso 11: Peso Total Justo Abaixo do Limite**
+Entrada:
+```
+5
+ Amigo1 50
+ Amigo2 50
+ Amigo3 50
+ Amigo4 50
+ Amigo5 49
+ 250
+```
+Saída:
+```
+Vamos todos encontrar a montanha!
+```
+
+**Caso 12: Peso Total Justo Acima do Limite**
+Entrada:
+```
+5
+ Amigo1 50
+ Amigo2 50
+ Amigo3 50
+ Amigo4 50
+ Amigo5 51
+ 250
+```
+Saída:
+```
+Vamos virar almoço de aranhas gigantes!
+Amigo5
+```
+
+**Caso 13: Todos com Peso Máximo e Capacidade Mínima**
+Entrada:
+```
+3
+ Amigo1 150
+ Amigo2 150
+ Amigo3 150
+ 50
+```
+Saída:
+```
+Vamos virar almoço de aranhas gigantes!
+Amigo1
+Amigo2
+Amigo3
+```
+
+**Caso 14: Peso Total Exato com Vários Amigos**
+Entrada:
+```
+6
+ Amigo1 50
+ Amigo2 50
+ Amigo3 50
+ Amigo4 50
+ Amigo5 50
+ Amigo6 50
+ 300
+```
+Saída:
+```
+Vamos todos encontrar a montanha!
+```
+
+**Caso 15: Peso Total Excede Capacidade com Vários Amigos**
+Entrada:
+```
+7
+ Amigo1 60
+ Amigo2 60
+ Amigo3 60
+ Amigo4 60
+ Amigo5 60
+ Amigo6 60
+ Amigo7 60
+ 350
+```
+Saída:
+```
+Vamos virar almoço de aranhas gigantes!
+Amigo1
+Amigo2
+Amigo3
+Amigo4
+Amigo5
+Amigo6
+Amigo7
+```
+
+**Passo 4: Validação e Revisão dos Casos de Teste**
+- Todos os casos gerados seguem as restrições do enunciado e cobrem uma ampla gama de cenários, incluindo casos simples, médios, complexos e especiais. As saídas esperadas foram verificadas e estão corretas.

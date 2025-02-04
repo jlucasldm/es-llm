@@ -1,0 +1,221 @@
+**Passo 1: Compreensão e Análise do Problema**
+
+1. O enunciado descreve um problema onde a velocidade do Flash é calculada a partir de dois valores: espaço (E) e tempo (T). A fórmula para calcular a velocidade (V) é dada por V = E / T.
+2. As restrições são:
+   - E deve estar entre 1 e 500.
+   - T deve estar entre 1 e 100.
+3. A saída deve ser um número inteiro, resultante da divisão de E por T.
+
+**Passo 2: Validação da Análise e Correção**
+
+- Os casos de exemplo fornecidos são:
+  - Para a entrada "300 5", a saída é "60" (300 / 5 = 60).
+  - Para a entrada "100 2", a saída é "50" (100 / 2 = 50).
+- Ambas as saídas estão corretas e confirmam a lógica da resolução.
+
+**Passo 3: Geração de Novos Casos de Teste**
+
+Agora, vamos gerar 15 casos de teste diversificados:
+
+1. **Caso Simples 1:**
+   - Entrada: `1 1`
+   - Saída: `1` (1 / 1 = 1)
+
+2. **Caso Simples 2:**
+   - Entrada: `2 1`
+   - Saída: `2` (2 / 1 = 2)
+
+3. **Caso Médio 1:**
+   - Entrada: `250 5`
+   - Saída: `50` (250 / 5 = 50)
+
+4. **Caso Médio 2:**
+   - Entrada: `150 3`
+   - Saída: `50` (150 / 3 = 50)
+
+5. **Caso Médio 3:**
+   - Entrada: `400 8`
+   - Saída: `50` (400 / 8 = 50)
+
+6. **Caso Médio 4:**
+   - Entrada: `300 6`
+   - Saída: `50` (300 / 6 = 50)
+
+7. **Caso Complexo 1:**
+   - Entrada: `500 100`
+   - Saída: `5` (500 / 100 = 5)
+
+8. **Caso Complexo 2:**
+   - Entrada: `500 1`
+   - Saída: `500` (500 / 1 = 500)
+
+9. **Caso Complexo 3:**
+   - Entrada: `499 99`
+   - Saída: `5` (499 / 99 = 5)
+
+10. **Caso Especial 1:**
+    - Entrada: `100 1`
+    - Saída: `100` (100 / 1 = 100)
+
+11. **Caso Especial 2:**
+    - Entrada: `250 10`
+    - Saída: `25` (250 / 10 = 25)
+
+12. **Caso Especial 3:**
+    - Entrada: `1 100`
+    - Saída: `0` (1 / 100 = 0)
+
+13. **Caso Especial 4:**
+    - Entrada: `10 2`
+    - Saída: `5` (10 / 2 = 5)
+
+14. **Caso Especial 5:**
+    - Entrada: `99 3`
+    - Saída: `33` (99 / 3 = 33)
+
+15. **Caso Especial 6:**
+    - Entrada: `200 4`
+    - Saída: `50` (200 / 4 = 50)
+
+**Passo 4: Validação e Revisão dos Casos de Teste**
+
+Todos os casos gerados foram revisados e estão em conformidade com as restrições do problema. As saídas foram calculadas corretamente usando a fórmula V = E / T e todos os casos cobrem uma ampla gama de cenários.
+
+**Formato de Saída para os Casos de Teste Gerados:**
+
+1. Entrada:
+   ```
+   1 1
+   ```
+   Saída:
+   ```
+   1
+   ```
+
+2. Entrada:
+   ```
+   2 1
+   ```
+   Saída:
+   ```
+   2
+   ```
+
+3. Entrada:
+   ```
+   250 5
+   ```
+   Saída:
+   ```
+   50
+   ```
+
+4. Entrada:
+   ```
+   150 3
+   ```
+   Saída:
+   ```
+   50
+   ```
+
+5. Entrada:
+   ```
+   400 8
+   ```
+   Saída:
+   ```
+   50
+   ```
+
+6. Entrada:
+   ```
+   300 6
+   ```
+   Saída:
+   ```
+   50
+   ```
+
+7. Entrada:
+   ```
+   500 100
+   ```
+   Saída:
+   ```
+   5
+   ```
+
+8. Entrada:
+   ```
+   500 1
+   ```
+   Saída:
+   ```
+   500
+   ```
+
+9. Entrada:
+   ```
+   499 99
+   ```
+   Saída:
+   ```
+   5
+   ```
+
+10. Entrada:
+    ```
+    100 1
+    ```
+    Saída:
+    ```
+    100
+    ```
+
+11. Entrada:
+    ```
+    250 10
+    ```
+    Saída:
+    ```
+    25
+    ```
+
+12. Entrada:
+    ```
+    1 100
+    ```
+    Saída:
+    ```
+    0
+    ```
+
+13. Entrada:
+    ```
+    10 2
+    ```
+    Saída:
+    ```
+    5
+    ```
+
+14. Entrada:
+    ```
+    99 3
+    ```
+    Saída:
+    ```
+    33
+    ```
+
+15. Entrada:
+    ```
+    200 4
+    ```
+    Saída:
+    ```
+    50
+    ``` 
+
+Todos os casos de teste gerados são válidos e cobrem uma ampla gama de cenários, conforme solicitado.

@@ -1,0 +1,126 @@
+**Passo 1: Compreensão e Análise do Problema**
+
+1. **Interpretação do Enunciado e Resolução:**
+   - O problema envolve calcular a quantidade total de turistas que desceram as corredeiras em quatro viagens, onde cada viagem tem um número específico de pessoas (Q1, Q2, Q3, Q4).
+   - A resolução apresentada soma as quantidades de pessoas nos quatro botes e subtrai 8, o que sugere que 8 pessoas (provavelmente o instrutor e o guia) não são consideradas turistas.
+
+2. **Nuances Lógicas:**
+   - A soma total de turistas é dada pela fórmula: Total de turistas = (Q1 + Q2 + Q3 + Q4) - 8.
+   - As entradas devem estar dentro do intervalo de 3 a 20 para cada Q.
+   - A saída deve ser um número inteiro representando o total de turistas.
+
+3. **Validação dos Casos de Exemplo:**
+   - Para a entrada '10 15 8 7':
+     - Total = 10 + 15 + 8 + 7 - 8 = 32 (correto).
+   - Para a entrada '3 6 9 12':
+     - Total = 3 + 6 + 9 + 12 - 8 = 22 (correto).
+   - Para a entrada '3 3 3 3':
+     - Total = 3 + 3 + 3 + 3 - 8 = 4 (correto).
+
+**Passo 2: Validação da Análise e Correção**
+- A análise está correta e todos os casos de exemplo estão alinhados com a lógica da resolução.
+
+**Passo 3: Geração de Novos Casos de Teste**
+
+1. **Casos Simples:**
+   - Entrada: `3 3 3 3`
+     - Saída: `4`
+   - Entrada: `3 3 3 4`
+     - Saída: `5`
+   - Entrada: `3 3 4 4`
+     - Saída: `6`
+
+2. **Casos Médios:**
+   - Entrada: `5 6 7 8`
+     - Saída: `18`
+   - Entrada: `10 10 10 10`
+     - Saída: `32`
+   - Entrada: `6 7 8 9`
+     - Saída: `22`
+
+3. **Casos Complexos:**
+   - Entrada: `20 20 20 20`
+     - Saída: `76`
+   - Entrada: `15 19 18 20`
+     - Saída: `64`
+   - Entrada: `19 19 19 20`
+     - Saída: `69`
+
+4. **Casos Especiais:**
+   - Entrada: `3 20 20 20`
+     - Saída: `75`
+   - Entrada: `20 20 20 3`
+     - Saída: `75`
+   - Entrada: `3 3 20 20`
+     - Saída: `32`
+   - Entrada: `3 20 3 20`
+     - Saída: `75`
+
+**Formato de Saída para os Casos de Teste Gerados:**
+
+Entrada:
+`3 3 3 3`
+Saída:
+`4`
+
+Entrada:
+`3 3 3 4`
+Saída:
+`5`
+
+Entrada:
+`3 3 4 4`
+Saída:
+`6`
+
+Entrada:
+`5 6 7 8`
+Saída:
+`18`
+
+Entrada:
+`10 10 10 10`
+Saída:
+`32`
+
+Entrada:
+`6 7 8 9`
+Saída:
+`22`
+
+Entrada:
+`20 20 20 20`
+Saída:
+`76`
+
+Entrada:
+`15 19 18 20`
+Saída:
+`64`
+
+Entrada:
+`19 19 19 20`
+Saída:
+`69`
+
+Entrada:
+`3 20 20 20`
+Saída:
+`75`
+
+Entrada:
+`20 20 20 3`
+Saída:
+`75`
+
+Entrada:
+`3 3 20 20`
+Saída:
+`32`
+
+Entrada:
+`3 20 3 20`
+Saída:
+`75`
+
+Todos os casos de teste gerados estão em conformidade com as restrições do problema, e as saídas correspondem à lógica da resolução.

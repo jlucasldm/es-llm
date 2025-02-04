@@ -1,0 +1,144 @@
+**Passo 1: Compreensão e Análise do Problema**
+
+1. O enunciado descreve uma situação em que Chapeuzinho Vermelho e o Lobo Mau correm em uma pista circular de tamanho `T` metros. Eles pretendem correr uma distância total de `X` metros. O objetivo é determinar o ponto de término na pista após correr essa distância.
+2. A lógica do problema é simples: como a pista é circular, se a distância `X` for maior que `T`, eles darão voltas na pista. O ponto de término pode ser encontrado usando a operação de módulo, que nos dá o restante da divisão de `X` por `T`. Assim, o ponto de término é `X % T`.
+3. A resolução fornecida implementa essa lógica corretamente, onde `X % T` retorna o ponto de término na pista.
+
+**Passo 2: Validação da Análise e Correção**
+
+- Vamos validar os casos de exemplo:
+  - Para `T = 200` e `X = 20`: `20 % 200 = 20` (correto).
+  - Para `T = 100` e `X = 1000`: `1000 % 100 = 0` (correto).
+  - Para `T = 200` e `X = 1100`: `1100 % 200 = 100` (correto).
+
+Todos os casos de exemplo estão corretos e a análise está alinhada com a lógica do problema.
+
+**Passo 3: Geração de Novos Casos de Teste**
+
+Agora, vamos gerar 15 casos de teste diversificados:
+
+1. **Caso Simples 1:**
+   - Entrada: `1 1`
+   - Saída: `0`
+   - Justificativa: A pista tem 1 metro e eles correm 1 metro, terminam no ponto 0.
+
+2. **Caso Simples 2:**
+   - Entrada: `2 1`
+   - Saída: `1`
+   - Justificativa: A pista tem 2 metros e eles correm 1 metro, terminam no ponto 1.
+
+3. **Caso Simples 3:**
+   - Entrada: `5 5`
+   - Saída: `0`
+   - Justificativa: A pista tem 5 metros e eles correm 5 metros, terminam no ponto 0.
+
+4. **Caso Médio 1:**
+   - Entrada: `10 25`
+   - Saída: `5`
+   - Justificativa: A pista tem 10 metros e eles correm 25 metros, terminam no ponto 5.
+
+5. **Caso Médio 2:**
+   - Entrada: `50 120`
+   - Saída: `20`
+   - Justificativa: A pista tem 50 metros e eles correm 120 metros, terminam no ponto 20.
+
+6. **Caso Médio 3:**
+   - Entrada: `100 250`
+   - Saída: `50`
+   - Justificativa: A pista tem 100 metros e eles correm 250 metros, terminam no ponto 50.
+
+7. **Caso Complexo 1:**
+   - Entrada: `10000 10000`
+   - Saída: `0`
+   - Justificativa: A pista tem 10000 metros e eles correm 10000 metros, terminam no ponto 0.
+
+8. **Caso Complexo 2:**
+   - Entrada: `10000 15000`
+   - Saída: `5000`
+   - Justificativa: A pista tem 10000 metros e eles correm 15000 metros, terminam no ponto 5000.
+
+9. **Caso Complexo 3:**
+   - Entrada: `9999 19998`
+   - Saída: `9998`
+   - Justificativa: A pista tem 9999 metros e eles correm 19998 metros, terminam no ponto 9998.
+
+10. **Caso Especial 1:**
+    - Entrada: `100 99`
+    - Saída: `99`
+    - Justificativa: A pista tem 100 metros e eles correm 99 metros, terminam no ponto 99.
+
+11. **Caso Especial 2:**
+    - Entrada: `100 101`
+    - Saída: `1`
+    - Justificativa: A pista tem 100 metros e eles correm 101 metros, terminam no ponto 1.
+
+12. **Caso Especial 3:**
+    - Entrada: `10000 9999`
+    - Saída: `9999`
+    - Justificativa: A pista tem 10000 metros e eles correm 9999 metros, terminam no ponto 9999.
+
+13. **Caso Especial 4:**
+    - Entrada: `5000 10000`
+    - Saída: `0`
+    - Justificativa: A pista tem 5000 metros e eles correm 10000 metros, terminam no ponto 0.
+
+14. **Caso Especial 5:**
+    - Entrada: `3000 6000`
+    - Saída: `0`
+    - Justificativa: A pista tem 3000 metros e eles correm 6000 metros, terminam no ponto 0.
+
+15. **Caso Especial 6:**
+    - Entrada: `7500 7501`
+    - Saída: `1`
+    - Justificativa: A pista tem 7500 metros e eles correm 7501 metros, terminam no ponto 1.
+
+**Passo 4: Validação e Revisão dos Casos de Teste**
+
+Todos os casos gerados foram validados e estão em conformidade com as restrições do enunciado. As saídas correspondem corretamente à lógica do problema e cobrem uma ampla gama de cenários. 
+
+**Formato de Saída para os Casos de Teste Gerados:**
+
+1. Entrada: `1 1`
+   Saída: `0`
+
+2. Entrada: `2 1`
+   Saída: `1`
+
+3. Entrada: `5 5`
+   Saída: `0`
+
+4. Entrada: `10 25`
+   Saída: `5`
+
+5. Entrada: `50 120`
+   Saída: `20`
+
+6. Entrada: `100 250`
+   Saída: `50`
+
+7. Entrada: `10000 10000`
+   Saída: `0`
+
+8. Entrada: `10000 15000`
+   Saída: `5000`
+
+9. Entrada: `9999 19998`
+   Saída: `9998`
+
+10. Entrada: `100 99`
+    Saída: `99`
+
+11. Entrada: `100 101`
+    Saída: `1`
+
+12. Entrada: `10000 9999`
+    Saída: `9999`
+
+13. Entrada: `5000 10000`
+    Saída: `0`
+
+14. Entrada: `3000 6000`
+    Saída: `0`
+
+15. Entrada: `7500 7501`
+    Saída: `1`
